@@ -31,3 +31,27 @@ save.addEventListener("mouseover", ()=>{
 save.addEventListener("mouseout", ()=>{
     saveImg.src = "./Assets/img/save.png";
 })
+
+const ham = document.querySelector(".ham");
+const navExp = document.querySelector(".nav_expanded");
+const container = document.querySelector(".container");
+let i = 0;
+ham.addEventListener("click" , ()=>{
+    i++;
+    if(i%2 == 1){
+        about.style.display = "none";
+        feed.style.display = "none";
+        tables.style.display = "none";
+        save.style.display = "none";
+        container.style.gridTemplateRows = "6% 94%";
+        navExp.style.gridTemplateRows = "100%";
+    }
+    else{
+        about.style.display = "block";
+        feed.style.display = "block";
+        tables.style.display = "block";
+        save.style.display = "block";
+        container.style.gridTemplateRows = "30% 70%";
+        navExp.style.gridTemplateRows = "20% 20% 20% 20% 20%";
+    }
+})
