@@ -18,7 +18,7 @@ body{
 }
 
 /* Nav: Start */ 
-.nav{
+.nav_expanded{
     position: relative;
     background-color:rgba(255, 62, 62, 0.89);
     display: grid;
@@ -27,14 +27,22 @@ body{
     align-items: center;
     font-weight: 300;
 }
-.nav > img{
+.logo3{
+    padding-left: 4vw;
+    height: 90%;
+}
+.logo2{
+    padding-left: 4vw;
+    height: 90%;
+}
+.mainLogo{
     padding-left: 4vw;
     height: 90%;
 }
 .logo3{
     width: 136px;
 }
-.nav > div{
+.nav_expanded > div{
     margin: 0;
     padding: 0;
     position: relative;
@@ -44,13 +52,13 @@ body{
     transition: all 0.2s ease-in-out;
     transform-origin: left;
 }
-.nav > div > img{
+.nav_expanded > div > img{
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     
 }
-.nav > div > p{
+.nav_expanded > div > p{
     position: absolute;
     margin: 0;
     padding: 0;
@@ -58,8 +66,7 @@ body{
     left: calc(4vw + 40px);
     transform: translateY(-50%);
 }
-.nav > div:hover{
-    transform: scale(1.02);
+.nav_expanded > div:hover{
     background: white;
     color: rgba(255, 62, 62, 0.89);
     box-shadow: 10px 10px 5px -6px rgba(0,0,0,0.43);
@@ -95,3 +102,55 @@ body{
 }
 
 /* About: End */
+@media screen and (max-width: 1064px){
+    .mainLogo{
+        position: relative;
+        display: block;
+        padding-left: 0;
+        height: 20%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .container{
+        grid-template-columns: none;
+        grid-template-rows: 30% 70%;
+        grid-row-gap: 30px;
+    }
+    .nav_expanded{
+        grid-template-rows: 20% 20% 20% 20% 20%;
+        width: 100vw;
+    }
+    .nav_expanded > div{
+        position: relative;
+        padding-left: 0;
+        left: 0;
+    }
+    
+    .logo2{
+        display: none;
+    }
+    .logo3{
+        display: none;
+    }
+    
+    .nav_expanded > div > img{
+        left: 0;
+    }
+    .nav_expanded > div > p{
+        left: 40px;
+    }
+    .aboutMain{
+        margin: 0 1vw 0 1vw;
+        grid-template-rows: min-content min-content 400px auto;
+    }
+    .images{
+        display: grid;
+        grid-template-columns: none;
+        grid-template-rows: 50% 50%;
+        height: 100%;
+        grid-row-gap: 1vh;
+    }
+
+    
+
+}
