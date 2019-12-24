@@ -129,6 +129,7 @@ body{
         display: none;
         position: relative;
         padding-left: 0;
+        margin-left: 2vw;
         left: 0;
     }
     .logo2{
