@@ -139,10 +139,10 @@ body{
     }
     
     .nav_expanded > div > img{
-        left: 0;
+        left: 3vw;
     }
     .nav_expanded > div > p{
-        left: 40px;
+        left: calc(40px + 3vw);
     }
     .aboutMain{
         margin: 0;
