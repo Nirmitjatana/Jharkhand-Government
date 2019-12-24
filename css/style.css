@@ -101,9 +101,15 @@ body{
 .images > img{
     height: 100%;
     width: 90%;
+    object-fit: cover;
 }
 
 /* About: End */
+@media screen and (min-height: 1100px){
+    .aboutMain{
+        grid-template-rows: min-content min-content 400px auto;
+    }
+}
 @media screen and (max-width: 700px){
     
     .container{
