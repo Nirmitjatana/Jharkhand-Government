@@ -38,12 +38,12 @@ const container = document.querySelector(".container");
 let i = 0;
 ham.addEventListener("click" , ()=>{
     i++;
-    if(i%2 == 1){
+    if(i%2 == 0){
         about.style.display = "none";
         feed.style.display = "none";
         tables.style.display = "none";
         save.style.display = "none";
-        container.style.gridTemplateRows = "6% 94%";
+        container.style.gridTemplateRows = "55px auto";
         navExp.style.gridTemplateRows = "100%";
     }
     else{
