@@ -55,7 +55,7 @@ ham.addEventListener("click" , ()=>{
         feed.style.display = "block";
         tables.style.display = "block";
         save.style.display = "block";
-        container.style.gridTemplateRows = "37% 63%";
-        navExp.style.gridTemplateRows = "55px 20% 20% 20% 20%";
+        container.style.gridTemplateRows = "35% 65%";
+        navExp.style.gridTemplateRows = "55px auto auto auto auto";
     }
 })
