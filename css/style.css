@@ -41,7 +41,7 @@ body{
     padding-left: 4vw;
     width: 35%;
 }
-.nav_expanded > div{
+.nav_expanded > a{
     margin: 0;
     padding: 0;
     position: relative;
@@ -50,22 +50,25 @@ body{
     cursor: pointer;
     transition: all 0.2s ease-in-out;
     transform-origin: left;
+    text-decoration: none;
+    color: white;
 }
-.nav_expanded > div > img{
+.nav_expanded > a > img{
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     
 }
-.nav_expanded > div > p{
+.nav_expanded > a > p{
     position: absolute;
     margin: 0;
     padding: 0;
+    
     top: 50%;
     left: calc(4vw + 40px);
     transform: translateY(-50%);
 }
-.nav_expanded > div:hover{
+.nav_expanded > a:hover{
     background: white;
     color: rgba(255, 62, 62, 0.89);
     box-shadow: 10px 10px 5px -6px rgba(0,0,0,0.43);
@@ -123,7 +126,7 @@ body{
         width: 100vw;
         /* padding-left: 3vw; */
     }
-    .nav_expanded > div{
+    .nav_expanded > a{
         display: none;
         position: relative;
         padding-left: 0;
@@ -135,10 +138,10 @@ body{
         display: none;
     }
     
-    .nav_expanded > div > img{
+    .nav_expanded > a > img{
         left: 3vw;
     }
-    .nav_expanded > div > p{
+    .nav_expanded > a > p{
         left: calc(40px + 3vw);
     }
     .aboutMain{

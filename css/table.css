@@ -15,6 +15,7 @@ body{
     height: 100%;
     width: 100%;
     position: relative;
+    
 }
 
 /* Nav: Start */ 
@@ -42,7 +43,7 @@ body{
 .logo3{
     width: 136px;
 }
-.nav_expanded > div{
+.nav_expanded > a{
     margin: 0;
     padding: 0;
     position: relative;
@@ -51,15 +52,17 @@ body{
     cursor: pointer;
     transition: all 0.2s ease-in-out;
     transform-origin: left;
+    text-decoration: none;
+    color: white;
 }
-.nav_expanded > div > img{
+.nav_expanded > a > img{
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     height: 24px;
     width: 24px;
 }
-.nav_expanded > div > p{
+.nav_expanded > a > p{
     position: absolute;
     margin: 0;
     padding: 0;
@@ -67,39 +70,239 @@ body{
     left: calc(4vw + 40px);
     transform: translateY(-50%);
 }
-.nav_expanded > div:hover{
+.nav_expanded > a:hover{
     background: white;
     color: rgba(255, 62, 62, 0.89);
     box-shadow: 10px 10px 5px -6px rgba(0,0,0,0.43);
 }
 .ham{
     display: none;
-}
+} 
 
+/*.nav_expanded{
+    position: relative;
+    background-color:rgba(255, 62, 62, 0.89);
+    display: grid;
+    grid-template-rows: 20% 10% 10% 10% 10% 20% 20%;
+    color: white;
+    align-items: center;
+    font-weight: 300;
+    max-height: 900px;
+}
+.logo3{
+    padding-left: 4vw;
+    width: 35%;
+    height: 7vw;
+}
+.logo2{
+    padding-left: 4vw;
+    width: 35%;
+}
+.mainLogo{
+    padding-left: 4vw;
+    width: 35%;
+}
+.nav_expanded > a{
+    margin: 0;
+    padding: 0;
+    position: relative;
+    padding-left: 4vw;
+    height: 100%;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    transform-origin: left;
+    text-decoration: none;
+    color: white;
+}
+.nav_expanded > a > img{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    
+}
+.nav_expanded > a > p{
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    
+    top: 50%;
+    left: calc(4vw + 40px);
+    transform: translateY(-50%);
+}
+.nav_expanded > a:hover{
+    background: white;
+    color: rgba(255, 62, 62, 0.89);
+    box-shadow: 10px 10px 5px -6px rgba(0,0,0,0.43);
+}
+.ham{
+    display: none;
+}*/
 
 /* TableMain: Start */
 
-.tableMain{
+/* .tableMain{
     position: relative;
-    margin: 15vh auto;
-    display: grid;
-    grid-template-rows: 30% 70%;
-    grid-row-gap: 5vh;
+    margin: 10vh auto auto auto;
+    justify-items: center;
 }
 .selector{
     position: relative;
-    width: 100%;
+    width: calc(100% + 10vw);
 }
-.selector > h1{
+.tableMain > div > h1{
     color: rgba(255, 62, 62, 0.89);
 }
-.selector > select{
-    
-    width: 100%;
-    height: 2rem;
-    font-size: 1.5rem;
-    color: rgb(83, 95, 107);;
+select{
+    position: relative;
+    outline-color: none;
+    width: calc(100% - 10vw);
+    height: 3rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(228, 228, 228);
+    color: rgba(98, 107, 116, 0.911);
     font-weight: 200;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.inner{
+    position: relative;
+    background: rgb(228, 228, 228);
+    height: calc(100% + 6vh);
+    padding: 3vh 3vw;
+    border-radius: 5px;
+}
+.tablee{
+    width: calc(100% + 10vw);
+}
+.inner > select{
+    background: white;
+    margin-top: 3vh;
+    margin-bottom: 3vh; 
 }
 
+table{
+    position: relative;
+    border-collapse: collapse;
+    left: 50%;
+    transform: translateX(-50%);
+}
+table, th, td {
+    border: 1px solid black;
+    text-justify: center;
+    background: white;
+} */
+
+
+
+
 /* TableMain: End */
+
+
+.tableMain{
+    position: relative;
+    justify-self: center;
+    margin-top: 8vh;
+}
+.tableMain > div > h1{
+    color: rgba(255, 62, 62, 0.89);
+}
+select{
+    position: relative;
+    left: 5%;
+    outline-color: none;
+    width: 40vw;
+    height: 3rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(228, 228, 228);
+    color: rgba(98, 107, 116, 0.911);
+    font-weight: 200;
+}
+.inner{
+    position: relative;
+    background: rgb(228, 228, 228);
+    width: 50vw;
+    padding-bottom: 4vh;
+}
+.inner > a{
+    display: block;
+    position: relative;
+    font-size: 0.9rem;
+    margin-top: 5%;
+    left: 5%;
+    width:80%;
+}
+.inner > select{
+    margin-top: 2%;
+    background-color: white;
+    color: rgba(98, 107, 116, 0.911);;
+}
+table{
+    position: relative;
+    border-collapse: collapse;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+    
+}
+table, th, td {
+    border: 1px solid black;
+    text-justify: center;
+    background: white;
+}
+
+
+@media screen and (max-width: 700px){
+    
+    .container{
+        grid-template-columns: none;
+        grid-template-rows: 55px auto;
+        grid-row-gap: 30px;
+        transition: all 2s ease-in-out;
+    }
+    .nav_expanded{
+        grid-template-rows: 100%;
+        width: 100%;
+    }
+    .nav_expanded > a{
+        display: none;
+        position: relative;
+        padding-left: 0;
+    }
+    .logo2{
+        display: none;
+    }
+    .logo3{
+        display: none;
+    }
+    
+    .nav_expanded > a > img{
+        left: 3vw;
+    }
+    .nav_expanded > a > p{
+        left: calc(40px + 3vw);
+    }
+    .ham{
+        display: block;
+        position: absolute;
+        top: 15px;
+        left: 10px;
+        cursor: pointer;
+    }
+    .mainLogo{
+        position: relative;
+        display: block;
+        padding-left: 0;
+        height: 49px;
+        width: 49px;
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 50px;
+    }
+    .inner{
+        width: 100%;
+    }
+}
