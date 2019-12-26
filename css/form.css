@@ -96,7 +96,6 @@ body{
     
     position: relative;
     margin: 113px 3vw 0 5vw;
-
 }
 .head > h1{
     color: rgba(255, 62, 62, 0.89);
@@ -108,7 +107,6 @@ body{
     font-size: x-large;
     height:500px;
     color:rgb(26, 188, 252);
-
 }
 .form{
     
@@ -240,6 +238,7 @@ input[type=button]{
     margin: 0;
     padding-top:20px;
     
+    
     /* grid-template-rows: min-content min-content 400px auto;
     justify-items: center;
     grid-row-gap: 30px; */
@@ -253,9 +252,13 @@ input[type=button]{
 
 }
 .button3{
-    margin-left: -7%;
+    
     margin-top:15px;
-    margin-left: 20vw;
+    position: relative;
+    width:55vw;
+    margin-left:7.5vw;
+
+
 }
 .button2{
     
@@ -264,8 +267,9 @@ input[type=button]{
 .head1{
     margin: 0;
     padding-top:20px;
-    padding-left:100px;
+    padding-left:90px;
     
     
 }
+
 }
