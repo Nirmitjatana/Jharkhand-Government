@@ -244,8 +244,8 @@ input[type=button]{
     grid-row-gap: 30px; */
 }
 .link{
-    margin: 0;
-    padding-right: 40px;
+    margin-left: -5vw;
+    
 }
 .form{
     margin-left: 5%;
