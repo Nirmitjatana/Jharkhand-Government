@@ -107,7 +107,7 @@ select{
 .inner{
     position: relative;
     background: rgb(228, 228, 228);
-    width: 50vw;
+    width: calc(100% + 5vw);
     padding-bottom: 4vh;
 }
 .inner > a{
@@ -148,7 +148,7 @@ table, th, td {
     }
     .nav_expanded{
         grid-template-rows: 100%;
-        width: 100%;
+        width: 100vw;
     }
     .nav_expanded > a{
         display: none;
@@ -186,6 +186,6 @@ table, th, td {
         border-radius: 50px;
     }
     .inner{
-        width: 100%;
+        width: calc(100% + 10%);
     }
 }
