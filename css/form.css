@@ -80,10 +80,23 @@ body{
 
 
 
+.head1{
+    
+    position: relative;
+    margin: 113px 3vw 0 5vw;
+
+}
+.head1 > h1{
+    color: rgba(255, 62, 62, 0.89);
+    font-weight: 750;
+    margin: 0;
+    padding: 0;
+}
 .head{
     
     position: relative;
     margin: 113px 3vw 0 5vw;
+
 }
 .head > h1{
     color: rgba(255, 62, 62, 0.89);
@@ -109,9 +122,14 @@ input[type=text]{
     height:28px;
     color:rgba(197, 197, 197, 0.89);
     font-size: 0.8em;
-    border-color: red;
+    outline-style: none;
+    border-top-style: groove;
+    border-right-style: groove;
+    border-left-style: groove;
+    border-bottom-style: groove;
     border-radius: 9px;
     border-width: 2.5px;
+    border-color: rgba(255, 62, 62, 0.89);
 }
 input[type=button]{
     background-color: rgba(201, 201, 201, 0.89);
@@ -220,19 +238,34 @@ input[type=button]{
     }
 .head{
     margin: 0;
+    padding-top:20px;
+    
     /* grid-template-rows: min-content min-content 400px auto;
     justify-items: center;
     grid-row-gap: 30px; */
 }
 .link{
-    margin: 0 12vw;
+    margin: 0;
+    padding-right: 40px;
 }
 .form{
     margin-left: 5%;
 
 }
 .button3{
-    margin-left: 20%;
+    margin-left: -7%;
     margin-top:15px;
+    margin-left: 20vw;
+}
+.button2{
+    
+    margin-top:15px;
+}
+.head1{
+    margin: 0;
+    padding-top:20px;
+    padding-left:100px;
+    
+    
 }
 }
