@@ -186,6 +186,6 @@ table, th, td {
         border-radius: 50px;
     }
     .inner{
-        width: calc(100% + 10%);
+        width: calc(100%);
     }
 }
