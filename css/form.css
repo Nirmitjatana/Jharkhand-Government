@@ -207,6 +207,9 @@ input[type=button]{
 .f1{
     margin-bottom: 40px;
 }
+.header{
+    display: none;
+}
 
 @media screen and (min-height: 1100px){
     .head{
