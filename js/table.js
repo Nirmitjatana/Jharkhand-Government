@@ -114,6 +114,8 @@ function okay(){
             display: "block"
         })
         logo2.style.display = "block";
+        logo3.style.display = "block";
+        govt.style.display = "block";
         container.style.gridTemplateRows = "100%";
         navExp.style.gridTemplateRows = "12% 12% 12% 12% 20% 20% 5%";
         t1.fromTo(navExp, 1 , {
@@ -128,17 +130,13 @@ function okay(){
         })
         .fromTo(logo3, 0.1, {
             opacity: "0",
-            display: "none"
         },{
             opacity: "1",
-            display: "block"
         })
         .fromTo(govt, 0.1, {
             opacity: "0",
-            display: "none"
         },{
             opacity: "1",
-            display: "block"
         })
     }
 }
