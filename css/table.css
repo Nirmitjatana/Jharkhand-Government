@@ -23,7 +23,7 @@ body{
     position: relative;
     background-color:#FF5F58;
     display: grid;
-    grid-template-rows: 19% 10% 10% 10% 10% 19% 19% 3%;
+    grid-template-rows: 19% 9% 9% 9% 9% 21% 21% 3%;
     color: white;
     align-items: center;
     font-weight: 300;
@@ -33,18 +33,18 @@ body{
 .logo3{
     position: relative;
     width: 35%;
-    height: 7vw;
     left: 50%;
     transform: translateX(-50%);
 }
 .logo2{
     position: relative;
-    width: 35%;
     left: 50%;
     transform: translateX(-50%);
 }
 .mainLogo{
-    padding-left: 4vw;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
     width: 35%;
 }
 .nav_expanded > a{
@@ -155,6 +155,7 @@ table, th, td {
     left: 5%;
     padding-top: 3vh;
     color: #AAAAAA;
+    width: fit-content;
 }
 
 

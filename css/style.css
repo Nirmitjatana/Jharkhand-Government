@@ -22,7 +22,7 @@ body{
     position: relative;
     background-color:#FF5F58;
     display: grid;
-    grid-template-rows: 19% 10% 10% 10% 10% 19% 19% 3%;
+    grid-template-rows: 19% 9% 9% 9% 9% 21% 21% 3%;
     color: white;
     align-items: center;
     font-weight: 300;
@@ -38,7 +38,7 @@ body{
 }
 .logo2{
     position: relative;
-    width: 35%;
+    width: 50%;
     left: 50%;
     transform: translateX(-50%);
 }
