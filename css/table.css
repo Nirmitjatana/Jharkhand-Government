@@ -107,7 +107,7 @@ select{
     /* position: relative;
     left: 5%; */
     outline-color: none;
-    width: 40vw;
+    width: 60vw;
     height: 3rem;
     font-size: 1rem;
     border: none;
@@ -151,9 +151,14 @@ table{
     overflow: scroll;
 }
 table, th, td {
-    border: 1px solid black;
+    border: 1px solid rgb(196, 196, 196);
     text-justify: center;
     background: white;
+}
+th, td, tr{
+    text-align: center;
+    height: 6vh;
+    width: 3vw;
 }
 .inner > p{
     position: relative;
@@ -240,6 +245,12 @@ table, th, td {
     }
     .inner{
         width: calc(100%);
+    }
+    .inner > select{
+        width: 90%;
+    }
+    th, td, tr{
+        height: 9vh;
     }
     .header{
         position: absolute;
