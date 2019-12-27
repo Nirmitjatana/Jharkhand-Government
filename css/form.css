@@ -154,7 +154,7 @@ input[type=button]{
     width:260px;
     height:70px;
     margin-right: 74px;
-    
+    margin-bottom: 10px;
 }
 .button2{
     background-color: white;
@@ -168,6 +168,7 @@ input[type=button]{
     width:260px;
     height:70px;
     margin-right: 73px;
+    margin-bottom: 10px;
 }
 .button3{
     background-color: rgba(255, 62, 62, 0.89);
@@ -181,6 +182,7 @@ input[type=button]{
     border-radius: 5px;
     width:260px;
     height:70px;
+    margin-bottom: 10px;
 }
 .saveImg1{
     height:2.5vh;
@@ -265,18 +267,11 @@ input[type=button]{
     margin-left: 5%;
 
 }
-.button3{
-    
-    margin-top:15px;
-    position: relative;
-    width:55vw;
-    margin-left:7.5vw;
+
+input[type=button]{
+    margin-bottom: 10px;
 
 
-}
-.button2{
-    
-    margin-top:15px;
 }
 .head1{
     margin: 0;
