@@ -131,7 +131,7 @@ function okay(){
             display: "block"
         })
         container.style.gridTemplateRows = "100%";
-        navExp.style.gridTemplateRows = "12vh 12vh 12vh 12vh auto auto 5vh";
+        navExp.style.gridTemplateRows = "12% 12% 12% 12% 20% 20% 5%";
         TweenLite.fromTo(navExp, 1 , {
             width: "0"
         },{
