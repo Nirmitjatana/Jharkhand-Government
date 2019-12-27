@@ -109,27 +109,26 @@ function okay(){
             opacity: "1",
             display: "block"
         })
-        TweenLite.fromTo(logo2, 1, {
+        TweenLite.fromTo(logo2, 2, {
+            opacity: "0",
+        },{
+            opacity: "1",
+        })
+        TweenLite.fromTo(logo3, 2, {
             opacity: "0",
             display: "none"
         },{
             opacity: "1",
             display: "block"
         })
-        TweenLite.fromTo(logo3, 1, {
+        TweenLite.fromTo(govt, 2, {
             opacity: "0",
             display: "none"
         },{
             opacity: "1",
             display: "block"
         })
-        TweenLite.fromTo(govt, 1, {
-            opacity: "0",
-            display: "none"
-        },{
-            opacity: "1",
-            display: "block"
-        })
+        logo2.style.display = "block";
         container.style.gridTemplateRows = "100%";
         navExp.style.gridTemplateRows = "12% 12% 12% 12% 20% 20% 5%";
         TweenLite.fromTo(navExp, 1 , {
