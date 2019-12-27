@@ -149,16 +149,19 @@ table{
     width: 90%;
     height: 90%;
     overflow: scroll;
+    left: 50%;
+    transform: translateX(-50%);
 }
 table, th, td {
     border: 1px solid rgb(196, 196, 196);
     text-justify: center;
     background: white;
+    
 }
 th, td {
     text-align: center;
     height: 6vh;
-    width: 40px;
+    width: auto;
 }
 .inner > p{
     position: relative;
