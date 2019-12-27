@@ -38,6 +38,7 @@ body{
 }
 .logo2{
     position: relative;
+    width: 50%;
     left: 50%;
     transform: translateX(-50%);
 }
