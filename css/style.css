@@ -20,13 +20,14 @@ body{
 /* Nav: Start */ 
 .nav_expanded{
     position: relative;
-    background-color:rgba(255, 62, 62, 0.89);
+    background-color:rgb(255, 62, 62);
     display: grid;
-    grid-template-rows: 20% 10% 10% 10% 10% 20% 20%;
+    grid-template-rows: 19% 10% 10% 10% 10% 19% 19% 3%;
     color: white;
     align-items: center;
     font-weight: 300;
     max-height: 900px;
+    z-index: 1;
 }
 .logo3{
     padding-left: 4vw;
@@ -52,6 +53,10 @@ body{
     transform-origin: left;
     text-decoration: none;
     color: white;
+    border-top: solid white 1.1px;
+}
+.save{
+    border-bottom: solid white 1.1px;
 }
 .nav_expanded > a > img{
     position: absolute;
@@ -70,8 +75,11 @@ body{
 }
 .nav_expanded > a:hover{
     background: white;
-    color: rgba(255, 62, 62, 0.89);
+    color: rgb(255, 62, 62);
     box-shadow: 10px 10px 5px -6px rgba(0,0,0,0.43);
+}
+.nav_expanded > p{
+    padding-left: 3.3vw;
 }
 .ham{
     display: none;
@@ -88,7 +96,7 @@ body{
     grid-row-gap: 3vh;
 }
 .aboutMain > h1{
-    color: rgba(255, 62, 62, 0.89);
+    color: rgb(255, 62, 62);
     font-weight: 750;
     margin: 0;
     padding: 0;
@@ -108,6 +116,9 @@ body{
 }
 
 /* About: End */
+.header{
+    display: none;
+}
 @media screen and (min-height: 1100px){
     .aboutMain{
         grid-template-rows: min-content min-content 400px auto;
@@ -119,9 +130,10 @@ body{
         grid-template-columns: none;
         grid-template-rows: 55px auto;
         grid-row-gap: 30px;
-        transition: all 2s ease-in-out;
+        transition: width 2s ease-in-out;
     }
     .nav_expanded{
+        padding-top: 55px;
         grid-template-rows: 100%;
         width: 100vw;
         /* padding-left: 3vw; */
@@ -132,12 +144,18 @@ body{
         padding-left: 0;
     }
     .logo2{
+        width: 33vw;
         display: none;
     }
     .logo3{
+        height: 18%;
+        width: 33vw;
         display: none;
     }
-    
+    .nav_expanded > p{
+        font-size: 1rem;
+        display: none;
+    }
     .nav_expanded > a > img{
         left: 3vw;
     }
@@ -150,9 +168,10 @@ body{
         justify-items: center;
         grid-row-gap: 30px;
     }
-    /* .aboutMain > h1{
-        justify-self: left;
-    } */
+    .aboutMain{
+        position: absolute;
+        margin-top: 168px;
+    }
     .images{
         display: grid;
         grid-template-columns: none;
@@ -171,7 +190,7 @@ body{
     }
     .mainLogo{
         position: relative;
-        display: block;
+        display: none;
         padding-left: 0;
         height: 49px;
         width: 49px;
@@ -184,7 +203,33 @@ body{
         margin: 0 6vw;
         margin-bottom: 5vh;
     }
-    .ham{
+    /* .ham{
+        display: block;
+        position: absolute;
+        top: 15px;
+        left: 10px;
+        cursor: pointer;
+    } */
+    .header{
+        position: absolute;
+        display: block;
+        height: 55px;
+        background: rgb(255, 62, 62);
+        top: 0;
+        width: 100vw;
+        z-index: 100;
+    }
+    .mainLogob{
+        position: absolute;
+        display: block;
+        padding-left: 0;
+        height: 49px;
+        width: 49px;
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 50px;
+    }
+    .bam{
         display: block;
         position: absolute;
         top: 15px;
