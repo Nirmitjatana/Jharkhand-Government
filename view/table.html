@@ -35,10 +35,11 @@
         <div class="tableMain">
             <div class="selector">
                 <h1>Table Selection</h1>
-                <select name="" id="main">
+                <select name="" id="main" onchange="table()">
                     <option value="0">Hospitalisation</option>
                     <option value="1">B</option>
                     <option value="2">C</option>
+                    <option value="3">D</option>
                 </select>
             </div>
             <div class="tablee">
@@ -51,7 +52,7 @@
                     <option value="2">C</option>
                   </select>
                   <a href="">Generate PDF</a>
-                  <table>
+                  <table class="tableContainer">
                       <tr>
                         <th>Company</th>
                         <th>Contact</th>

@@ -141,11 +141,22 @@ function okay(){
     }
 }
 
-const container = document.querySelector(".tableContainer");
-const drop = document.querySelector("#dropdown");
+const tableContainer = document.querySelector(".tableContainer");
+const drop = document.querySelector("#main");
 var dbTables = [
     ["Alfreds","Maria","Germany" ],
     ["Centro","Francisco","Mexico"],
     ["Ernst","Roland","Austria"],
     ["Island","Helen","UK"]
 ];
+var columns = [
+    ["Name", "Last Name", "Country"],
+    ["Nice", "Last", "Count"],
+    ["Nae", "Last Na", "Cotry"],
+    ["Na", "Last", "try"]
+];
+table();
+function table(){
+    var val = drop.value;
+    tableContainer.innerHTML = "<tr><th>"+columns[val][0]+"</th><th>"+columns[val][1]+"</th><th>"+columns[val][2]+"</th></tr><tr><td>"+dbTables[val][0]+"</td><td>"+dbTables[val][1]+"</td><td>"+dbTables[val][2]+"</td></tr>"
+}
