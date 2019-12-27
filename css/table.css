@@ -107,7 +107,7 @@ select{
     /* position: relative;
     left: 5%; */
     outline-color: none;
-    width: 60vw;
+    width: 70vw;
     height: 3rem;
     font-size: 1rem;
     border: none;
@@ -123,7 +123,7 @@ select{
 .inner{
     position: relative;
     background: #F7F7F7;
-    width: calc(100% + 5vw);
+    width: 70vw;
     padding-bottom: 4vh;
 }
 .inner > a{
@@ -139,7 +139,7 @@ select{
     margin-top: 2%;
     background-color: white;
     color: #AAAAAA;
-    width: 60vw;
+    width: 65vw;
 }
 .inner > a{
     color: #62BCCC;
@@ -148,7 +148,7 @@ table{
     position: relative;
     border-collapse: collapse;
     left: 5%;
-    width: 60vw;
+    width: 65vw;
     height: 90%;
     overflow: scroll;
     left: 50%;
@@ -175,7 +175,9 @@ th, td {
 .tablee > h1{
     font-size: 1.5rem;
 }
-
+.header{
+    display:none;
+}
 
 @media screen and (max-width: 700px){
     
@@ -233,7 +235,7 @@ th, td {
         width: 90vw;
     }
     table{
-        width: 90%;
+        width: 80vw;
     }
     .ham{
         display: none;
@@ -253,10 +255,16 @@ th, td {
         border-radius: 50px;
     }
     .inner{
-        width: calc(100%);
+        width: calc(90vw);
+    }
+    select{
+        width: 90vw;
+    }
+    .inner > a, .inner > p{
+        left: 6%;
     }
     .inner > select{
-        width: 90%;
+        width: 80vw;
     }
     th, td, tr{
         height: 9vh;
