@@ -124,7 +124,6 @@ select{
     position: relative;
     background: #F7F7F7;
     width: calc(100% + 5vw);
-    /* left: -5%; */
     padding-bottom: 4vh;
 }
 .inner > a{
@@ -132,7 +131,7 @@ select{
     position: relative;
     font-size: 0.9rem;
     margin-top: 5%;
-    left: 5%;
+    left: 4%;
     width: fit-content;
 }
 .inner > select{
