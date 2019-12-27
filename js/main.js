@@ -40,6 +40,7 @@ const logo3 = document.querySelector(".logo3");
 const govt = document.querySelector(".govt");
 let i = 0;
 ham.addEventListener("click" , okay);
+const t1 = new TimelineLite();
 
 function okay(){
     i++;
@@ -109,33 +110,33 @@ function okay(){
             opacity: "1",
             display: "block"
         })
-        TweenLite.fromTo(logo2, 2, {
-            opacity: "0",
-        },{
-            opacity: "1",
-        })
-        TweenLite.fromTo(logo3, 2, {
-            opacity: "0",
-            display: "none"
-        },{
-            opacity: "1",
-            display: "block"
-        })
-        TweenLite.fromTo(govt, 2, {
-            opacity: "0",
-            display: "none"
-        },{
-            opacity: "1",
-            display: "block"
-        })
         logo2.style.display = "block";
         container.style.gridTemplateRows = "100%";
         navExp.style.gridTemplateRows = "12% 12% 12% 12% 20% 20% 5%";
-        TweenLite.fromTo(navExp, 1 , {
+        t1.fromTo(navExp, 1 , {
             width: "0"
         },{
             width: "100%"
-        });
+        })
+        .fromTo(logo2, 0.1, {
+            opacity: "0",
+        },{
+            opacity: "1",
+        })
+        .fromTo(logo3, 0.1, {
+            opacity: "0",
+            display: "none"
+        },{
+            opacity: "1",
+            display: "block"
+        })
+        .fromTo(govt, 0.1, {
+            opacity: "0",
+            display: "none"
+        },{
+            opacity: "1",
+            display: "block"
+        })
     }
 }
 

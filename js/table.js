@@ -36,26 +36,109 @@ save.addEventListener("mouseout", ()=>{
     saveImg.src = "../Assets/img/save.png";
 })
 
-const ham = document.querySelector(".ham");
+const ham = document.querySelector(".bam");
 const navExp = document.querySelector(".nav_expanded");
 const container = document.querySelector(".container");
+const logo2 = document.querySelector(".logo2");
+const logo3 = document.querySelector(".logo3");
+const govt = document.querySelector(".govt");
 let i = 0;
-ham.addEventListener("click" , ()=>{
+ham.addEventListener("click" , okay);
+const t1 = new TimelineLite();
+function okay(){
     i++;
     if(i%2 == 0){
         about.style.display = "none";
         feed.style.display = "none";
         tables.style.display = "none";
         save.style.display = "none";
+        logo2.style.display = "none";
+        logo3.style.display = "none";
+        govt.style.display = "none";
         container.style.gridTemplateRows = "55px auto";
-        navExp.style.gridTemplateRows = "100%";
+        TweenLite.fromTo(navExp, 1 , {
+            width: "100%"
+        },{
+            width: "0"
+        });
+        TweenLite.fromTo(about, 0.5, {
+            opacity: "1"
+        },{
+            opacity: "0"
+        })
+        TweenLite.fromTo(feed, 0.5, {
+            opacity: "1"
+        },{
+            opacity: "0"
+        })
+        TweenLite.fromTo(tables, 0.5, {
+            opacity: "1"
+        },{
+            opacity: "0"
+        })
+        TweenLite.fromTo(save, 0.5, {
+            opacity: "1"
+        },{
+            opacity: "0"
+        })
+        logo2.style.opacity = "0";
+        logo2.style.display = "none";
     }
     else{
-        about.style.display = "block";
-        feed.style.display = "block";
-        tables.style.display = "block";
-        save.style.display = "block";
-        container.style.gridTemplateRows = "35% 65%";
-        navExp.style.gridTemplateRows = "55px auto auto auto auto";
+        TweenLite.fromTo(about, 0.1, {
+            opacity: "0",
+            display: "none"
+        },{
+            opacity: "1",
+            display: "block"
+        })
+        TweenLite.fromTo(feed, 0.1, {
+            opacity: "0",
+            display: "none"
+        },{
+            opacity: "1",
+            display: "block"
+        })
+        TweenLite.fromTo(tables, 0.1, {
+            opacity: "0",
+            display: "none"
+        },{
+            opacity: "1",
+            display: "block"
+        })
+        TweenLite.fromTo(save, 0.1, {
+            opacity: "0",
+            display: "none"
+        },{
+            opacity: "1",
+            display: "block"
+        })
+        logo2.style.display = "block";
+        container.style.gridTemplateRows = "100%";
+        navExp.style.gridTemplateRows = "12% 12% 12% 12% 20% 20% 5%";
+        t1.fromTo(navExp, 1 , {
+            width: "0"
+        },{
+            width: "100%"
+        })
+        .fromTo(logo2, 0.1, {
+            opacity: "0",
+        },{
+            opacity: "1",
+        })
+        .fromTo(logo3, 0.1, {
+            opacity: "0",
+            display: "none"
+        },{
+            opacity: "1",
+            display: "block"
+        })
+        .fromTo(govt, 0.1, {
+            opacity: "0",
+            display: "none"
+        },{
+            opacity: "1",
+            display: "block"
+        })
     }
-})
+}

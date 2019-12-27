@@ -21,22 +21,27 @@ body{
 /* Nav: Start */ 
 .nav_expanded{
     position: relative;
-    background-color:rgba(255, 62, 62, 0.89);
+    background-color:#FF5F58;
     display: grid;
-    grid-template-rows: 20% 10% 10% 10% 10% 20% 20%;
+    grid-template-rows: 19% 10% 10% 10% 10% 19% 19% 3%;
     color: white;
     align-items: center;
     font-weight: 300;
     max-height: 900px;
+    z-index: 1;
 }
 .logo3{
-    padding-left: 4vw;
+    position: relative;
     width: 35%;
     height: 7vw;
+    left: 50%;
+    transform: translateX(-50%);
 }
 .logo2{
-    padding-left: 4vw;
+    position: relative;
     width: 35%;
+    left: 50%;
+    transform: translateX(-50%);
 }
 .mainLogo{
     padding-left: 4vw;
@@ -53,30 +58,37 @@ body{
     transform-origin: left;
     text-decoration: none;
     color: white;
+    border-top: solid white 1.1px;
+}
+.save{
+    border-bottom: solid white 1.1px;
 }
 .nav_expanded > a > img{
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    height: 24px;
-    width: 24px;
+    
 }
 .nav_expanded > a > p{
     position: absolute;
     margin: 0;
     padding: 0;
+    
     top: 50%;
     left: calc(4vw + 40px);
     transform: translateY(-50%);
 }
 .nav_expanded > a:hover{
     background: white;
-    color: rgba(255, 62, 62, 0.89);
+    color: #FF5F58;
     box-shadow: 10px 10px 5px -6px rgba(0,0,0,0.43);
+}
+.nav_expanded > p{
+    text-align: center;
 }
 .ham{
     display: none;
-} 
+}
 
 
 
@@ -100,13 +112,13 @@ select{
     font-size: 1rem;
     border: none;
     border-radius: 5px;
-    background-color: rgb(228, 228, 228);
+    background-color: #F7F7F7;
     color: rgba(98, 107, 116, 0.911);
     font-weight: 200;
 }
 .inner{
     position: relative;
-    background: rgb(228, 228, 228);
+    background: #F7F7F7;
     width: calc(100% + 5vw);
     padding-bottom: 4vh;
 }
@@ -121,7 +133,7 @@ select{
 .inner > select{
     margin-top: 2%;
     background-color: white;
-    color: rgba(98, 107, 116, 0.911);;
+    color: rgba(98, 107, 116, 0.911);
 }
 table{
     position: relative;
@@ -129,7 +141,7 @@ table{
     left: 5%;
     width: 90%;
     height: 90%;
-    
+    overflow: scroll;
 }
 table, th, td {
     border: 1px solid black;
@@ -144,11 +156,13 @@ table, th, td {
         grid-template-columns: none;
         grid-template-rows: 55px auto;
         grid-row-gap: 30px;
-        transition: all 2s ease-in-out;
+        transition: width 2s ease-in-out;
     }
     .nav_expanded{
+        padding-top: 55px;
         grid-template-rows: 100%;
         width: 100vw;
+        /* padding-left: 3vw; */
     }
     .nav_expanded > a{
         display: none;
@@ -156,20 +170,42 @@ table, th, td {
         padding-left: 0;
     }
     .logo2{
+        position: relative;
+        left: 50vw;
+        transform: translateX(-50%);
+        /* padding-left: 4vw; */
+        width: 33vw;
+        display: none;
+        width: 33vw;
         display: none;
     }
     .logo3{
+        position: relative;
+        left: 50vw;
+        height: 18%;
+        width: 33vw;
         display: none;
     }
-    
+    .nav_expanded > p{
+        position: relative;
+        text-align: center;
+        padding-top: none;
+        margin: 0;
+        font-size: 1rem;
+        display: none;
+    }
     .nav_expanded > a > img{
         left: 3vw;
     }
     .nav_expanded > a > p{
         left: calc(40px + 3vw);
     }
+    .tableMain{
+        position: absolute;
+        margin-top: 168px;
+    }
     .ham{
-        display: block;
+        display: none;
         position: absolute;
         top: 15px;
         left: 10px;
@@ -177,7 +213,7 @@ table, th, td {
     }
     .mainLogo{
         position: relative;
-        display: block;
+        display: none;
         padding-left: 0;
         height: 49px;
         width: 49px;
@@ -187,5 +223,31 @@ table, th, td {
     }
     .inner{
         width: calc(100%);
+    }
+    .header{
+        position: absolute;
+        display: block;
+        height: 55px;
+        background: #FF5F58;
+        top: 0;
+        width: 100vw;
+        z-index: 100;
+    }
+    .mainLogob{
+        position: absolute;
+        display: block;
+        padding-left: 0;
+        height: 49px;
+        width: 49px;
+        left: 50vw;
+        transform: translateX(-55%);
+        border-radius: 50px;
+    }
+    .bam{
+        display: block;
+        position: absolute;
+        top: 15px;
+        left: 10px;
+        cursor: pointer;
     }
 }

@@ -20,7 +20,7 @@ body{
 /* Nav: Start */ 
 .nav_expanded{
     position: relative;
-    background-color:rgb(255, 62, 62);
+    background-color:#FF5F58;
     display: grid;
     grid-template-rows: 19% 10% 10% 10% 10% 19% 19% 3%;
     color: white;
@@ -30,16 +30,23 @@ body{
     z-index: 1;
 }
 .logo3{
-    padding-left: 4vw;
+    position: relative;
     width: 35%;
     height: 7vw;
+    left: 50%;
+    transform: translateX(-50%);
 }
 .logo2{
-    padding-left: 4vw;
+    position: relative;
     width: 35%;
+    left: 50%;
+    transform: translateX(-50%);
 }
 .mainLogo{
-    padding-left: 4vw;
+    /* padding-left: 4vw; */
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
     width: 35%;
 }
 .nav_expanded > a{
@@ -68,18 +75,18 @@ body{
     position: absolute;
     margin: 0;
     padding: 0;
-    
     top: 50%;
     left: calc(4vw + 40px);
     transform: translateY(-50%);
 }
 .nav_expanded > a:hover{
     background: white;
-    color: rgb(255, 62, 62);
+    color: #FF5F58;
     box-shadow: 10px 10px 5px -6px rgba(0,0,0,0.43);
 }
 .nav_expanded > p{
-    padding-left: 3.3vw;
+    /* padding-left: 3.3vw; */
+    text-align: center;
 }
 .ham{
     display: none;
@@ -96,7 +103,7 @@ body{
     grid-row-gap: 3vh;
 }
 .aboutMain > h1{
-    color: rgb(255, 62, 62);
+    color: #FF5F58;
     font-weight: 750;
     margin: 0;
     padding: 0;
@@ -144,16 +151,26 @@ body{
         padding-left: 0;
     }
     .logo2{
+        position: relative;
+        left: 50vw;
+        transform: translateX(-50%);
+        /* padding-left: 4vw; */
         width: 33vw;
         display: none;
     }
     .logo3{
+        /* transform: none; */
+        /* padding-left: 4vw; */
+        position: relative;
+        left: 50vw;
         height: 18%;
         width: 33vw;
         display: none;
     }
     .nav_expanded > p{
-        padding-top: none;
+        position: relative;
+        text-align: center;
+        padding-top: 0;
         margin: 0;
         font-size: 1rem;
         display: none;
@@ -216,8 +233,8 @@ body{
         position: absolute;
         display: block;
         height: 55px;
-        background: rgb(255, 62, 62);
-        top: 0;
+        background: #FF5F58;
+        top: 0; 
         width: 100vw;
         z-index: 100;
     }
