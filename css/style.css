@@ -196,7 +196,7 @@ body{
         padding-left: 0;
         height: 49px;
         width: 49px;
-        left: 50%;
+        left: 50vw;
         transform: translateX(-50%);
         border-radius: 50px;
     }
@@ -227,8 +227,8 @@ body{
         padding-left: 0;
         height: 49px;
         width: 49px;
-        left: 50%;
-        transform: translateX(-50%);
+        left: 50vw;
+        transform: translateX(-55%);
         border-radius: 50px;
     }
     .bam{
