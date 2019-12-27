@@ -101,7 +101,7 @@ body{
     margin-top: 8vh;
 }
 .tableMain > div > h1{
-    color: rgba(255, 62, 62, 0.89);
+    color: #FF5F58;
 }
 select{
     position: relative;
@@ -111,9 +111,8 @@ select{
     height: 3rem;
     font-size: 1rem;
     border: none;
-    border-radius: 5px;
     background-color: #F7F7F7;
-    color: rgba(98, 107, 116, 0.911);
+    color: #AAAAAA;
     font-weight: 200;
 }
 .inner{
@@ -133,7 +132,10 @@ select{
 .inner > select{
     margin-top: 2%;
     background-color: white;
-    color: rgba(98, 107, 116, 0.911);
+    color: #AAAAAA;
+}
+.inner > a{
+    color: #62BCCC;
 }
 table{
     position: relative;
@@ -147,6 +149,12 @@ table, th, td {
     border: 1px solid black;
     text-justify: center;
     background: white;
+}
+.inner > p{
+    position: relative;
+    left: 5%;
+    padding-top: 3vh;
+    color: #AAAAAA;
 }
 
 
