@@ -133,7 +133,7 @@ body{
         transition: width 2s ease-in-out;
     }
     .nav_expanded{
-        padding-top: 55px;
+        padding-top: 56px;
         grid-template-rows: 100%;
         width: 100vw;
         /* padding-left: 3vw; */
@@ -153,6 +153,8 @@ body{
         display: none;
     }
     .nav_expanded > p{
+        padding-top: none;
+        margin: 0;
         font-size: 1rem;
         display: none;
     }
