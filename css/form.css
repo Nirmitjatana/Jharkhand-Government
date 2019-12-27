@@ -112,7 +112,6 @@ body{
     
     color: rgba(80, 80, 80, 0.89);
     font-size: 1.6em;
-
 }
 input[type=text]{
     padding:10px 15px;
@@ -139,7 +138,7 @@ input[type=button]{
     border-style: hidden;
     cursor: pointer;
     border-radius: 5px;
-    
+    width:400px;
 
 }
 .button1{
@@ -152,6 +151,9 @@ input[type=button]{
     border-style: hidden;
     cursor: pointer;
     border-radius: 5px;
+    width:260px;
+    height:70px;
+    margin-right: 74px;
     
 }
 .button2{
@@ -163,7 +165,9 @@ input[type=button]{
     cursor: pointer;
     border-color: rgba(255, 62, 62, 0.89);
     border-radius: 5px;
-    
+    width:260px;
+    height:70px;
+    margin-right: 73px;
 }
 .button3{
     background-color: rgba(255, 62, 62, 0.89);
@@ -175,8 +179,18 @@ input[type=button]{
     border-style: hidden;
     cursor: pointer;
     border-radius: 5px;
+    width:260px;
+    height:70px;
 }
-
+.saveImg1{
+    height:2.5vh;
+    width:2.5vh;
+    opacity: 0.6;
+    padding-right:3vw;
+}
+.f1{
+    margin-bottom: 40px;
+}
 
 @media screen and (min-height: 1100px){
     .head{
