@@ -144,6 +144,7 @@ function okay(){
 const tableContainer = document.querySelector(".tableContainer");
 const drop = document.querySelector("#main");
 const change = document.querySelector(".change");
+const change2 = document.querySelector(".changeb")
 var options = ["Hospitalisation", "B" , "C" , "D"];
 var dbTables = [
     ["Alfreds","Maria","Germany" ],
@@ -161,5 +162,6 @@ table();
 function table(){
     var val = drop.value;
     change.innerHTML = options[val]+" Status";
+    change2.innerHTML = options[val]+" Status";
     tableContainer.innerHTML = "<tr><th>"+columns[val][0]+"</th><th>"+columns[val][1]+"</th><th>"+columns[val][2]+"</th></tr><tr><td>"+dbTables[val][0]+"</td><td>"+dbTables[val][1]+"</td><td>"+dbTables[val][2]+"</td></tr>"
 }
