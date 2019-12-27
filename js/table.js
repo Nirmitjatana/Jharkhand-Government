@@ -140,3 +140,12 @@ function okay(){
         })
     }
 }
+
+const container = document.querySelector(".tableContainer");
+const drop = document.querySelector("#dropdown");
+var dbTables = [
+    ["Alfreds","Maria","Germany" ],
+    ["Centro","Francisco","Mexico"],
+    ["Ernst","Roland","Austria"],
+    ["Island","Helen","UK"]
+];

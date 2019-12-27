@@ -104,8 +104,8 @@ body{
     color: #FF5F58;
 }
 select{
-    position: relative;
-    left: 5%;
+    /* position: relative;
+    left: 5%; */
     outline-color: none;
     width: 40vw;
     height: 3rem;
@@ -115,10 +115,15 @@ select{
     color: #AAAAAA;
     font-weight: 200;
 }
+.inner > select{
+    position: relative;
+    left: 5%;
+}
 .inner{
     position: relative;
     background: #F7F7F7;
     width: calc(100% + 5vw);
+    /* left: -5%; */
     padding-bottom: 4vh;
 }
 .inner > a{
@@ -156,6 +161,9 @@ table, th, td {
     padding-top: 3vh;
     color: #AAAAAA;
     width: fit-content;
+}
+.tablee > h1{
+    font-size: 1.5rem;
 }
 
 
