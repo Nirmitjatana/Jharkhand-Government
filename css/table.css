@@ -155,10 +155,10 @@ table, th, td {
     text-justify: center;
     background: white;
 }
-th, td, tr{
+th, td {
     text-align: center;
     height: 6vh;
-    width: 3vw;
+    width: 40px;
 }
 .inner > p{
     position: relative;
