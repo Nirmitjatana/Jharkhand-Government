@@ -228,6 +228,7 @@ th, td {
     .tableMain{
         position: absolute;
         margin-top: 168px;
+        width: 90vw;
     }
     .ham{
         display: none;
