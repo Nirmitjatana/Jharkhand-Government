@@ -127,7 +127,7 @@ select{
     font-size: 0.9rem;
     margin-top: 5%;
     left: 5%;
-    width:80%;
+    width: fit-content;
 }
 .inner > select{
     margin-top: 2%;
