@@ -117,7 +117,8 @@ select{
 }
 .inner > select{
     position: relative;
-    left: 5%;
+    left: 50%;
+    transform: translateX(-50%);
 }
 .inner{
     position: relative;
@@ -135,9 +136,11 @@ select{
     width: fit-content;
 }
 .inner > select{
+    
     margin-top: 2%;
     background-color: white;
     color: #AAAAAA;
+    width: 60vw;
 }
 .inner > a{
     color: #62BCCC;
@@ -146,7 +149,7 @@ table{
     position: relative;
     border-collapse: collapse;
     left: 5%;
-    width: 90%;
+    width: 60vw;
     height: 90%;
     overflow: scroll;
     left: 50%;
@@ -165,7 +168,7 @@ th, td {
 }
 .inner > p{
     position: relative;
-    left: 5%;
+    left: 4%;
     padding-top: 3vh;
     color: #AAAAAA;
     width: fit-content;
@@ -229,6 +232,9 @@ th, td {
         position: absolute;
         margin-top: 168px;
         width: 90vw;
+    }
+    table{
+        width: 90%;
     }
     .ham{
         display: none;

@@ -143,6 +143,7 @@ function okay(){
 
 const tableContainer = document.querySelector(".tableContainer");
 const drop = document.querySelector("#main");
+const change = document.querySelector(".change");
 var dbTables = [
     ["Alfreds","Maria","Germany" ],
     ["Centro","Francisco","Mexico"],
