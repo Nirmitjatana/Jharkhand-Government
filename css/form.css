@@ -154,34 +154,53 @@ input[type=button]{
     width:400px;
 
 }
-.button1{
-    background-color: rgba(228, 228, 228, 0.89);
-    color: black;
-    font-weight: 600;
-    font-size: medium;
-    padding: 16px 16px 16px 16px;
-    border-color: rgba(201, 201, 201, 0.89);
-    border-style: hidden;
-    cursor: pointer;
+.inputGroup {
+    background-color: rgba(243, 242, 242, 0.89);
+    display:inline-block;
+    margin: 10px 0;
+    position: relative;
+    height: 50px;
+    width: 240px;
+    padding-top: 20px;
+    padding-left: 25px;
     border-radius: 5px;
-    width:260px;
-    height:70px;
-    margin-right: 74px;
-    margin-bottom: 10px;
-}
-.button2{
-    background-color: white;
-    color: rgba(255, 62, 62, 0.89);
-    font-weight: 600;
-    font-size: medium;
-    padding: 16px 16px 16px 16px;
     cursor: pointer;
+    margin-right: 62px;
+    margin-bottom: 10px;
     border-color: rgba(255, 62, 62, 0.89);
-    border-radius: 5px;
-    width:260px;
-    height:70px;
-    margin-right: 73px;
-    margin-bottom: 10px;
+    outline-style: none;
+    border-top-style: none;
+    border-right-style: none;
+    border-left-style: none;
+    border-bottom-style:none;
+    border-width: 2.5px;
+}
+.inputGroup:hover{
+    background-color: rgba(255, 62, 62, 0.89);
+    color:white;
+    &.label{color:white} 
+}
+
+label{
+    padding-top: 24px;
+
+    padding-bottom: 24px;
+    padding-left: 60px;
+    padding-right: 60px;
+    font-weight: 600;
+    font-size: large;
+    color: rgba(107, 107, 107, 0.89);
+    height: 70px;
+    width:400px;
+    
+    margin-left: -50px;
+
+}
+label:hover{
+    color:white;
+}
+
+
 }
 .button3{
     background-color: rgba(255, 62, 62, 0.89);
