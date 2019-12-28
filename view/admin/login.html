@@ -29,7 +29,8 @@ body{
 
 .username{
     position: absolute;
-    height: 5vh;
+    height: fit-content;
+    
     width: 40vw;
     top: calc(50vh - 50px);
     left: 50vw;
@@ -44,15 +45,15 @@ body{
 }
 .password{
     position: absolute;
-    height: 5vh;
     width: 40vw;
     top: calc(50vh + 50px);
     left: 50vw;
     transform: translate(-50%,-50%);
 }
 input{
-    color:rgba(197, 197, 197, 0.89);
-    font-size: 0.8em;
+    color:black;
+    padding: 7px 0;
+    font-size: 1rem;
     outline-style: none;
     border-top-style: groove;
     border-right-style: groove;
@@ -86,6 +87,9 @@ h1{
     width: fit-content
 }
 @media screen and (max-width: 700px){
+    input{
+        padding: 3px 0;
+    }
     .user{
         top: calc(40vh - 100px);
     }
@@ -111,9 +115,9 @@ h1{
     <h1>Admin Login</h1>
     <form action="">
         <p class="user">Username</p>
-        <input type="text" name="Name" value="" class="input username" placeholder="Username">
+        <input type="text" name="Username" value="" class="input username" placeholder="Username">
         <p class="pass">Password</p>
-        <input type="text" name="Name" value="" class="input password" placeholder="Password">
+        <input type="text" name="Password" value="" class="input password" placeholder="Password">
         <input type="submit" class="submit" value="Login">
     </form>
     <!-- <div class="main">
