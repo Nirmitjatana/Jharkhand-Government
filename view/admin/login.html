@@ -9,33 +9,57 @@
 <style>
 *{
     font-family: sans-serif;
+    margin: 0;
+    padding: 0;
 }
 body{
     margin: 0;
     padding: 0;
-    height: 100vh;
-    width: 100vh;
+    background-color: #FF5F58;
 }
-.main{
-    position: relative;
-    margin: 0;
-    padding: 0;
+/* .main{
+    position: absolute;
+    height: ;
+    width: 50vw;
     top: 50vh;
     left: 50vw;
     transform: translate(-50%,-50%);
-    background-color: #FF5F58;
-    width: 30vw;
-    height: 30vh;
-    text-align: center;
-    color: white;
-}
+    background-color: aqua;
+    z-index: -2;
+} */
 .user{
-    position: relative;
-    padding-top: 3vh;
+    
+    color: white;
+    position: absolute;
+    top: calc(50vh - 100px);
+    left: 50vw;
+    transform: translate(-50%,-50%);
+}
+
+.username{
+    position: absolute;
+    height: 5vh;
+    width: 40vw;
+    top: calc(50vh - 50px);
+    left: 50vw;
+    transform: translate(-50%,-50%);
+}
+.pass{
+    color: white;
+    position: absolute;
+    top: calc(50vh);
+    left: 50vw;
+    transform: translate(-50%,-50%);
+}
+.password{
+    position: absolute;
+    height: 5vh;
+    width: 40vw;
+    top: calc(50vh + 50px);
+    left: 50vw;
+    transform: translate(-50%,-50%);
 }
 input{
-    height: 15%;
-    width: 80%;
     color:rgba(197, 197, 197, 0.89);
     font-size: 0.8em;
     outline-style: none;
@@ -43,7 +67,7 @@ input{
     border-right-style: groove;
     border-left-style: groove;
     border-bottom-style: groove;
-    border-radius: 9px;
+    border-radius: 2px;
     border-width: 2.5px;
     border-color: #FF5F58;
 }
@@ -52,16 +76,19 @@ h1{
     top: 2vh;
     left: 50vw;
     transform: translateX(-50%);
-    color: #FF5F58;
+    color: white;
+    font-size: 1rem;
 }
 </style>
 <body>
     <h1>Admin Login</h1>
-    <div class="main">
-        <p class="user">Username</p>
-        <input type="text" name="Name" value="" class="input username" placeholder="Username"><br>
-        <p class="pass">Password</p>
-        <input type="text" name="Name" value="" class="input password" placeholder="Password"><br>
-    </div>
+
+            <p class="user">Username</p>
+            <input type="text" name="Name" value="" class="input username" placeholder="Username">
+            <p class="pass">Password</p>
+            <input type="text" name="Name" value="" class="input password" placeholder="Password">
+    <!-- <div class="main">
+
+    </div> -->
 </body>
 </html>
