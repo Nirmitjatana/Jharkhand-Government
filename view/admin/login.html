@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,121 +8,220 @@
     <title>Admin Login</title>
 </head>
 <style>
-*{
-    font-family: sans-serif;
-    margin: 0;
-    padding: 0;
-}
-body{
-    margin: 0;
-    padding: 0;
-    background-color: #FF5F58;
-}
+    * {
+        font-family: sans-serif;
+        margin: 0;
+        padding: 0;
+    }
 
-.user{
-    
-    color: white;
-    position: absolute;
-    top: calc(50vh - 100px);
-    left: 50vw;
-    transform: translate(-50%,-50%);
-}
+    body {
+        margin: 0;
+        padding: 0;
+        background-color: #FF5F58;
+    }
 
-.username{
-    position: absolute;
-    height: fit-content;
-    
-    width: 40vw;
-    top: calc(50vh - 50px);
-    left: 50vw;
-    transform: translate(-50%,-50%);
-}
-.pass{
-    color: white;
-    position: absolute;
-    top: calc(50vh);
-    left: 50vw;
-    transform: translate(-50%,-50%);
-}
-.password{
-    position: absolute;
-    width: 40vw;
-    top: calc(50vh + 50px);
-    left: 50vw;
-    transform: translate(-50%,-50%);
-}
-input{
-    color:black;
-    padding: 7px 0;
-    font-size: 1rem;
-    outline-style: none;
-    border-top-style: groove;
-    border-right-style: groove;
-    border-left-style: groove;
-    border-bottom-style: groove;
-    border-radius: 2px;
-    border-width: 2.5px;
-    border-color: #FF5F58;
-}
-.submit{
-    position: absolute;
-    top: calc(50vh + 150px);
-    left: 50vw;
-    transform: translate(-50%,-50%);
-    width: fit-content;
-    height: fit-content;
-    padding: 5px 20px;
-    background: white;
-    outline: none;
-    border: none;
-    cursor: pointer;
-    color: #FF5F58;
-}
-h1{
-    position: absolute;
-    top: 2vh;
-    left: 50vw;
-    transform: translateX(-50%);
-    color: white;
-    font-size: 2rem;
-    width: fit-content
-}
-@media screen and (max-width: 700px){
-    input{
-        padding: 3px 0;
-    }
-    .user{
-        top: calc(40vh - 100px);
-    }
-    .username{
-        width: 80vw;
-        top: calc(40vh - 50px);
-    }
-    .password{
-        width: 80vw;
-        top: calc(40vh + 50px);
-    }
-    .pass{
-        top: calc(40vh);
-    }
-    .submit{
-        top: calc(40vh + 150px);
-        /* width: 20vw; */
+    .user {
 
+        color: white;
+        position: absolute;
+        top: calc(50vh - 100px);
+        left: 50vw;
+        transform: translate(-50%, -50%);
     }
-}
+
+    .username {
+        position: absolute;
+        height: fit-content;
+
+        width: 40vw;
+        top: calc(50vh - 50px);
+        left: 50vw;
+        transform: translate(-50%, -50%);
+    }
+
+    .pass {
+        color: white;
+        position: absolute;
+        top: calc(50vh);
+        left: 50vw;
+        transform: translate(-50%, -50%);
+    }
+
+    .password {
+        position: absolute;
+        width: 40vw;
+        top: calc(50vh + 50px);
+        left: 50vw;
+        transform: translate(-50%, -50%);
+    }
+
+    input {
+        color: black;
+        padding: 7px 0;
+        font-size: 1rem;
+        outline-style: none;
+        border-top-style: groove;
+        border-right-style: groove;
+        border-left-style: groove;
+        border-bottom-style: groove;
+        border-radius: 2px;
+        border-width: 2.5px;
+        border-color: #FF5F58;
+    }
+
+    .submit {
+        position: absolute;
+        top: calc(50vh + 150px);
+        left: 50vw;
+        transform: translate(-50%, -50%);
+        width: fit-content;
+        height: fit-content;
+        padding: 5px 20px;
+        background: white;
+        outline: none;
+        border: none;
+        cursor: pointer;
+        color: #FF5F58;
+    }
+
+    h1 {
+        position: absolute;
+        top: 2vh;
+        left: 50vw;
+        transform: translateX(-50%);
+        color: white;
+        font-size: 2rem;
+        width: fit-content
+    }
+
+    @media screen and (max-width: 700px) {
+        input {
+            padding: 3px 0;
+        }
+
+        .user {
+            top: calc(40vh - 100px);
+        }
+
+        .username {
+            width: 80vw;
+            top: calc(40vh - 50px);
+        }
+
+        .password {
+            width: 80vw;
+            top: calc(40vh + 50px);
+        }
+
+        .pass {
+            top: calc(40vh);
+        }
+
+        .submit {
+            top: calc(40vh + 150px);
+            /* width: 20vw; */
+
+        }
+    }
 </style>
+
 <body>
     <h1>Admin Login</h1>
-    <form action="">
+    <form id="formElem">
         <p class="user">Username</p>
-        <input type="text" name="Username" value="" class="input username" placeholder="Username">
+        <input type="text" name="Username" value="" class="input username" id="usr" placeholder="Username">
         <p class="pass">Password</p>
-        <input type="text" name="Password" value="" class="input password" placeholder="Password">
+        <input type="text" name="Password" value="" class="input password" id="pass" placeholder="Password">
         <input type="submit" class="submit" value="Login">
     </form>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" sync></script>
+    <script>
+        // formElem.onsubmit = async (e) => {
+        //     console.log('submit')
+        //     e.preventDefault();
+
+        //     let formdata = new FormData(formElem)
+        //     console.log(formdata)
+        //     let response = await fetch('http://pmjay.herokuapp.com/auth/token/login/', {
+        //         method: 'POST',
+        //         crossDomain: true,
+        //         credentials: 'include',
+        //         body: formdata
+        //     });
+
+        //     let result = await response.json();
+
+        //     alert(result.message);
+        // };
+        $(document).ready(function () {
+            $('.submit').click(function (e) {
+                e.preventDefault();
+                var username = document.getElementById("usr").value;
+                var password = document.getElementById("pass").value;
+                console.log(username, password)
+                //Register User
+                fetch("http://pmjay.herokuapp.com/auth/users/", {
+                        method: 'POST',
+                        crossDomain: true,
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({
+                            username: username,
+                            password: password,
+                        }),
+                    })
+                    .then(res => {
+                        console.log(res)
+                        if (res.status === 200) {
+                            console.log('done')
+                        } else {
+                            console.log('A user with that username already exists.')
+                        }
+                    })
+                    .catch(error => {
+                        console.log('Cannot connect to server')
+                    })
+
+                    //Login user
+
+                    fetch("http://pmjay.herokuapp.com/auth/token/login/", {
+                        method: 'POST',
+                        crossDomain: true,
+                        headers: {
+                            'Accept': 'application/json',
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({
+                            username: username,
+                            password: password,
+                        }),
+                    })
+                    .then(res => {
+                        console.log(res)
+                        console.log(res.json())
+                        if (res.status === 200) {
+                            console.log('Logged IN')
+                        } else {
+                            console.log('Not Logged IN')
+                        }
+                        return res.json()
+                    })
+                    .then(data => {
+                        console.log(data);
+                    })
+                    // .catch(error => {
+                    //     console.log('Cannot connect to server')
+                    // })
+
+
+            })
+        })
+    </script>
     <!-- <div class="main">
 
     </div> -->
 </body>
+
 </html>

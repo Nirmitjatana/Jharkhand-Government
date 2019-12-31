@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,24 +8,27 @@
     <title>Document</title>
 </head>
 <style>
-    *{
+    * {
         font-family: sans-serif;
     }
-    body{
+
+    body {
         margin: 0;
         padding: 0;
         height: 100vh;
         width: 100vw;
         background-color: #FF5F58;
     }
-    form{
+
+    form {
         position: absolute;
         top: 50vh;
         left: 50vw;
-        transform: translate(-50%,-50%);
+        transform: translate(-50%, -50%);
         color: white;
     }
-    h1{
+
+    h1 {
         position: absolute;
         top: 2vh;
         left: 50vw;
@@ -33,17 +37,67 @@
         color: white;
         font-size: 2rem;
     }
-@media screen and (max-width: 700px){
-    form{
-        top: 40vh;
+
+    @media screen and (max-width: 700px) {
+        form {
+            top: 40vh;
+        }
     }
-}
 </style>
+
 <body>
     <h1>Admin Portal</h1>
-    <form action="/action_page.php">
-        Select a file to upload: <br><br> <input type="file" name="myFile"><br><br>
+    <form id="formElem">
+        Select a file to upload: <br><br> <input type="file" name="myFile" id="file"><br><br>
         <input type="submit">
-      </form>      
+    </form>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" sync></script>
+
+    <script>
+        // Select your input type file and store it in a variable
+        const input = document.getElementById('file');
+
+        // This will upload the file after having read it
+        const upload = (file) => {
+            fetch('http://pmjay.herokuapp.com/upload/', { 
+                method: 'POST',
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: file // This is your file object
+            }).then(
+                response => response.json() // if the response is a JSON object
+            ).then(
+                success => console.log(success) // Handle the success response object
+            ).catch(
+                error => console.log(error) // Handle the error response object
+            );
+        };
+
+      
+        const onSelectFile = () => upload(input.files[0]);
+
+       
+        input.addEventListener('change', onSelectFile, false);
+        // formElem.onsubmit = async (e) => {
+        //     console.log('submit')
+        //     e.preventDefault();
+
+        //     const fileInput = document.querySelector('#file');
+        //     const formData = new FormData();
+
+        //     formData.append('file', fileInput.files[0]);
+
+        //     console.log(formData)
+        //     const options = {
+        //         method: 'POST',
+        //         body: formData
+        //     };
+
+        //     fetch('http://pmjay.herokuapp.com/upload/', options)
+        // };
+    </script>
 </body>
+
 </html>
