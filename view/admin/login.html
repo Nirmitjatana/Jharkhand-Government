@@ -19,40 +19,26 @@
         padding: 0;
         background-color: #FF5F58;
     }
-
-    .user {
-
-        color: white;
+    form{
         position: absolute;
-        top: calc(50vh - 100px);
-        left: 50vw;
-        transform: translate(-50%, -50%);
+        padding: 0;
+        transform: translate(-50%,-50%);
+        text-align: center;
     }
-
+    .submit{
+        display: block;
+    }
+    p{
+        color: white;
+        padding-bottom: 25px;
+    }
+    
     .username {
-        position: absolute;
-        height: fit-content;
-
         width: 40vw;
-        top: calc(50vh - 50px);
-        left: 50vw;
-        transform: translate(-50%, -50%);
     }
 
-    .pass {
-        color: white;
-        position: absolute;
-        top: calc(50vh);
-        left: 50vw;
-        transform: translate(-50%, -50%);
-    }
-
-    .password {
-        position: absolute;
-        width: 40vw;
-        top: calc(50vh + 50px);
-        left: 50vw;
-        transform: translate(-50%, -50%);
+    .password{
+       width: 40vw;
     }
 
     input {
@@ -67,13 +53,11 @@
         border-radius: 2px;
         border-width: 2.5px;
         border-color: #FF5F58;
+        margin-bottom: 20px;
     }
 
     .submit {
-        position: absolute;
-        top: calc(50vh + 150px);
-        left: 50vw;
-        transform: translate(-50%, -50%);
+        
         width: fit-content;
         height: fit-content;
         padding: 5px 20px;
@@ -82,6 +66,9 @@
         border: none;
         cursor: pointer;
         color: #FF5F58;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
     }
 
     h1 {
@@ -99,28 +86,13 @@
             padding: 3px 0;
         }
 
-        .user {
-            top: calc(40vh - 100px);
-        }
 
         .username {
             width: 80vw;
-            top: calc(40vh - 50px);
         }
 
         .password {
             width: 80vw;
-            top: calc(40vh + 50px);
-        }
-
-        .pass {
-            top: calc(40vh);
-        }
-
-        .submit {
-            top: calc(40vh + 150px);
-            /* width: 20vw; */
-
         }
     }
 </style>
@@ -134,9 +106,19 @@
         <input type="text" name="Password" value="" class="input password" id="pass" placeholder="Password">
         <input type="submit" class="submit" value="Login">
     </form>
-
+    <script>
+        const form = document.querySelector("#formElem");
+        var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
+        var height = (window.innerHeight > 0) ? window.innerHeight : screen.height;
+        height = height/2;
+        width = width/2;
+        form.style.top = height+"px";
+        form.style.left = width + "px";
+        console.log(form.style.top);
+    </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" sync></script>
     <script>
+        
         // formElem.onsubmit = async (e) => {
         //     console.log('submit')
         //     e.preventDefault();
