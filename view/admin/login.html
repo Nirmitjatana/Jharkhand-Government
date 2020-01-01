@@ -118,24 +118,6 @@
     </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" sync></script>
     <script>
-        
-        // formElem.onsubmit = async (e) => {
-        //     console.log('submit')
-        //     e.preventDefault();
-
-        //     let formdata = new FormData(formElem)
-        //     console.log(formdata)
-        //     let response = await fetch('http://pmjay.herokuapp.com/auth/token/login/', {
-        //         method: 'POST',
-        //         crossDomain: true,
-        //         credentials: 'include',
-        //         body: formdata
-        //     });
-
-        //     let result = await response.json();
-
-        //     alert(result.message);
-        // };
         $(document).ready(function () {
             $('.submit').click(function (e) {
                 e.preventDefault();
@@ -194,11 +176,7 @@
                         sessionStorage.setItem("token", data.auth_token)
                         window.location.href = 'inputfile.html'
                     })
-                    // .catch(error => {
-                    //     console.log('Cannot connect to server')
-                    // })
-
-
+                
             })
         })
     </script>
