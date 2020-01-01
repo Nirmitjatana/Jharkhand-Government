@@ -48,7 +48,9 @@
 <body>
     <h1>Admin Portal</h1>
     <form id="formElem">
-        Select a file to upload: <br><br> <input type="file" name="myFile" id="file"><br><br>
+        <input type="text" name="csv_name" value="" class="input" placeholder="csv_name">
+        <input type="text" name="version" value="" class="input" placeholder="version"><br>
+        Select a file to upload: <br><br> <input type="file" name="csv" id="file"><br><br>
         <input type="submit">
     </form>
 
@@ -56,31 +58,30 @@
 
     <script>
         console.log(sessionStorage.getItem("token"))
-        // Select your input type file and store it in a variable
         const input = document.getElementById('file');
-
-        // This will upload the file after having read it
         const upload = (file) => {
-
-            let formData = new FormData()
-            formData.append('csv_name', 'p2')
-            formData.append('csv', file)
-            formData.append('version', 'Hospital')
+            let formData = new FormData(formElem);
 
             for (var value of formData.values()) {
                 console.log(value);
             }
+            // var object = {};
+            // formData.forEach(function (value, key) {
+            //     console.log(value)
+            //     object[key] = value;
+            // });
+            // console.log(JSON.stringify(object))
 
-            formElem.onsubmit =  (e) => {
+            formElem.onsubmit = (e) => {
                 console.log('submit')
                 e.preventDefault();
                 fetch('http://pmjay.herokuapp.com/upload/', {
                     method: 'POST',
                     crossDomain: true,
                     headers: {
-                        "Authorization": "Token" + sessionStorage.getItem("token"),
-                        'Accept': 'application/json',
-                        "Content-Type": "application/json"
+                        "Authorization": "Token " + sessionStorage.getItem("token"),
+                        // 'Accept': 'application/json',
+                        // "Content-Type": "application/json"
                         // 'Access-Control-Allow-Credentials':'true'
                         // "Access-Control-Allow-Origin": 'null'
                     },
