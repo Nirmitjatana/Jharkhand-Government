@@ -55,30 +55,50 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" sync></script>
 
     <script>
+        console.log(sessionStorage.getItem("token"))
         // Select your input type file and store it in a variable
         const input = document.getElementById('file');
 
         // This will upload the file after having read it
         const upload = (file) => {
-            fetch('http://pmjay.herokuapp.com/upload/', { 
-                method: 'POST',
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                body: file // This is your file object
-            }).then(
-                response => response.json() // if the response is a JSON object
-            ).then(
-                success => console.log(success) // Handle the success response object
-            ).catch(
-                error => console.log(error) // Handle the error response object
-            );
+
+            let formData = new FormData()
+            formData.append('csv_name', 'p2')
+            formData.append('csv', file)
+            formData.append('version', 'Hospital')
+
+            for (var value of formData.values()) {
+                console.log(value);
+            }
+
+            formElem.onsubmit =  (e) => {
+                console.log('submit')
+                e.preventDefault();
+                fetch('http://pmjay.herokuapp.com/upload/', {
+                    method: 'POST',
+                    crossDomain: true,
+                    headers: {
+                        "Authorization": "Token" + sessionStorage.getItem("token"),
+                        'Accept': 'application/json',
+                        "Content-Type": "application/json"
+                        // 'Access-Control-Allow-Credentials':'true'
+                        // "Access-Control-Allow-Origin": 'null'
+                    },
+                    body: formData
+                }).then(
+                    response => response.json()
+                ).then(
+                    success => console.log(success)
+                ).catch(
+                    error => console.log(error)
+                );
+            }
         };
 
-      
+
         const onSelectFile = () => upload(input.files[0]);
 
-       
+
         input.addEventListener('change', onSelectFile, false);
         // formElem.onsubmit = async (e) => {
         //     console.log('submit')

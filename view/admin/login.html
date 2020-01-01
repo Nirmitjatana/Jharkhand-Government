@@ -200,7 +200,6 @@
                     })
                     .then(res => {
                         console.log(res)
-                        console.log(res.json())
                         if (res.status === 200) {
                             console.log('Logged IN')
                         } else {
@@ -209,7 +208,9 @@
                         return res.json()
                     })
                     .then(data => {
-                        console.log(data);
+                        console.log(data.auth_token);
+                        sessionStorage.setItem("token", data.auth_token)
+                        window.location.href = 'inputfile.html'
                     })
                     // .catch(error => {
                     //     console.log('Cannot connect to server')
