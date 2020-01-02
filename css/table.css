@@ -148,9 +148,10 @@ select{
 table{
     position: relative;
     border-collapse: collapse;
-    left: 5%;
     width: 65vw;
-    height: 90%;
+    /* max-height: 900px; */
+    display: block;
+    height: 40vh;
     overflow: scroll;
     left: 50%;
     transform: translateX(-50%);
@@ -161,10 +162,14 @@ table, th, td {
     background: white;
     
 }
+tr{
+    width: 33%;
+}
 th, td {
     text-align: center;
     height: 6vh;
-    width: auto;
+    padding: 2px 10px;
+    width: 33%;
 }
 .inner > p{
     position: relative;
