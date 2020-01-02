@@ -160,6 +160,54 @@ var columns = [
 ];
 table();
 function table(){
+
+
+    fetch("http://pmjay.herokuapp.com/csv/", {
+        method: 'GET',
+        crossDomain: true,
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
+            "Authorization": "Token 99998b6539472741666fb07fcdf6f338db860cdb"
+        },
+
+        })
+        .then(res => {
+            console.log(res)
+            if (res.status === 200) {
+                console.log('Logged IN')
+            } else {
+                console.log('Not Logged IN')
+            }
+           return res.json();
+           
+        })
+        .then(data => {
+            console.log(data)
+            data.forEach(element => {
+                var dropdown = document.getElementById("main");
+                var opt = document.createElement("option");
+                console.log(element.csv_name)
+                opt.text = element.csv_name;
+                opt.value = element.csv_name;
+                dropdown.options.add(opt);
+
+                var dropdown = document.getElementById("sub");
+                var opt = document.createElement("option");
+                console.log(element.version)
+                opt.text = element.version;
+                opt.value = element.version;
+                dropdown.options.add(opt);
+            });
+
+        })
+        .catch(error => {
+            console.log('Cannot connect to server')
+        })
+
+
+    
+    
     var file = document.getElementById("main").value;
     var version = document.getElementById("sub").value;
 
