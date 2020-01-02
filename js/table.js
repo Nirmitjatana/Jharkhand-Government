@@ -141,7 +141,7 @@ function okay(){
     }
 }
 
-const tableContainer = document.querySelector(".tableContainer");
+const selector = document.querySelector(".tableContainer");
 const drop = document.querySelector("#main");
 const change = document.querySelector(".change");
 const change2 = document.querySelector(".changeb")
@@ -160,8 +160,62 @@ var columns = [
 ];
 table();
 function table(){
-    var val = drop.value;
-    change.innerHTML = options[val]+" Status";
-    change2.innerHTML = options[val]+" Status";
-    tableContainer.innerHTML = "<tr><th>"+columns[val][0]+"</th><th>"+columns[val][1]+"</th><th>"+columns[val][2]+"</th></tr><tr><td>"+dbTables[val][0]+"</td><td>"+dbTables[val][1]+"</td><td>"+dbTables[val][2]+"</td></tr>"
-}
+    var file = document.getElementById("main").value;
+    var version = document.getElementById("sub").value;
+
+    //Register User
+    var urls = "http://pmjay.herokuapp.com/?file="+file+"&version="+version;
+    fetch(urls, {
+        method: 'GET',
+        crossDomain: true,
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        data : {
+            'file' : "p4",
+            'version':"1"
+        }
+    })
+    .then(res => {
+        console.log(res)
+        if (res.status === 200) {
+            console.log('Logged IN')
+        } else {
+            console.log('Not Logged IN')
+        }
+        return res.json()
+    })
+    .then(data => {
+        console.log(data.message);
+        
+        $.ajax({
+        url:data.message,
+        dataType:"text",
+        success:function(data)
+        {
+            var employee_data = data.split(/\r?\n|\r/);
+            var table_data = '<table class="table table-bordered table-striped">';
+            for(var count = 0; count<employee_data.length; count++)
+            {
+            var cell_data = employee_data[count].split(",");
+            table_data += '<tr>';
+            for(var cell_count=0; cell_count<cell_data.length; cell_count++)
+            {
+            if(count === 0)
+            {
+            table_data += '<th>'+cell_data[cell_count]+'</th>';
+            }
+            else
+            {
+            table_data += '<td>'+cell_data[cell_count]+'</td>';
+            }
+            }
+            table_data += '</tr>';
+            }
+            table_data += '</table>';
+            $(selector).html(table_data);
+        }
+        });
+    })
+  
+ }
