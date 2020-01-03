@@ -199,7 +199,7 @@ function table(){
                 }
             nice(); 
             function nice(){
-                /* sub_dropdown.innerHTML = "<option>Select Version</option>"; */
+                sub_dropdown.innerHTML = "";
                 for(k = 0 ;k < entries.length; k++){
                     if(entries[k][0] === main_dropdown.value){
                         change.innerHTML = main_dropdown.value;
