@@ -124,7 +124,7 @@
                 var password = document.getElementById("pass").value;
                 console.log(username, password)
                 //Register User
-                fetch("http://pmjay.herokuapp.com/auth/users/", {
+                fetch("https://pmjay.herokuapp.com/auth/users/", {
                         method: 'POST',
                         crossDomain: true,
                         headers: {
@@ -149,7 +149,7 @@
 
                     //Login user
 
-                    fetch("http://pmjay.herokuapp.com/auth/token/login/", {
+                    fetch("https://pmjay.herokuapp.com/auth/token/login/", {
                         method: 'POST',
                         crossDomain: true,
                         headers: {
