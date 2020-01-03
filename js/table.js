@@ -163,6 +163,37 @@ let k = 0;
 let l = 0;
 const main_dropdown = document.getElementById("main");
 const sub_dropdown = document.getElementById("sub");
+/* fetch("http://pmjay.herokuapp.com/csv/", {
+        method: 'GET',
+        crossDomain: true,
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
+            "Authorization": "Token 99998b6539472741666fb07fcdf6f338db860cdb"
+        },
+
+        })
+        .then(res => {
+            console.log(res)
+            if (res.status === 200) {
+                console.log('Logged IN')
+            } else {
+                console.log('Not Logged IN')
+            }
+           return res.json();
+           
+        })
+        .then(data => {
+            const entries = Object.entries(data);
+            console.log(entries)
+            for( ;l < entries.length; l++){
+                var opt = document.createElement("option");
+                opt.value = entries[l][0];
+                opt.text = entries[l][0];
+                main_dropdown.options.add(opt)
+                
+            }
+        }) */
 
 function table(){
 
@@ -195,13 +226,16 @@ function table(){
                     opt.value = entries[l][0];
                     opt.text = entries[l][0];
                     main_dropdown.options.add(opt)
-                    
                 }
-            nice(); 
+                main_dropdown.addEventListener("change", () =>{
+                    sub_dropdown.innerHTML = "<option value = "+"none"+">Select Version</option>";
+                    nice();
+                })
             function nice(){
-                sub_dropdown.innerHTML = "";
+                
                 for(k = 0 ;k < entries.length; k++){
                     if(entries[k][0] === main_dropdown.value){
+                        sub_dropdown.innerHTML = "<option value = "+"none"+">Select Version</option>";
                         change.innerHTML = main_dropdown.value;
                         change2.innerHTML = main_dropdown.value;
                         for(let c = 0; c < entries[k][1].length; c++){
@@ -215,6 +249,7 @@ function table(){
                     }
                 } 
             }
+            
         })
         .catch(error => {
             console.log('Cannot connect to server')
