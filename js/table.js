@@ -232,7 +232,7 @@ function table(){
 
     //Register User
     var urls = "http://pmjay.herokuapp.com/?file="+file+"&version="+version;
-    console.log(urls)
+
     fetch(urls, {
         method: 'GET',
         crossDomain: true,
