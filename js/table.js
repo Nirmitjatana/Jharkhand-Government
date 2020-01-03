@@ -163,37 +163,6 @@ let k = 0;
 let l = 0;
 const main_dropdown = document.getElementById("main");
 const sub_dropdown = document.getElementById("sub");
-/* fetch("http://pmjay.herokuapp.com/csv/", {
-        method: 'GET',
-        crossDomain: true,
-        headers: {
-            'Accept': 'application/json',
-            'Content-Type': 'application/json',
-            "Authorization": "Token 99998b6539472741666fb07fcdf6f338db860cdb"
-        },
-
-        })
-        .then(res => {
-            console.log(res)
-            if (res.status === 200) {
-                console.log('Logged IN')
-            } else {
-                console.log('Not Logged IN')
-            }
-           return res.json();
-           
-        })
-        .then(data => {
-            const entries = Object.entries(data);
-            console.log(entries)
-            for( ;l < entries.length; l++){
-                var opt = document.createElement("option");
-                opt.value = entries[l][0];
-                opt.text = entries[l][0];
-                main_dropdown.options.add(opt)
-                
-            }
-        }) */
 
 function table(){
 
