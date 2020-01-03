@@ -248,7 +248,7 @@ function table(){
                 console.log(cell_data)
                 table_data += '<tr>';
                 for(var cell_count=0; cell_count<cell_data.length; cell_count++){
-                    if(count === 1){
+                    if(count === 0){
                         table_data += '<th>'+cell_data[cell_count]+'</th>';
                     }
                     else{
