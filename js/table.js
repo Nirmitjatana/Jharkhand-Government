@@ -167,7 +167,7 @@ const sub_dropdown = document.getElementById("sub");
 function table(){
 
 
-    fetch("http://pmjay.herokuapp.com/csv/", {
+    fetch("https://pmjay.herokuapp.com/csv/", {
         method: 'GET',
         crossDomain: true,
         headers: {
@@ -231,7 +231,7 @@ function table(){
     var version = document.getElementById("sub").value;
 
     //Register User
-    var urls = "http://pmjay.herokuapp.com/?file="+file+"&version="+version;
+    var urls = "https://pmjay.herokuapp.com/?file="+file+"&version="+version;
 
     fetch(urls, {
         method: 'GET',
