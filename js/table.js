@@ -160,6 +160,10 @@ var columns = [
 ];
 table();
 let k = 0;
+let l = 0;
+const main_dropdown = document.getElementById("main");
+const sub_dropdown = document.getElementById("sub");
+
 function table(){
 
 
@@ -184,27 +188,33 @@ function table(){
            
         })
         .then(data => {
-            console.log(data)
-            if(k < 2){
-                for( ;k < data["Claim Status"].length; k++){
-                    const main_dropdown = document.getElementById("sub");
-                    /* var opt = document.createElement("option");
-                    console.log(element.csv_name)
-                    opt.text = data["Claim Status"][0];
-                    opt.value = data["Claim Status"][0]; */
-                    main_dropdown.innerHTML += "<option value = "+data["Claim Status"][k]+">"+data["Claim Status"][k]+"</option>"
-                    
-                    /* var dropdownb = document.getElementById("sub");
+            const entries = Object.entries(data);
+                console.log(entries)
+                for( ;l < entries.length; l++){
                     var opt = document.createElement("option");
-                    console.log(element.version)
-                    opt.text = element.version;
-                    opt.value = element.version;
-                    dropdown.options.add(opt); */
-    
+                    opt.value = entries[l][0];
+                    opt.text = entries[l][0];
+                    main_dropdown.options.add(opt)
+                    
                 }
+            nice(); 
+            function nice(){
+                /* sub_dropdown.innerHTML = "<option>Select Version</option>"; */
+                for(k = 0 ;k < entries.length; k++){
+                    if(entries[k][0] === main_dropdown.value){
+                        change.innerHTML = main_dropdown.value;
+                        change2.innerHTML = main_dropdown.value;
+                        for(let c = 0; c < entries[k][1].length; c++){
+                            var optb = document.createElement("option");
+                            console.log(entries[k][c])
+                            optb.value = entries[k][1][c];
+                            optb.text = entries[k][1][c];
+                            console.log(optb)
+                            sub_dropdown.options.add(optb)
+                        }
+                    }
+                } 
             }
-            
-
         })
         .catch(error => {
             console.log('Cannot connect to server')
@@ -218,6 +228,7 @@ function table(){
 
     //Register User
     var urls = "http://pmjay.herokuapp.com/?file="+file+"&version="+version;
+    console.log(urls)
     fetch(urls, {
         method: 'GET',
         crossDomain: true,
