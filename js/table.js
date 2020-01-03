@@ -159,6 +159,7 @@ var columns = [
     ["Na", "Last", "try"]
 ];
 table();
+let k = 0;
 function table(){
 
 
@@ -184,21 +185,25 @@ function table(){
         })
         .then(data => {
             console.log(data)
-            data.forEach(element => {
-                var dropdown = document.getElementById("main");
-                var opt = document.createElement("option");
-                console.log(element.csv_name)
-                opt.text = element.csv_name;
-                opt.value = element.csv_name;
-                dropdown.options.add(opt);
-
-                var dropdown = document.getElementById("sub");
-                var opt = document.createElement("option");
-                console.log(element.version)
-                opt.text = element.version;
-                opt.value = element.version;
-                dropdown.options.add(opt);
-            });
+            if(k < 2){
+                for( ;k < data["Claim Status"].length; k++){
+                    const main_dropdown = document.getElementById("sub");
+                    /* var opt = document.createElement("option");
+                    console.log(element.csv_name)
+                    opt.text = data["Claim Status"][0];
+                    opt.value = data["Claim Status"][0]; */
+                    main_dropdown.innerHTML += "<option value = "+data["Claim Status"][k]+">"+data["Claim Status"][k]+"</option>"
+                    
+                    /* var dropdownb = document.getElementById("sub");
+                    var opt = document.createElement("option");
+                    console.log(element.version)
+                    opt.text = element.version;
+                    opt.value = element.version;
+                    dropdown.options.add(opt); */
+    
+                }
+            }
+            
 
         })
         .catch(error => {
@@ -245,7 +250,6 @@ function table(){
             var table_data = '<table class="table table-bordered table-striped">';
             for(var count = 0; count<employee_data.length; count++){
                 var cell_data = employee_data[count].split(",");
-                console.log(cell_data)
                 table_data += '<tr>';
                 for(var cell_count=0; cell_count<cell_data.length; cell_count++){
                     if(count === 1){
