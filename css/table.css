@@ -218,7 +218,7 @@ th, td {
         position: relative;
         left: 50vw;
         height: 18%;
-        width: 33vw;
+        max-width: 100%;
         display: none;
     }
     .nav_expanded > p{
