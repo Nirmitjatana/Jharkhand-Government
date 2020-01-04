@@ -145,27 +145,16 @@ const selector = document.querySelector(".tableContainer");
 const drop = document.querySelector("#main");
 const change = document.querySelector(".change");
 const change2 = document.querySelector(".changeb")
-var options = ["Hospitalisation", "B" , "C" , "D"];
-var dbTables = [
-    ["Alfreds","Maria","Germany" ],
-    ["Centro","Francisco","Mexico"],
-    ["Ernst","Roland","Austria"],
-    ["Island","Helen","UK"]
-];
-var columns = [
-    ["Name", "Last Name", "Country"],
-    ["Nice", "Last", "Count"],
-    ["Nae", "Last Na", "Cotry"],
-    ["Na", "Last", "try"]
-];
+
+let z = 0;
 table();
 let k = 0;
 let l = 0;
+
 const main_dropdown = document.getElementById("main");
 const sub_dropdown = document.getElementById("sub");
-
 function table(){
-
+    z++;
 
     fetch("http://pmjay.herokuapp.com/csv/", {
         method: 'GET',
@@ -178,18 +167,16 @@ function table(){
 
         })
         .then(res => {
-            console.log(res)
             if (res.status === 200) {
                 console.log('Logged IN')
             } else {
                 console.log('Not Logged IN')
-            }
+            } 
            return res.json();
            
         })
         .then(data => {
             const entries = Object.entries(data);
-                console.log(entries)
                 for( ;l < entries.length; l++){
                     var opt = document.createElement("option");
                     opt.value = entries[l][0];
@@ -197,23 +184,25 @@ function table(){
                     main_dropdown.options.add(opt)
                 }
                 main_dropdown.addEventListener("change", () =>{
-                    sub_dropdown.innerHTML = "<option value = "+"none"+">Select Version</option>";
+                    sub_dropdown.innerHTML = "";
+                    sub_dropdown.value = "none";
                     nice();
                 })
             function nice(){
                 
                 for(k = 0 ;k < entries.length; k++){
                     if(entries[k][0] === main_dropdown.value){
-                        sub_dropdown.innerHTML = "<option value = "+"none"+">Select Version</option>";
                         change.innerHTML = main_dropdown.value;
                         change2.innerHTML = main_dropdown.value;
+                        var optb = document.createElement("option");
+                        optb.value = "none";
+                        optb.text = "Select Version";
+                        sub_dropdown.options.add(optb);
                         for(let c = 0; c < entries[k][1].length; c++){
-                            var optb = document.createElement("option");
-                            console.log(entries[k][c])
-                            optb.value = entries[k][1][c];
-                            optb.text = entries[k][1][c];
-                            console.log(optb)
-                            sub_dropdown.options.add(optb)
+                            var optc = document.createElement("option");
+                            optc.value = entries[k][1][c];
+                            optc.text = entries[k][1][c];
+                            sub_dropdown.options.add(optc)
                         }
                     }
                 } 
@@ -227,10 +216,16 @@ function table(){
 
     
     
-    var file = document.getElementById("main").value;
-    var version = document.getElementById("sub").value;
+    
 
     //Register User
+    
+        var file = document.getElementById("main").value;
+    var version = document.getElementById("sub").value;
+    if(file == "" || version == "none"){
+        selector.innerHTML = "";
+    }
+    else{
     var urls = "http://pmjay.herokuapp.com/?file="+file+"&version="+version;
 
     fetch(urls, {
@@ -245,7 +240,6 @@ function table(){
         }
     })
     .then(res => {
-        console.log(res)
         if (res.status === 200) {
             console.log('Logged IN')
         } else {
@@ -261,25 +255,27 @@ function table(){
         dataType:"text",
         success:function(data)
         {
-            var employee_data = data.split(/\r?\n|\r/);
-            var table_data = '<table class="table table-bordered table-striped">';
-            for(var count = 0; count<employee_data.length; count++){
-                var cell_data = employee_data[count].split(",");
-                table_data += '<tr>';
-                for(var cell_count=0; cell_count<cell_data.length; cell_count++){
-                    if(count === 0){
-                        table_data += '<th>'+cell_data[cell_count]+'</th>';
+                var employee_data = data.split(/\r?\n|\r/);
+                var table_data = '<table class="table table-bordered table-striped">';
+                for(var count = 0; count<employee_data.length; count++){
+                    var cell_data = employee_data[count].split(",");
+                    table_data += '<tr>';
+                    for(var cell_count=0; cell_count<cell_data.length; cell_count++){
+                        if(count === 0){
+                            table_data += '<th>'+cell_data[cell_count]+'</th>';
+                        }
+                        else{
+                            table_data += '<td>'+cell_data[cell_count]+'</td>';
+                        }
                     }
-                    else{
-                        table_data += '<td>'+cell_data[cell_count]+'</td>';
-                    }
+                    table_data += '</tr>';
                 }
-                table_data += '</tr>';
-            }
-            table_data += '</table>';
-            $(selector).html(table_data);
+                table_data += '</table>';
+                $(selector).html(table_data);
+            
+            
         }
         });
-    })
-  
+    }) 
+    }
  }
