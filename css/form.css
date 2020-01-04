@@ -170,8 +170,10 @@ input[type=text1]{
     border-width: 2.5px;
     border-color: rgba(255, 62, 62, 0.89);
 }
-
-input[type=textarea]{
+.nice{
+    width: 50%;
+}
+textarea[type=textarea]{
     padding:10px 15px;
     width: 82.6%;
     height:190px;
@@ -239,7 +241,7 @@ input[type=button]{
 .inputGroup:hover{
     background-color: rgba(255, 62, 62, 0.89);
     color:white;
-    &.label{color:white} 
+
 }
 
 label{
@@ -428,6 +430,7 @@ input[type=button]{
 
 }
 .head1{
+    position: absolute;
     margin: 0;
     padding-top:20px;
 }
