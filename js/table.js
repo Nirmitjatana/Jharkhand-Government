@@ -1,3 +1,6 @@
+const pdfgen = document.getElementById("pdfgen");
+pdfgen.setAttribute("href", "");
+
 const tables = document.querySelector('.tables');
 const tablesImg = document.querySelector('.tablesImg');
 tables.addEventListener("mouseover", ()=>{
@@ -228,6 +231,7 @@ function table(){
     else{
     var urls = "http://pmjay.herokuapp.com/?file="+file+"&version="+version;
 
+
     fetch(urls, {
         method: 'GET',
         crossDomain: true,
@@ -249,7 +253,8 @@ function table(){
     })
     .then(data => {
         console.log(data.message);
-        
+				let pdfurl = `${data.message.split(".csv")[0]}.pdf`
+
         $.ajax({
         url:data.message,
         dataType:"text",
@@ -271,6 +276,15 @@ function table(){
                     table_data += '</tr>';
                 }
                 table_data += '</table>';
+								
+								// set PDF download URL in the "Generate PDF" anchor
+								// This gets cleared on page load and overwritten on 
+								// option dropdown selection
+								//
+								// TODO: hit another route to generate PDF
+								// This is only for heroku as it flushes the FS
+								// every 30 mins of inactivity
+								pdfgen.setAttribute("href", pdfurl);
                 $(selector).html(table_data);
             
             
