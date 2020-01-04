@@ -51,14 +51,14 @@
                     </select><br><br><br>
                     <input class="f2" type="text1" name="phone" value="" placeholder="Phone Number">
 
-                    <input class="f2" type="text1" name="email" value="" placeholder="Email"><br><br>
+                    <input class="f2 nice" type="text1" name="email" value="" placeholder="Email"><br><br>
 
                     <br>
                     <input class="f1" type="text" name="district" value="" placeholder="District"><br>
                     <br>
 
                     <br>
-                    <textarea class="f1 nice" type="textarea" name="body" value="" placeholder="Body"></textarea>
+                    <textarea class="f1" type="textarea" name="body" value="" placeholder="Body"></textarea>
 
                     <br>
 
@@ -256,13 +256,13 @@
                     response => response.json()
                 ).then(
                     success => {
-                        document.getElementById('message').innerHTML = 'Thank you for your feedback!'
+                        document.getElementById('message').innerHTML = 'Feedback Saved!'
                         document.getElementById('message').style.color = "green"
                         console.log(success)
                     }
                 ).catch(
                     error => {
-                        document.getElementById('message').innerHTML = 'Please try again'
+                        document.getElementById('message').innerHTML = 'Feedback not Saved!<br>Please try again'
                         document.getElementById('message').style.color = "red"
                         console.log(error)
                     }

@@ -170,7 +170,9 @@ input[type=text1]{
     border-width: 2.5px;
     border-color: rgba(255, 62, 62, 0.89);
 }
-
+.nice{
+    width: 50%;
+}
 textarea[type=textarea]{
     padding:10px 15px;
     width: 82.6%;
