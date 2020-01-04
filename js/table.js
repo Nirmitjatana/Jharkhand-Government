@@ -218,7 +218,7 @@ function table() {
   if (file == '' || version == 'none') {
     selector.innerHTML = '';
   } else {
-    const urls = `http://pmjay.herokuapp.com/?file=${file}&version=${version}`;
+    const urls = `https://pmjay.herokuapp.com/?file=${file}&version=${version}`;
 
 
     fetch(urls, {
@@ -242,7 +242,7 @@ function table() {
       })
       .then((data) => {
         console.log(data.message);
-        const pdfurl = `${data.message.split('.csv')[0]}.pdf`;
+        const pdfurl = `https://pmjay.herokuapp.com/pdf/?file=${file}&version=${version}`;
 
         $.ajax({
           url: data.message,
@@ -267,10 +267,7 @@ function table() {
             // set PDF download URL in the "Generate PDF" anchor
             // This gets cleared on page load and overwritten on
             // option dropdown selection
-            //
-            // TODO: hit another route to generate PDF
-            // This is only for heroku as it flushes the FS
-            // every 30 mins of inactivity
+           
             pdfgen.setAttribute('href', pdfurl);
             $(selector).html(table_data);
           },
