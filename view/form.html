@@ -292,7 +292,9 @@
                             document.getElementById('message').innerHTML = 'Feedback Saved!'
                             document.getElementById('message').style.color = "green"
                             console.log(success)
-                						$("#formElem").reset()
+														for (let elem of $("#formElem")) {
+																		elem.reset()
+														}
                         }
                     ).catch(
                         error => {
