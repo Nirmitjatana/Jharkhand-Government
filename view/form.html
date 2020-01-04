@@ -41,19 +41,18 @@
                 <form id="formElem">
                     <p id="message"></p>
                     <br>
-                    <input class="f2" type="text1" name="name" value="" placeholder="Name">
-                    <select name="gender" id="sub" placeholder="Gender">
-                        <option value="gender">Gender</option>
+                    <input class="f2" type="text1" name="name" value="" placeholder="Name" required>
+                    <select name="gender" id="sub" placeholder="Gender" required>
                         <option value="Male">Male</option>
                         <option value="Female">Female</option>
                         <option value="Other">Other</option>
                     </select><br><br><br>
-                    <input class="f2" type="text1" name="phone" value="" placeholder="Phone Number">
+                    <input class="f2" type="text1" name="phone" value="" placeholder="Phone Number" required>
 
                     <input class="f2 nice" type="text1" name="email" value="" placeholder="Email"><br><br>
 
                     <br>
-                    <input class="f1" type="text" name="district" value="" placeholder="District"><br>
+                    <input class="f1" type="text" name="district" value="" placeholder="District" required><br>
                     <br>
 
                     <br>
@@ -221,8 +220,40 @@
         }
     }
         $(document).ready(function () {
+            ca=false;
+            ce=false;
+            cp=false;
             $('.submit').click(function (e) {
                 e.preventDefault();
+
+                //Email validation
+                if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(formElem.email.value)) {
+                    ce = true;
+                } else {
+                    message.innerHTML = "Please enter a valid email"
+                    ce=false;
+                }
+
+                //phone validation
+                var phoneno = /^[789]\d{9}$/;
+                if (formElem.phone.value.match(phoneno)) {
+                    cp = true;
+                } else {
+                    message.innerHTML = "Please enter a valid phone number"
+                    cp=false;
+                }
+                if (formElem.name.value == "" ||
+                    formElem.gender.value == "" ||
+                    formElem.phone.value == "" ||
+                    formElem.email.value == "" ||
+                    formElem.body.value == "" ||
+                    formElem.district.value == "") {
+                    message.innerHTML = 'All fields are required'
+                    ca = false;
+                } else {
+                    ca = true;
+                }
+
                 let formData = new FormData(formElem);
 
                 // for (var value of formData.values()) {
@@ -236,28 +267,35 @@
                 });
                 console.log(JSON.stringify(object))
 
-                fetch('https://pmjay.herokuapp.com/feedback/', {
-                    method: 'POST',
-                    crossDomain: true,
-                    headers: {
-                        "Content-Type": "application/json"
-                    },
-                    body: JSON.stringify(object)
-                }).then(
-                    response => response.json()
-                ).then(
-                    success => {
-                        document.getElementById('message').innerHTML = 'Feedback Saved!'
-                        document.getElementById('message').style.color = "green"
-                        console.log(success)
-                    }
-                ).catch(
-                    error => {
-                        document.getElementById('message').innerHTML = 'Feedback not Saved!<br>Please try again'
-                        document.getElementById('message').style.color = "red"
-                        console.log(error)
-                    }
-                );
+                console.log(ca,cp,ce);
+                if (ca & cp & ce) {
+                    fetch('https://pmjay.herokuapp.com/feedback/', {
+                        method: 'POST',
+                        crossDomain: true,
+                        headers: {
+                            "Content-Type": "application/json"
+                        },
+                        body: JSON.stringify(object)
+                    }).then(
+                        response => response.json()
+                    ).then(
+                        success => {
+                            document.getElementById('message').innerHTML = 'Feedback Saved!'
+                            document.getElementById('message').style.color = "green"
+                            console.log(success)
+														for (let elem of $("#formElem")) {
+																		elem.reset()
+														}
+                        }
+                    ).catch(
+                        error => {
+                            document.getElementById('message').innerHTML = 'Feedback not saved, please try again'
+                            document.getElementById('message').style.color = "red"
+                            console.log(error)
+                        }
+                    );
+                }
+
 
             })
         })
