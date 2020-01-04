@@ -292,6 +292,7 @@
                             document.getElementById('message').innerHTML = 'Feedback Saved!'
                             document.getElementById('message').style.color = "green"
                             console.log(success)
+                						formData.reset()
                         }
                     ).catch(
                         error => {
