@@ -156,7 +156,7 @@ const sub_dropdown = document.getElementById("sub");
 function table(){
     z++;
 
-    fetch("http://pmjay.herokuapp.com/csv/", {
+    fetch("https://pmjay.herokuapp.com/csv/", {
         method: 'GET',
         crossDomain: true,
         headers: {

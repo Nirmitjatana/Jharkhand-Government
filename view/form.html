@@ -39,6 +39,7 @@
             <h1>Feedback Form</h1>
             <div class="form"></br>
                 <form id="formElem">
+                    <p id="message"></p>
                     <br>
                     <input class="f2" type="text1" name="name" value="" placeholder="Name">
                     <select name="gender" id="sub" placeholder="Gender">
@@ -103,7 +104,7 @@
                 });
                 console.log(JSON.stringify(object))
 
-                fetch('http://pmjay.herokuapp.com/feedback/', {
+                fetch('https://pmjay.herokuapp.com/feedback/', {
                     method: 'POST',
                     crossDomain: true,
                     headers: {
@@ -113,9 +114,17 @@
                 }).then(
                     response => response.json()
                 ).then(
-                    success => console.log(success)
+                    success => {
+                        document.getElementById('message').innerHTML = 'Thank you for your feedback!'
+                        document.getElementById('message').style.color = "green"
+                        console.log(success)
+                    }
                 ).catch(
-                    error => console.log(error)
+                    error => {
+                        document.getElementById('message').innerHTML = 'Please try again'
+                        document.getElementById('message').style.color = "red"
+                        console.log(error)
+                    }
                 );
 
             })
