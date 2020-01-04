@@ -58,7 +58,7 @@
 
     <script>
         let tkn = sessionStorage.getItem("token")
-				if (tkn == "") {
+				if (tkn === "" || tkn === null) {
 						window.location.href("/view/admin/login")
 				}
         const input = document.getElementById('file');
