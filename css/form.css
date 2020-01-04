@@ -239,7 +239,7 @@ input[type=button]{
 .inputGroup:hover{
     background-color: rgba(255, 62, 62, 0.89);
     color:white;
-    &.label{color:white} 
+
 }
 
 label{
@@ -428,6 +428,7 @@ input[type=button]{
 
 }
 .head1{
+    position: absolute;
     margin: 0;
     padding-top:20px;
 }
