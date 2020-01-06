@@ -67,8 +67,3 @@ select{
     transform-origin: left;
 }
 
-@media screen and (max-width: 700px) {
-    form {
-        top: 40vh;
-    }
-}

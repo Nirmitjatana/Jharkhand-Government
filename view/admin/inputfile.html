@@ -32,7 +32,17 @@
     </form>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" sync></script>
-
+    <script>
+        const form = document.querySelector("form");
+        var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
+        var height = (window.innerHeight > 0) ? window.innerHeight : screen.height;
+        if(width < 700){
+            height = (2*height)/5;
+            width = (width)/2;
+            form.style.top = height+"px";
+            form.style.left = width + "px";
+        }
+    </script>
     <script>
         let tkn = sessionStorage.getItem("token")
 				if (tkn === "" || tkn === null) {
