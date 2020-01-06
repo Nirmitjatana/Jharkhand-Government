@@ -12,7 +12,7 @@
     
 </style>
 
-<body>
+<body onresize="positioning()">
     <h1>Admin Portal</h1>
     <form id="formElem">
 						<!-- for file, max size = 5MB and only accept CSV -->
@@ -33,12 +33,24 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" sync></script>
     <script>
-        const form = document.querySelector("form");
-        var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
-        var height = (window.innerHeight > 0) ? window.innerHeight : screen.height;
-        if(width < 700){
-            height = (2*height)/5;
-            width = (width)/2;
+        var ini_wid = (window.innerWidth > 0) ? window.innerWidth : screen.width;
+        if(ini_wid < 700)
+            positioning();
+        function positioning(){
+            var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
+            var height = (window.innerHeight > 0) ? window.innerHeight : screen.height;
+            const form = document.querySelector("form");
+            const h1 = document.querySelector("h1");
+            if(width < 700){
+                h1.style.top = height/50 + "px";
+                height = (2*height)/5;
+                width = (width)/2;
+                
+            }
+            else{
+                height = height/2;
+                width = width/2;
+            }
             form.style.top = height+"px";
             form.style.left = width + "px";
         }
