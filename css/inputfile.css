@@ -33,12 +33,40 @@ select{
     padding: 5px 0px;
     padding-right: 20px;
     margin-bottom: 10px;
-    /* font-size: 1rem; */
+    font-size: 1rem;
     border: none;
     background-color: #F7F7F7;
     color: #AAAAAA;
     font-weight: 200;
 }
+.ver{
+    
+    border: none;
+    background-color: #F7F7F7;
+    color: #AAAAAA;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    padding: 5px 0;
+    padding-left: 2px;
+}
+.ver::placeholder{
+    color: #AAAAAA;
+}
+
+.submit{
+    padding: 5px 10px;
+    border-radius: 2px;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    background: white;
+    color: #FF5F58;
+}
+.submit:hover{
+    transform: scale(1.07);
+    transform-origin: left;
+}
+
 @media screen and (max-width: 700px) {
     form {
         top: 40vh;

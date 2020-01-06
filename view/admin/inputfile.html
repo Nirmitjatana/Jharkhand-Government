@@ -17,7 +17,7 @@
     <form id="formElem">
 						<!-- for file, max size = 5MB and only accept CSV -->
         <!-- <input type="text" name="csv_name" value="" class="input" placeholder="csv_name"> -->
-        <select name="csv_name" id="" class="input" aria-placeholder="csv_name">
+        <select name="csv_name" id="" class="input csv" aria-placeholder="csv_name">
             <option value="">csv_name</option>
             <option value="Claim Status">Claim Status</option>
             <option value="Golden Card Report">Golden Card Report</option>
@@ -26,9 +26,9 @@
             <option value="Empanelled Hospital List">Empanelled Hospital List</option>
             <option value="TPA List">TPA List</option>
         </select>
-        <input type="text" name="version" value="" class="input" placeholder="version"><br>
-        Select a file to upload: <br><br> <input type="file" accept=".csv,text/csv" data-max-size="5242880" name="csv" id="file"><br><br>
-        <input type="submit">
+        <input type="text" name="version" value="" class="input ver" placeholder="version"><br>
+        Select a file to upload: <br><br> <input type="file" accept=".csv,text/csv" data-max-size="5242880" name="csv" id="file" class="file"><br><br>
+        <input type="submit" class="submit">
     </form>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" sync></script>
