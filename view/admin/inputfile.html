@@ -27,8 +27,13 @@
             <option value="TPA List">TPA List</option>
         </select>
         <input type="text" name="version" value="" class="input ver" placeholder="version"><br>
-        Select a file to upload: <br><br> <input type="file" accept=".csv,text/csv" data-max-size="5242880" name="csv" id="file" class="file"><br><br>
-        <input type="submit" class="submit">
+        Select a file to upload: <br><br>
+        <div class="btnWrapper">
+            <button class="btn">Upload a file</button>
+            <input type="file" accept=".csv,text/csv" data-max-size="5242880" name="csv" id="file" class="file">
+            <input type="submit" class="submit">
+        </div>
+        
     </form>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" sync></script>

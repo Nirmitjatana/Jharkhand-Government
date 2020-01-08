@@ -31,7 +31,7 @@ select{
     appearance: none;
     display: block;
     outline-color: none;
-    padding: 15px 0px;
+    padding: 10px 0px;
     border: 1px black solid;
     border-radius: 7px;
     padding-right: 20px;
@@ -56,15 +56,34 @@ select{
 .ver::placeholder{
     color: #AAAAAA;
 }
-
+.btnWrapper{
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    margin-bottom: 3px;
+}
+.btn {
+    border: 1px black solid;
+    border-radius: 7px;
+    color: #FF5F58;
+    background-color: white;
+    padding: 8px 20px;
+}
+.btnWrapper input[type=file] {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+  }
 .submit{
-    padding: 7px 30px;
-    border-radius: 2px;
-    border: none;
+    margin-left: 5px;
+    padding: 8px 20px;
+    border: 1px black solid;
+    border-radius: 7px;
     outline: none;
     box-shadow: none;
     background: white;
-    color: #FF5F58;
+    color: #AAAAAA;
 }
 .submit:hover{
     transform: scale(1.07);
