@@ -96,7 +96,7 @@ body{
 .head1{
     
     position: relative;
-    margin: 113px 3vw 0 5vw;
+    margin: 68px 3vw 0 5vw;
 
 }
 .head1 > h1{
@@ -104,7 +104,10 @@ body{
     font-weight: 750;
     margin: 0;
     padding: 0;
+    
 }
+
+
 .head{
     
     position: relative;
@@ -120,7 +123,7 @@ body{
 .headf{
     
     position: relative;
-    margin: 74px 3vw 0 5vw;
+    margin: 64px 0 0 5vw;
 }
 
 .headf > h1{
@@ -133,6 +136,8 @@ body{
     font-size: x-large;
     height:500px;
     color:rgb(26, 188, 252);
+    padding-top: 2000px;
+    
 }
 .form{
     
@@ -367,7 +372,9 @@ label:hover{
     grid-row-gap: 30px; */
 }
 .link{
-    margin-left: 7vw;
+    margin-left: 8vw;
+    
+  
     
 }
 .form{
