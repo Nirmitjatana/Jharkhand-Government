@@ -29,6 +29,7 @@ body{
     font-weight: 300;
     /* max-height: 900px; */
     z-index: 1;
+    padding-bottom: 20px;
 }
 .logo3{
     position: relative;
@@ -47,6 +48,8 @@ body{
     left: 50%;
     transform: translateX(-50%);
     width: 35%;
+    border-radius: 100px;
+
 }
 .nav_expanded > a{
     margin: 0;
@@ -151,7 +154,7 @@ table{
     width: 65vw;
     /* max-height: 900px; */
     display: block;
-    height: 40vh;
+    height: 39vh;
     overflow: scroll;
     left: 50%;
     transform: translateX(-50%);
