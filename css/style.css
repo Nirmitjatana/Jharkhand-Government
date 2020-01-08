@@ -97,7 +97,7 @@ body{
 
 .aboutMain{
     position: relative;
-    margin: 113px 3vw 0 5vw;
+    margin: 68px 3vw 0 5vw;
     display: grid;
     grid-template-rows: min-content min-content 40vh auto;
     grid-row-gap: 3vh;
@@ -111,6 +111,7 @@ body{
 .aboutMain > div{
     font-size: 1.3rem;
     color: rgb(83, 95, 107);
+    margin-top: 42px;
 }
 .images{
     display: grid;
