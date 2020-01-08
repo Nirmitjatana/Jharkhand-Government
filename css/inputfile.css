@@ -17,15 +17,18 @@ form {
     transform: translate(-50%, -50%);
     color: white;
 }
-
+.message{
+    text-align: center;
+    margin-bottom: 20px;
+}
 h1 {
     position: absolute;
-    top: 2vh;
+    top: 4vh;
     left: 50vw;
     width: fit-content;
     transform: translateX(-50%);
     color: white;
-    font-size: 2rem;
+    font-size: 3rem;
 }
 select{
     appearance: none;
@@ -51,10 +54,12 @@ select{
     font-size: 1rem;
     margin-bottom: 11px;
     padding: 10px 0;
-    padding-left: 10px;
+    margin-left: 0;
+    width: 100%;
 }
 .ver::placeholder{
     color: #AAAAAA;
+    padding-left: 10px;
 }
 .btnWrapper{
     position: relative;
@@ -68,6 +73,7 @@ select{
     color: #FF5F58;
     background-color: white;
     padding: 8px 20px;
+    cursor: pointer;
 }
 .btnWrapper input[type=file] {
     position: absolute;
@@ -76,7 +82,7 @@ select{
     opacity: 0;
   }
 .submit{
-    margin-left: 5px;
+    margin-left: 10px;
     padding: 8px 20px;
     border: 1px black solid;
     border-radius: 7px;
@@ -84,9 +90,8 @@ select{
     box-shadow: none;
     background: white;
     color: #AAAAAA;
+    cursor: pointer;
 }
-.submit:hover{
-    transform: scale(1.07);
-    transform-origin: left;
-}
+
+
 
