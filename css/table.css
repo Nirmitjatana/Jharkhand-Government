@@ -200,7 +200,7 @@ th, td {
         padding-top: 55px;
         grid-template-rows: 100%;
         width: 100vw;
-        /* padding-left: 3vw; */
+        padding-bottom: 0;
     }
     .nav_expanded > a{
         display: none;
