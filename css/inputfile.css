@@ -28,33 +28,37 @@ h1 {
     font-size: 2rem;
 }
 select{
+    appearance: none;
     display: block;
     outline-color: none;
-    padding: 5px 0px;
+    padding: 15px 0px;
+    border: 1px black solid;
+    border-radius: 7px;
     padding-right: 20px;
+    padding-left: 10px;
     margin-bottom: 10px;
     font-size: 1rem;
-    border: none;
-    background-color: #F7F7F7;
+    background-color: white;
     color: #AAAAAA;
     font-weight: 200;
+
 }
 .ver{
-    
-    border: none;
-    background-color: #F7F7F7;
+    border: 1px black solid;
+    border-radius: 7px;
+    background-color: white;
     color: #AAAAAA;
     font-size: 1rem;
-    margin-bottom: 10px;
-    padding: 5px 0;
-    padding-left: 2px;
+    margin-bottom: 11px;
+    padding: 10px 0;
+    padding-left: 10px;
 }
 .ver::placeholder{
     color: #AAAAAA;
 }
 
 .submit{
-    padding: 5px 10px;
+    padding: 7px 30px;
     border-radius: 2px;
     border: none;
     outline: none;
