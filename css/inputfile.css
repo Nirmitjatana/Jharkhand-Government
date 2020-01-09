@@ -81,6 +81,7 @@ select{
     opacity: 0;
     width: 55%;
     height: 100%;
+    cursor: pointer;
   }
 .submit{
     margin-left: 10px;
