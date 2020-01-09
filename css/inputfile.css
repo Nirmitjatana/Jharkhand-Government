@@ -65,7 +65,6 @@ select{
     position: relative;
     overflow: hidden;
     display: inline-block;
-    margin-bottom: 3px;
 }
 .btn {
     border: 1px black solid;
@@ -80,6 +79,8 @@ select{
     left: 0;
     top: 0;
     opacity: 0;
+    width: 55%;
+    height: 100%;
   }
 .submit{
     margin-left: 10px;
