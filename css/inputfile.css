@@ -17,53 +17,83 @@ form {
     transform: translate(-50%, -50%);
     color: white;
 }
-
+.message{
+    text-align: center;
+    margin-bottom: 20px;
+}
 h1 {
     position: absolute;
-    top: 2vh;
+    top: 4vh;
     left: 50vw;
     width: fit-content;
     transform: translateX(-50%);
     color: white;
-    font-size: 2rem;
+    font-size: 3rem;
 }
 select{
+    appearance: none;
     display: block;
     outline-color: none;
-    padding: 5px 0px;
+    padding: 10px 0px;
+    border: 1px black solid;
+    border-radius: 7px;
     padding-right: 20px;
+    padding-left: 10px;
     margin-bottom: 10px;
     font-size: 1rem;
-    border: none;
-    background-color: #F7F7F7;
+    background-color: white;
     color: #AAAAAA;
     font-weight: 200;
+
 }
 .ver{
-    
-    border: none;
-    background-color: #F7F7F7;
+    border: 1px black solid;
+    border-radius: 7px;
+    background-color: white;
     color: #AAAAAA;
     font-size: 1rem;
-    margin-bottom: 10px;
-    padding: 5px 0;
-    padding-left: 2px;
+    margin-bottom: 11px;
+    padding: 10px 0;
+    margin-left: 0;
+    width: 100%;
 }
 .ver::placeholder{
     color: #AAAAAA;
+    padding-left: 10px;
 }
-
+.btnWrapper{
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+}
+.btn {
+    border: 1px black solid;
+    border-radius: 7px;
+    color: #FF5F58;
+    background-color: white;
+    padding: 8px 20px;
+    cursor: pointer;
+}
+.btnWrapper input[type=file] {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    width: 55%;
+    height: 100%;
+    cursor: pointer;
+  }
 .submit{
-    padding: 5px 10px;
-    border-radius: 2px;
-    border: none;
+    margin-left: 10px;
+    padding: 8px 20px;
+    border: 1px black solid;
+    border-radius: 7px;
     outline: none;
     box-shadow: none;
     background: white;
-    color: #FF5F58;
+    color: #AAAAAA;
+    cursor: pointer;
 }
-.submit:hover{
-    transform: scale(1.07);
-    transform-origin: left;
-}
+
+
 

@@ -6,17 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../../css/inputfile.css">
-    <title>Admin Portal</title>
+    <title>PMJAY | Admin Portal</title>
 </head>
-<style>
-    
-</style>
 
 <body onresize="positioning()">
     <h1>Admin Portal</h1>
     <form id="formElem">
 						<!-- for file, max size = 5MB and only accept CSV -->
         <!-- <input type="text" name="csv_name" value="" class="input" placeholder="csv_name"> -->
+        <p class="message">
+
+        </p>
         <select name="csv_name" id="" class="input csv" aria-placeholder="csv_name">
             <option value="">csv_name</option>
             <option value="Claim Status">Claim Status</option>
@@ -27,8 +27,13 @@
             <option value="TPA List">TPA List</option>
         </select>
         <input type="text" name="version" value="" class="input ver" placeholder="version"><br>
-        Select a file to upload: <br><br> <input type="file" accept=".csv,text/csv" data-max-size="5242880" name="csv" id="file" class="file"><br><br>
-        <input type="submit" class="submit">
+        Select a file to upload: <br><br>
+        <div class="btnWrapper">
+            <button class="btn">Upload a file</button>
+            <input type="file" accept=".csv,text/csv" data-max-size="5242880" name="csv" id="file" class="file">
+            <input type="submit" class="submit">
+        </div>
+        
     </form>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" sync></script>
@@ -49,6 +54,7 @@
         
     </script>
     <script>
+        const message = document.querySelector(".message");
         let tkn = sessionStorage.getItem("token")
 				if (tkn === "" || tkn === null) {
 						window.location.replace("/view/admin/login")
@@ -84,9 +90,16 @@
                 }).then(
                     response => response.json()
                 ).then(
-                    success => console.log(success)
+                    success => {
+                        console.log(success)
+                        message.innerHTML = "Csv File successfully uploaded.";
+                    }
+
                 ).catch(
-                    error => console.log(error)
+                    error => {
+                        console.log(error)
+                        message.innerHTML = "Csv File not uploaded.";
+                    }
                 );
             }
         };
