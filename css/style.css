@@ -22,7 +22,7 @@ body{
     position: relative;
     background-color:#FF5F58;
     display: grid;
-    grid-template-rows: 19% 9% 9% 9% 9% 21% 21% 3%;
+    grid-template-rows: 19% 9% 9% 9% 9% 21% 15%;
     color: white;
     align-items: center;
     font-weight: 300;
@@ -111,7 +111,7 @@ body{
 .aboutMain > div{
     font-size: 1.3rem;
     color: rgb(83, 95, 107);
-    margin-top: 42px;
+    margin-top: 32px;
 }
 .images{
     display: grid;
