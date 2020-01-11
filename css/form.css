@@ -336,14 +336,19 @@ label:hover{
     color:rgba(255, 62, 62, 0.89);
     font-size:25px;
 }
+
 .topp > p{
     color:rgba(255, 62, 62, 0.89);
-    padding-left: 70px;
+    margin-left: -90px;
     padding-top: 40px;
-    font-weight:700;
+    font-weight:400;
     font-size:32px;
-
 }
+.topp{
+    width:70%;
+    margin-left: 12vw;
+}
+
 @media screen and (min-height: 1100px){
     .head{
         grid-template-rows: min-content min-content 400px auto;
@@ -360,6 +365,13 @@ label:hover{
     }
     select{
         width:45.4%
+    }
+    .topp > p{
+        margin-left:15px;
+    }
+    .topp{
+        width:100%;
+        margin-left: 0;
     }
     .container{
         grid-template-columns: none;
@@ -396,11 +408,15 @@ label:hover{
         display: none;
     }
     .grid-container {
-        padding-top: 100px;
+        padding-top: 35px;
         display: grid;
         grid-template-columns: auto;
-        grid-template-rows:  280px 280px;
+        grid-template-rows:  auto auto;
+        padding-left:10px;
+        
       }
+      
+
     .nav_expanded > p{
         position: relative;
         text-align: center;
