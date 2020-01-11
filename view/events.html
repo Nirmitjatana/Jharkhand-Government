@@ -11,7 +11,7 @@
 </head>
 <title>PMJAY | JSAS</title>
 </head>
-<body>
+<d/div>
     <div class="container">
         <div class="nav_expanded">
             <img src="https://0.academia-photos.com/61780733/19658868/19531766/s200_sna.jharkhand.jpg" alt="" class="mainLogo">
@@ -27,7 +27,7 @@
                 <img src="../Assets/img/table.png" alt="" class="tablesImg">
                 <p>Tables</p>
             </a>
-            <a class="tables" href="../view/download.html">
+            <a class="save" href="../view/download.html">
                 <img src="../Assets/img/save.png" alt="" class="saveImg">
                 <p>Downloads</p>
             </a>
@@ -47,13 +47,13 @@
             <p>Events and Workshops</p>
             <div class="w3-row">
                 <a href="javascript:void(0)" onclick="openCity(event, 'London');">
-                  <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding">All</div>
+                  <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding" style="color:rgba(255, 62, 62, 0.89);text-align: center;border-bottom-left:none;">All</div>
                 </a>
-                <a href="javascript:void(0)" onclick="openCity(event, 'Paris');">
-                  <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding">Upcoming</div>
+                <a href="javascript:void(0)" onclick="openCity(event, 'Paris');" id="defaultOpen">
+                  <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding" style="color:rgba(255, 62, 62, 0.89);text-align: center;">Upcoming</div>
                 </a>
                 <a href="javascript:void(0)" onclick="openCity(event, 'Tokyo');">
-                  <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding">Past</div>
+                  <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding" style="color:rgba(255, 62, 62, 0.89);text-align: center;">Past</div>
                 </a>
               </div>
               <div id="London" class="w3-container city" style="display: none;">
@@ -70,7 +70,7 @@
                     <div class="grid-item" style="box-shadow:1px 1px 2px 2px rgb(235, 235, 235);"></div>
                     <div class="grid-item" style="box-shadow:1px 1px 2px 2px rgb(235, 235, 235);"></div>
                     <div class="grid-item" style="box-shadow:1px 1px 2px 2px rgb(235, 235, 235);"></div>
-              </div>
+              </div></div>
               <div id="Tokyo" class="w3-container city" style="display: none;">
                 <div class="grid-container1">
                     <div class="grid-item" style="box-shadow:1px 1px 2px 2px rgb(235, 235, 235);"></div>
@@ -78,5 +78,12 @@
                     <div class="grid-item" style="box-shadow:1px 1px 2px 2px rgb(235, 235, 235);"></div>
                     <div class="grid-item" style="box-shadow:1px 1px 2px 2px rgb(235, 235, 235);"></div>
                   </div>
-              </div>
+              </div></div>
             <script src="../js/events.js"></script>
+            <div class="header">
+                <img src="../Assets/img/ham.png" alt="" srcset="" class="bam">
+                <img src="https://0.academia-photos.com/61780733/19658868/19531766/s200_sna.jharkhand.jpg" alt="" class="mainLogob">
+            </div>
+            <script src="../js/download.js"></script>
+        </body>
+        </html>
