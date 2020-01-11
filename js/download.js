@@ -22,16 +22,15 @@ feed.addEventListener('mouseover', () => {
 feed.addEventListener('mouseout', () => {
   feedbackImg.src = '../Assets/img/feedback.png';
 });
-const save = document.querySelector('.save');
+const save= document.querySelector('.save');
 const saveImg = document.querySelector('.saveImg');
 save.addEventListener('mouseover', () => {
-  setTimeout(() => {
-    saveImg.src = '../Assets/img/save_pink.png';
-  }, 170);
+  saveImg.src = '../Assets/img/save_pink.png';
 });
 save.addEventListener('mouseout', () => {
   saveImg.src = '../Assets/img/save.png';
 });
+
 const suc = document.querySelector('.suc');
 const sucImg = document.querySelector('.sucImg');
 about.addEventListener('mouseover', () => {
