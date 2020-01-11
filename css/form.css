@@ -328,7 +328,7 @@ label:hover{
     padding-top: 30px;
     grid-gap: 45px;
     display: grid;
-    grid-template-columns:  auto auto;
+    grid-template-columns:  48% auto;
     grid-template-rows:  220px 220px;
 
   }
@@ -347,7 +347,20 @@ label:hover{
     color:rgba(255, 62, 62, 0.89);
     font-size:25px;
 }
-
+.grid-item > h{
+    color:rgba(255, 62, 62, 0.89);
+    font-size:25px;
+}
+.grid-item > ul{
+    color:rgba(70, 70, 70, 0.89);
+    font-size:15px;
+}
+.grid-item > a{
+    color:rgba(6, 148, 243, 0.89);
+    font-size:20px;
+    margin-left: 70%;
+    
+}
 .topp1 > p{
     color:rgba(255, 62, 62, 0.89);
     margin-left: -90px;
@@ -457,11 +470,13 @@ label:hover{
         padding-top: 35px;
         display: grid;
         grid-template-columns: auto;
-        grid-template-rows:  200px 200px 200px 200px;
+        grid-template-rows:  214px 210px 210px 210px;
         padding-left:10px;
       }
       
-
+      .grid-item > a{
+          margin-bottom: 10px;
+      }
     .nav_expanded > p{
         position: relative;
         text-align: center;
