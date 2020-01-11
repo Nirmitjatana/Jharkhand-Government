@@ -66,6 +66,9 @@ body{
 .save{
     border-bottom: solid white 1.1px;
 }
+.eve{
+    border-bottom: solid white 1.1px;
+}
 .nav_expanded > a > img{
     position: absolute;
     top: 50%;
@@ -363,6 +366,10 @@ label:hover{
     width:70%;
     margin-left: 12vw;
 }
+.newn{
+    display:inline-block;
+}
+
 
 @media screen and (min-height: 1100px){
     .head{
@@ -388,12 +395,28 @@ label:hover{
         width:100%;
         margin-left: 0;
     }
+    .topp1 > p{
+        margin-left:15px;
+    }
+    .topp1{
+        width:100%;
+        margin-left: 0;
+    }
     .container{
+        
         grid-template-columns: none;
         grid-template-rows: 55px auto;
         grid-row-gap: 30px;
         transition: width 2s ease-in-out;
     }
+    .grid-item {
+    
+        padding: 5px;
+        font-size:20px;
+        color:rgb(114, 114, 114);
+        margin-bottom: 20px;
+        margin-top: -7px;
+      }
     .nav_expanded{
         padding-top: 55px;
         grid-template-rows: 100%;
@@ -429,6 +452,13 @@ label:hover{
         grid-template-rows:  auto auto;
         padding-left:10px;
         
+      }
+      .grid-container1 {
+        padding-top: 35px;
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows:  200px 200px 200px 200px;
+        padding-left:10px;
       }
       
 
