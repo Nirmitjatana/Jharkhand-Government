@@ -23,7 +23,7 @@ body{
     position: relative;
     background-color:#FF5F58;
     display: grid;
-    grid-template-rows: 18.5% 8.8% 8.8% 8.8% 8.8% 8.8% 8.8% 21% ;
+    grid-template-rows: 19% 9% 9% 9% 9% 9% 9% 21% ;
     color: white;
     align-items: center;
     font-weight: 300;
