@@ -150,7 +150,6 @@ let z = 0;
 table();
 let k = 0;
 let l = 0;
-
 const main_dropdown = document.getElementById('main');
 const sub_dropdown = document.getElementById('sub');
 function table() {
