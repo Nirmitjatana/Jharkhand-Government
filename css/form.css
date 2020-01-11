@@ -313,8 +313,37 @@ label:hover{
 .header{
     display: none;
 }
+.grid-container {
+    padding-top: 10px;
+    padding-left:50px;
+    display: grid;
+    grid-template-columns:  auto auto;
+    grid-template-rows:  280px 280px;
 
+  }
+   .grid-item {
+    
+    padding: 20px;
+    font-size:20px;
+    color:rgb(114, 114, 114);
+  }
+  .grid-item > img{
+    height: 100%;
+    width: 90%;
+    object-fit: cover;
+}
+.grid-item > p{
+    color:rgba(255, 62, 62, 0.89);
+    font-size:25px;
+}
+.topp > p{
+    color:rgba(255, 62, 62, 0.89);
+    padding-left: 70px;
+    padding-top: 40px;
+    font-weight:700;
+    font-size:32px;
 
+}
 @media screen and (min-height: 1100px){
     .head{
         grid-template-rows: min-content min-content 400px auto;
@@ -366,6 +395,12 @@ label:hover{
         max-width: 100%;
         display: none;
     }
+    .grid-container {
+        padding-top: 100px;
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows:  280px 280px;
+      }
     .nav_expanded > p{
         position: relative;
         text-align: center;
