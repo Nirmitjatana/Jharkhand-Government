@@ -321,9 +321,17 @@ label:hover{
     grid-template-rows:  280px 280px;
 
   }
+  .grid-container1 {
+    padding-top: 30px;
+    grid-gap: 45px;
+    display: grid;
+    grid-template-columns:  auto auto;
+    grid-template-rows:  220px 220px;
+
+  }
    .grid-item {
     
-    padding: 20px;
+    padding: 10px;
     font-size:20px;
     color:rgb(114, 114, 114);
   }
@@ -337,14 +345,21 @@ label:hover{
     font-size:25px;
 }
 
-.topp > p{
+.topp1 > p{
     color:rgba(255, 62, 62, 0.89);
     margin-left: -90px;
     padding-top: 40px;
     font-weight:400;
     font-size:32px;
 }
-.topp{
+.topp > p{
+    color:rgba(255, 62, 62, 0.89);
+   margin-left:70px ;
+    padding-top: 40px;
+    font-weight:400;
+    font-size:32px;
+}
+.topp1{
     width:70%;
     margin-left: 12vw;
 }
