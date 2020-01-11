@@ -1,6 +1,3 @@
-
-
-
 const tables = document.querySelector('.tables');
 const tablesImg = document.querySelector('.tablesImg');
 tables.addEventListener('mouseover', () => {
@@ -25,7 +22,6 @@ feed.addEventListener('mouseover', () => {
 feed.addEventListener('mouseout', () => {
   feedbackImg.src = '../Assets/img/feedback.png';
 });
-
 const save = document.querySelector('.save');
 const saveImg = document.querySelector('.saveImg');
 save.addEventListener('mouseover', () => {
@@ -36,11 +32,26 @@ save.addEventListener('mouseover', () => {
 save.addEventListener('mouseout', () => {
   saveImg.src = '../Assets/img/save.png';
 });
+const suc = document.querySelector('.suc');
+const sucImg = document.querySelector('.sucImg');
+about.addEventListener('mouseover', () => {
+  sucImg.src = '../Assets/img/about_pink.png';
+});
+suc.addEventListener('mouseout', () => {
+  sucImg.src = '../Assets/img/about.png';
+});
+const eve = document.querySelector('.eve');
+const eveImg = document.querySelector('.eveImg');
+eve.addEventListener('mouseover', () => {
+  eveImg.src = '../Assets/img/about_pink.png';
+});
+eve.addEventListener('mouseout', () => {
+  eveImg.src = '../Assets/img/about.png';
+});
 
 const ham = document.querySelector('.bam');
 const navExp = document.querySelector('.nav_expanded');
 const container = document.querySelector('.container');
-const logo2 = document.querySelector('.logo2');
 const logo3 = document.querySelector('.logo3');
 const govt = document.querySelector('.govt');
 let i = 0;
