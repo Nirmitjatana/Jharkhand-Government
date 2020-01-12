@@ -40,7 +40,21 @@ const container = document.querySelector('.container');
 const logo3 = document.querySelector('.logo3');
 const govt = document.querySelector('.govt');
 const suc = document.querySelector(".suc");
-const eve = document.querySelector(".eve")
+const eve = document.querySelector(".eve");
+const sucImg = document.querySelector(".sucImg");
+const eveImg = document.querySelector(".eveImg");
+suc.addEventListener('mouseover', () => {
+  sucImg.src = '../Assets/img/save_pink.png';
+});
+suc.addEventListener('mouseout', () => {
+  sucImg.src = '../Assets/img/save.png';
+});
+eve.addEventListener('mouseover', () => {
+  eveImg.src = '../Assets/img/save_pink.png';
+});
+eve.addEventListener('mouseout', () => {
+  eveImg.src = '../Assets/img/save.png';
+});
 let i = 0;
 ham.addEventListener('click', okay);
 const t1 = new TimelineLite();
