@@ -12,3 +12,4 @@ function openCity(evt, cityName) {
     evt.currentTarget.firstElementChild.className += " w3-border-red";
   }
   document.getElementById("defaultOpen").click();
+  
