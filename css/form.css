@@ -397,6 +397,17 @@ label:hover{
     
     
 }
+.smalldesc {
+    max-height: 220px;
+    max-width:380px;
+    overflow: hidden;
+    transition: all .3s ease;
+  }
+  
+  .smalldesc.expand {
+    max-height: 515px;
+    max-width:794px;
+  }
 
 @media screen and (min-height: 1100px){
     .head{
