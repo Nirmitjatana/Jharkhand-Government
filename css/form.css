@@ -295,8 +295,8 @@ label:hover{
     border-style: hidden;
     cursor: pointer;
     border-radius: 5px;
-    /* width:250px;
-    height:70px; */
+     width:280px;
+    height:70px;
     margin-bottom: 10px;
     margin-left:31%;
 }
@@ -353,15 +353,17 @@ label:hover{
 .grid-item > h{
     color:rgba(255, 62, 62, 0.89);
     font-size:25px;
+    padding:10px;
 }
-.grid-item > ul{
+.grid-item > h2{
     color:rgba(70, 70, 70, 0.89);
     font-size:15px;
+    padding:10px;
 }
 .grid-item > a{
     color:rgba(6, 148, 243, 0.89);
     font-size:20px;
-    margin-left: 70%;
+    margin-left: 69%;
     
 }
 .topp1 > p{
@@ -385,7 +387,16 @@ label:hover{
 .newn{
     display:inline-block;
 }
-
+.sucImg{
+    height:24px;
+    
+    
+}
+.eveImg{
+    height:24px;
+    
+    
+}
 
 @media screen and (min-height: 1100px){
     .head{
@@ -473,7 +484,7 @@ label:hover{
         padding-top: 35px;
         display: grid;
         grid-template-columns: auto;
-        grid-template-rows:  214px 210px 210px 210px;
+        grid-template-rows:  220px 220px 220px 220px;
         padding-left:10px;
       }
       
@@ -489,7 +500,7 @@ label:hover{
         display: none;
     }
     .button3{
-        width:263px;
+        width:93%;
         margin-left:0px;
     }
     .nav_expanded > a > img{

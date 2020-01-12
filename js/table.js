@@ -44,16 +44,16 @@ const eve = document.querySelector(".eve");
 const sucImg = document.querySelector(".sucImg");
 const eveImg = document.querySelector(".eveImg");
 suc.addEventListener('mouseover', () => {
-  sucImg.src = '../Assets/img/save_pink.png';
+  sucImg.src = '../Assets/img/trophy_pink.png';
 });
 suc.addEventListener('mouseout', () => {
-  sucImg.src = '../Assets/img/save.png';
+  sucImg.src = '../Assets/img/trophy.png';
 });
 eve.addEventListener('mouseover', () => {
-  eveImg.src = '../Assets/img/save_pink.png';
+  eveImg.src = '../Assets/img/ca_pink.png';
 });
 eve.addEventListener('mouseout', () => {
-  eveImg.src = '../Assets/img/save.png';
+  eveImg.src = '../Assets/img/calender.png';
 });
 let i = 0;
 ham.addEventListener('click', okay);

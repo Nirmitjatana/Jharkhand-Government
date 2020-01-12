@@ -17,7 +17,16 @@ body{
     position: relative;
     
 }
-
+.sucImg{
+    height:24px;
+    
+    
+}
+.eveImg{
+    height:24px;
+    
+    
+}
 /* Nav: Start */ 
 .nav_expanded{
     position: relative;
