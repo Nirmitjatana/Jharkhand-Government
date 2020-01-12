@@ -154,7 +154,7 @@ function okay() {
     });
     /* logo2.style.display = 'block'; */
     container.style.gridTemplateRows = '100%';
-    navExp.style.gridTemplateRows = '12% 12% 12% 12% 12% 12% 18% 5%';
+    navExp.style.gridTemplateRows = '11% 11% 11% 11% 11% 11% 25% 5%';
     t1.fromTo(navExp, 1, {
       width: '0',
     }, {
