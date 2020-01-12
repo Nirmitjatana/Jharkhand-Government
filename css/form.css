@@ -66,9 +66,7 @@ body{
 .save{
     border-bottom: solid white 1.1px;
 }
-.eve{
-    border-bottom: solid white 1.1px;
-}
+
 .nav_expanded > a > img{
     position: absolute;
     top: 50%;
@@ -307,6 +305,11 @@ label:hover{
     width:2.5vh;
     opacity: 0.6;
     padding-right:3vw;
+}
+.saveImg2{
+    height:2.5vh;
+    width:2.5vh;
+    padding-right:15px;
 }
 
 .f2{
