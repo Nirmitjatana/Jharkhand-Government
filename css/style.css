@@ -121,6 +121,9 @@ body{
     width: 90%;
     object-fit: cover;
 }
+.eve{
+    border-bottom: solid white 1.1px;
+}
 
 /* About: End */
 .header{
