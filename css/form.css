@@ -17,7 +17,7 @@ body{
     position: relative;
 }
 
-/* Nav: Start */ 
+/* Nav: Start  */
 .nav_expanded{
     position: relative;
     background-color:#FF5F58;
@@ -36,12 +36,12 @@ body{
     left: 50%;
     transform: translateX(-50%);
 }
-.logo2{
+/* .logo2{
     position: relative;
     width: 50%;
     left: 50%;
     transform: translateX(-50%);
-}
+} */
 .mainLogo{
     /* padding-left: 4vw; */
     position: relative;
@@ -441,14 +441,14 @@ label:hover{
         position: relative;
         padding-left: 0;
     }
-    .logo2{
+    /* .logo2{
         position: relative;
         left: 50vw;
         transform: translateX(-50%);
-        /* padding-left: 4vw; */
+        /* padding-left: 4vw; 
         width: 33vw;
         display: none;
-    }
+    } */
     .logo3{
         /* transform: none; */
         /* padding-left: 4vw; */
