@@ -35,8 +35,7 @@ save.addEventListener('mouseout', () => {
 const ham = document.querySelector('.bam');
 const navExp = document.querySelector('.nav_expanded');
 const container = document.querySelector('.container');
-/* const logo2 = document.querySelector('.logo2'); */
-/* console.log(logo2); */
+
 const logo3 = document.querySelector('.logo3');
 const govt = document.querySelector('.govt');
 const suc = document.querySelector(".Suc");
@@ -65,7 +64,6 @@ function okay() {
     feed.style.display = 'none';
     tables.style.display = 'none';
     save.style.display = 'none';
-    /* logo2.style.display = 'none'; */
     logo3.style.display = 'none';
     govt.style.display = 'none';
     suc.style.display = 'none';
@@ -106,8 +104,7 @@ function okay() {
     }, {
       opacity: '0',
     });
-    /* logo2.style.opacity = '0';
-    logo2.style.display = 'none'; */
+    
   } else {
     TweenLite.fromTo(about, 0.1, {
       opacity: '0',
@@ -151,7 +148,7 @@ function okay() {
       opacity: '1',
       display: 'block',
     });
-    /* logo2.style.display = 'block'; */
+
     container.style.gridTemplateRows = '100%';
     navExp.style.gridTemplateRows = '11% 11% 11% 11% 11% 11% 25% 5%';
     t1.fromTo(navExp, 1, {
@@ -159,11 +156,6 @@ function okay() {
     }, {
       width: '100%',
     })
-      /* .fromTo(logo2, 0.1, {
-        opacity: '0',
-      }, {
-        opacity: '1',
-      }) */
       .fromTo(logo3, 0.1, {
         opacity: '0',
         display: 'none',

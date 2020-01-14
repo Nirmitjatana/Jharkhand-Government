@@ -79,6 +79,8 @@ const t1 = new TimelineLite();
 function okay() {
   i++;
   if (i % 2 == 0) {
+    logo3.style.display = 'none';
+    logo3.style.opacity = "0";
     about.style.display = 'none';
     feed.style.display = 'none';
     tables.style.display = 'none';
@@ -124,6 +126,7 @@ function okay() {
     }, {
       opacity: '0',
     });
+    logo3.style.display = "none";
     /* logo2.style.opacity = '0';
     logo2.style.display = 'none'; */
   } else {

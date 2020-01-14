@@ -36,16 +36,17 @@ body{
     color: white;
     align-items: center;
     font-weight: 300;
-    height:764px;
+    /* height:764px; */
     /* max-height: 900px; */
     z-index: 1;
     padding-bottom: 20px;
 }
 .logo3{
     position: relative;
-    width: 35%;
+    height: 9%;
+    width: 22%;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-50%) scale(1.9);
 }
 /* .logo2{
     position: relative;
@@ -512,6 +513,8 @@ label:hover{
         margin-left:15px;
     }
     .topp1{
+        position: absolute;
+        margin-top: 50px;
         width:100%;
         margin-left: 0;
     }
@@ -561,7 +564,7 @@ label:hover{
         /* padding-left: 4vw; */
         position: relative;
         left: 50vw;
-        height: 18%;
+        height: 38%;
         max-width: 100%;
         display: none;
     }
