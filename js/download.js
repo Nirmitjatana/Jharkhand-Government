@@ -58,7 +58,6 @@ eve.addEventListener('mouseout', () => {
 let i = 0;
 ham.addEventListener('click', okay);
 const t1 = new TimelineLite();
-
 function okay() {
   i++;
   if (i % 2 == 0) {
