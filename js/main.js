@@ -168,6 +168,7 @@ function okay() {
       .fromTo(logo3, 0.1, {
         opacity: '0',
         display: 'none',
+        
       }, {
         opacity: '1',
         display: 'block',

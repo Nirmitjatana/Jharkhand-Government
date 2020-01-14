@@ -15,17 +15,12 @@ body{
     height: 100vh;
     width: 100%;
     position: relative;
-    
 }
 .sucImg{
     height:24px;
-    
-    
 }
 .eveImg{
     height:24px;
-    
-    
 }
 /* Nav: Start */ 
 .nav_expanded{
@@ -200,6 +195,12 @@ th, td {
 @media screen and (max-width: 700px){
     
     .container{
+        grid-template-columns: none;
+        grid-template-rows: 55px auto;
+        grid-row-gap: 30px;
+        transition: width 2s ease-in-out;
+    }
+    .container1{
         grid-template-columns: none;
         grid-template-rows: 55px auto;
         grid-row-gap: 30px;
