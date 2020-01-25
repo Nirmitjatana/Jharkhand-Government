@@ -191,6 +191,7 @@ function okay() {
       }, {
         opacity: '1',
         display: 'block',
+        height: '70px',
       })
       .fromTo(govt, 0.1, {
         opacity: '0',

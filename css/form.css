@@ -14,7 +14,8 @@ body{
     grid-template-columns: 20% auto;
     height: 100vh;
     width: 100%;
-    position: relative;
+    position: sticky;
+
 }
 
 .container1{
@@ -24,22 +25,23 @@ body{
     grid-template-columns: 20% auto;
     height: 100vh;
     width: 100%;
-    position: relative;
+    position: sticky;
 }
 
 /* Nav: Start  */
 .nav_expanded{
-    position: relative;
     background-color:#FF5F58;
     display: grid;
-    grid-template-rows: 19% 9% 9% 9% 9% 9% 9% 22%;
+    grid-template-rows: 19% 9% 9% 9% 9% 9% 9% 21%;
     color: white;
     align-items: center;
     font-weight: 300;
     /* height:764px; */
     /* max-height: 900px; */
-    z-index: 1;
-    padding-bottom: 20px;
+    /*z-index: 5;*/
+   /* position: fixed;
+    position: relative;*/
+    position:sticky;
 }
 .logo3{
     position: relative;
@@ -483,6 +485,10 @@ label:hover{
 .card{
     margin-top:25px;
     border-bottom: black;
+    
+}
+.card-header{
+    height:160px;
 }
 
 @media screen and (min-height: 1100px){
@@ -491,6 +497,10 @@ label:hover{
     }
     
 }
+
+
+
+
 @media screen and (max-width: 700px){
     
     input[type=text1]{
