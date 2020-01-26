@@ -152,7 +152,7 @@ select{
 .inner > a{
     color: #62BCCC;
 }
-table{
+.tableContainer{
     position: relative;
     border-collapse: collapse;
     width: 65vw;
@@ -163,7 +163,7 @@ table{
     left: 50%;
     transform: translateX(-50%);
 }
-table, th, td {
+.tableContainer, th, td {
     border: 1px solid rgb(196, 196, 196);
     text-justify: center;
     background: white;
@@ -253,7 +253,7 @@ th, td {
         margin-top: 168px;
         width: 90vw;
     }
-    table{
+    .tableContainer{
         width: 80vw;
     }
     .ham{

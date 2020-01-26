@@ -262,8 +262,9 @@ function table() {
   if (file == '' || version == 'none') {
     selector.innerHTML = '';
   } else {
+    
     const urls = `https://pmjay.herokuapp.com/?file=${file}&version=${version}`;
-
+    selector.innerHTML = '<img src="../Assets/gifs/loading.gif" alt="" height="20px" style = "position: absolute; top: 50%; left: 50%; transfrom: translate(-50%,-50%);">';
 
     fetch(urls, {
       method: 'GET',

@@ -30,6 +30,9 @@ body{
 
 /* Nav: Start  */
 .nav_expanded{
+    position: sticky;
+    top: 0;
+    height: 100vh;
     background-color:#FF5F58;
     display: grid;
     grid-template-rows: 19% 9% 9% 9% 9% 9% 9% 21%;
@@ -45,17 +48,11 @@ body{
 }
 .logo3{
     position: relative;
-    height: 9%;
-    width: 22%;
     left: 50%;
     transform: translateX(-50%) scale(1.9);
+    width: 20%;
+    max-width: 150px;
 }
-/* .logo2{
-    position: relative;
-    width: 50%;
-    left: 50%;
-    transform: translateX(-50%);
-} */
 .mainLogo{
     /* padding-left: 4vw; */
     position: relative;
@@ -525,6 +522,7 @@ label:hover{
         margin-top: 50px;
         width:100%;
         margin-left: 0;
+        z-index: -1;
     }
     .container{
         
