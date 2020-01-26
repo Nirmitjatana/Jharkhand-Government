@@ -570,13 +570,13 @@ label:hover{
         width: 33vw;
         display: none;
     } */
-    /* .logo3{
+    .logo3{
         position: relative;
         left: 50vw;
         height: 38%;
         max-width: 100%;
         display: none;
-    } */
+    }
     .w3-padding {
         padding: 8px!important;
         margin-left: 30px;
