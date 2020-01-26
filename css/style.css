@@ -166,12 +166,12 @@ body{
         grid-row-gap: 30px;
         transition: width 2s ease-in-out;
     }
-    .nav_expanded{
+    /* .nav_expanded{
         padding-top: 55px;
         grid-template-rows: 100%;
         width: 100vw;
         padding-bottom: 0;
-    }
+    } */
     .nav_expanded > a{
         display: none;
         position: relative;
