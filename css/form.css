@@ -39,8 +39,8 @@ body{
     /* height:764px; */
     /* max-height: 900px; */
     /*z-index: 5;*/
-   /* position: fixed;
-    position: relative;*/
+    position: fixed;
+    /*position: relative;*/
     position:sticky;
 }
 .logo3{
@@ -487,9 +487,7 @@ label:hover{
     border-bottom: black;
     
 }
-.card-header{
-    height:160px;
-}
+
 
 @media screen and (min-height: 1100px){
     .head{
