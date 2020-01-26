@@ -153,8 +153,7 @@ body{
         grid-template-rows: min-content min-content 400px auto;
     }
 }
-@media screen and (max-width: 700px){
-    
+@media screen and (max-width: 700px){ 
     .container{
         grid-template-columns: none;
         grid-template-rows: 55px auto;

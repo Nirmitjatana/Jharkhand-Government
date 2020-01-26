@@ -38,8 +38,8 @@ body{
     font-weight: 300;
     /* height:764px; */
     /* max-height: 900px; */
-    /*z-index: 5;*/
-    position: fixed;
+    z-index: 5;
+    
     /*position: relative;*/
     position:sticky;
 }
