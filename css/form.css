@@ -46,13 +46,13 @@ body{
     /*position: relative;*/
     position:sticky;
 }
-/* .logo3{
+.logo3{
     position: relative;
     left: 50%;
     transform: translateX(-50%) scale(1.9);
     width: 20%;
     max-width: 150px;
-} */
+}
 .mainLogo{
     /* padding-left: 4vw; */
     position: relative;
