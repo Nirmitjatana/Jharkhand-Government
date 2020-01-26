@@ -217,11 +217,12 @@ function table() {
            
         })
         .then(data => {
-            querySelector(".mainopt").innerHTML = "Select Table";
-            querySelector(".subopt").innerHTML = "Select Version";
+          document.querySelector(".mainopt").innerHTML = "Select Table";
+          document.querySelector(".subopt").innerHTML = "Select Version";
             console.log(data)
             const entries = Object.entries(data);
                 for( ;l < entries.length; l++){
+                    
                     var opt = document.createElement("option");
                     opt.value = entries[l][0];
                     opt.text = entries[l][0];
