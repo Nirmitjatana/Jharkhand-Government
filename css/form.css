@@ -549,8 +549,9 @@ label:hover{
     .nav_expanded{
         padding-top: 55px;
         grid-template-rows: 100%;
-        width: 100vw;
+        width: 0;
         padding-bottom: 0;
+        z-index: 1;
     }
     .nav_expanded > a{
         display: none;
@@ -611,7 +612,7 @@ label:hover{
     .nav_expanded > a > p{
         left: calc(40px + 3vw);
     }
-.head{
+.headf{
     margin-top: 163px;
     position: absolute;
     /* grid-template-rows: min-content min-content 400px auto;
