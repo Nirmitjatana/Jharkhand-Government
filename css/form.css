@@ -486,6 +486,7 @@ label:hover{
 }
 
 
+
 @media screen and (min-height: 1100px){
     .head{
         grid-template-rows: min-content min-content 400px auto;
@@ -530,14 +531,14 @@ label:hover{
         grid-template-columns: none;
         grid-template-rows: 55px auto;
         grid-row-gap: 30px;
-        transition: width 2s ease-in-out;
+        transition: width 0.5s ease-in-out;
     }
     .container1{
         
         grid-template-columns: none;
         grid-template-rows: 55px auto;
         grid-row-gap: 30px;
-        transition: width 2s ease-in-out;
+        transition: width 0.5s ease-in-out;
     }
     .grid-item {
     
@@ -575,6 +576,11 @@ label:hover{
         height: 38%;
         max-width: 100%;
         display: none;
+    }
+    .w3-padding {
+        padding: 8px!important;
+        margin-left: 30px;
+        width: 85vw;
     }
     .grid-container {
         padding-top: 35px;
