@@ -46,13 +46,13 @@ body{
     /*position: relative;*/
     position:sticky;
 }
-.logo3{
+/* .logo3{
     position: relative;
     left: 50%;
     transform: translateX(-50%) scale(1.9);
     width: 20%;
     max-width: 150px;
-}
+} */
 .mainLogo{
     /* padding-left: 4vw; */
     position: relative;
@@ -568,15 +568,13 @@ label:hover{
         width: 33vw;
         display: none;
     } */
-    .logo3{
-        /* transform: none; */
-        /* padding-left: 4vw; */
+    /* .logo3{
         position: relative;
         left: 50vw;
         height: 38%;
         max-width: 100%;
         display: none;
-    }
+    } */
     .w3-padding {
         padding: 8px!important;
         margin-left: 30px;
