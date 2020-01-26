@@ -217,6 +217,8 @@ function table() {
            
         })
         .then(data => {
+            querySelector(".mainopt").innerHTML = "Select Table";
+            querySelector(".subopt").innerHTML = "Select Version";
             console.log(data)
             const entries = Object.entries(data);
                 for( ;l < entries.length; l++){
