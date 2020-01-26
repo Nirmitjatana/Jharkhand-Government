@@ -531,7 +531,9 @@ label:hover{
         grid-template-rows: 55px auto;
         grid-row-gap: 30px;
         transition: width 0.5s ease-in-out;
+        
     }
+    
     .container1{
         
         grid-template-columns: none;
