@@ -559,9 +559,6 @@ label:hover{
         display: none;
     } */
     .logo3{
-        display: none;
-        /* transform: none; */
-        /* padding-left: 4vw; */
         position: relative;
         left: 50vw;
         height: 32%;
