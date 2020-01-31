@@ -71,9 +71,9 @@ body{
     color: white;
     border-top: solid white 1.1px;
 }
-.save{
+/* .save{
     border-bottom: solid white 1.1px;
-}
+} */
 .nav_expanded > a > img{
     position: absolute;
     top: 50%;
@@ -134,9 +134,8 @@ body{
 
 .sucImg{
     height:24px;
-    
-    
 }
+
 .eveImg{
     height:24px;
     
