@@ -36,7 +36,7 @@ const ham = document.querySelector('.bam');
 const navExp = document.querySelector('.nav_expanded');
 const container = document.querySelector('.container');
 
-const logo3 = document.querySelector('.logo3');
+// const logo3 = document.querySelector('.logo3');
 const govt = document.querySelector('.govt');
 const suc = document.querySelector(".Suc");
 const eve = document.querySelector(".eve")
@@ -64,7 +64,7 @@ function okay() {
     feed.style.display = 'none';
     tables.style.display = 'none';
     save.style.display = 'none';
-    logo3.style.display = 'none';
+    // logo3.style.display = 'none';
     govt.style.display = 'none';
     suc.style.display = 'none';
     eve.style.display = 'none';
@@ -156,13 +156,13 @@ function okay() {
     }, {
       width: '100%',
     })
-      .fromTo(logo3, 0.1, {
-        opacity: '0',
-        display: 'none',
-      }, {
-        opacity: '1',
-        display: 'block',
-      })
+      // .fromTo(logo3, 0.1, {
+      //   opacity: '0',
+      //   display: 'none',
+      // }, {
+      //   opacity: '1',
+      //   display: 'block',
+      // })
       .fromTo(govt, 0.1, {
         opacity: '0',
         display: 'none',

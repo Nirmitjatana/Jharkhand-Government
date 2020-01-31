@@ -110,6 +110,9 @@ body{
 .save{
     border-bottom: solid white 1.1px;
 }
+/* .nav_expanded > .logo3{
+    padding-left:65px;
+} */
 
 .nav_expanded > a > img{
     position: absolute;
@@ -559,13 +562,14 @@ label:hover{
         width: 33vw;
         display: none;
     } */
-    .logo3{
+    /* .logo3{
         position: relative;
         left: 50vw;
         height: 32%;
-        width: 40%;
+        width: 20%;
+        display: none;
         
-    }
+    } */
     .w3-padding {
         padding: 8px!important;
         margin-left: 30px;
