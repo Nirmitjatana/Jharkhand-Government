@@ -1,3 +1,36 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 *{
     font-family: sans-serif;
 }
@@ -35,7 +68,7 @@ body{
     height: 100vh;
     background-color:#FF5F58;
     display: grid;
-    grid-template-rows: 19% 9% 9% 9% 9% 9% 9% 21%;
+    grid-template-rows: 19% 9% 9% 9% 9% 9% 8% 21%;
     color: white;
     align-items: center;
     font-weight: 300;
@@ -438,52 +471,7 @@ label:hover{
     width: 500px;
     height: 500px;
 }
-.black{
-    width: 250px;
-    height: 250px;
-    /* background: black; */
-    text-align: center;
-    transition: all .1s ease;
-}
-.blue{
-    width: 250px;
-    height: 250px;
-    /* background: blue; */
-    transition: all .1s ease-out;
-    text-align: center;
-}
 
-.red{
-    width: 250px;
-    height: 250px;
-    background: red;
-    transition: all .1s ease;
-}
-.green{
-    width: 250px;
-    height: 250px;
-    background: green;
-    transition: all .1s ease;
-}
-
-.flo{
-    float:left;
-}
-
-
-.active{
-    height: 100%;
-    width: 100%;
-}
-
-.hide{
-    display: none;
-}
-.card{
-    margin-top:25px;
-    border-bottom: black;
-    
-}
 
 
 
@@ -571,13 +559,14 @@ label:hover{
         display: none;
     } */
     .logo3{
+        display: none;
         /* transform: none; */
         /* padding-left: 4vw; */
         position: relative;
         left: 50vw;
-        height: 38%;
-        max-width: 100%;
-        display: none;
+        height: 32%;
+        width: 40%;
+        
     }
     .w3-padding {
         padding: 8px!important;

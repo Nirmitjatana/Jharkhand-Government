@@ -4,6 +4,7 @@ body{
     padding: 0;
     height: 100%;
     width: 100%;
+    font-family: sans-serif;
 }
 .container{
     margin: 0;
@@ -29,7 +30,7 @@ body{
     position: relative;
     background-color:#FF5F58;
     display: grid;
-    grid-template-rows: 19% 9% 9% 9% 9% 9% 9% 21%;
+    grid-template-rows: 19.5% 9% 9% 9% 9% 9% 9% 21%;
     color: white;
     align-items: center;
     font-weight: 300;
@@ -38,8 +39,8 @@ body{
 }
 .logo3{
     position: relative;
-    width: 35%;
-    height: 7vw;
+    width: 38%;
+    height: 75%;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -130,9 +131,7 @@ body{
     width: 90%;
     object-fit: cover;
 }
-.eve{
-    border-bottom: solid white 1.1px;
-}
+
 .sucImg{
     height:24px;
     
@@ -191,7 +190,7 @@ body{
         position: relative;
         left: 50vw;
         max-width: 100%;
-        height: 18%;
+        height: 75%;
         display: none;
     }
     .nav_expanded > p{
