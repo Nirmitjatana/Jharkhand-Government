@@ -155,11 +155,11 @@ function okay() {
     /* logo2.style.display = 'block'; */
     container.style.gridTemplateRows = '100%';
     navExp.style.gridTemplateRows = '12% 12% 12% 12% 12% 12% 18% 5%';
-    t1.fromTo(navExp, 1, {
+    t1.fromTo(navExp, 0.2, {
       width: '0',
-    }, {
+      }, {
       width: '100%',
-    })
+      })
       /* .fromTo(logo2, 0.1, {
         opacity: '0',
       }, {

@@ -72,7 +72,7 @@ function okay() {
     suc.style.display = 'none';
     eve.style.display = 'none';
     container.style.gridTemplateRows = '55px auto';
-    TweenLite.fromTo(navExp, 1, {
+    TweenLite.fromTo(navExp, 0.2, {
       width: '100%',
     }, {
       width: '0',
@@ -155,7 +155,7 @@ function okay() {
     /* logo2.style.display = 'block'; */
     container.style.gridTemplateRows = '100%';
     navExp.style.gridTemplateRows = '12% 12% 12% 12% 12% 12% 23% 3%';
-    t1.fromTo(navExp, 1, {
+    t1.fromTo(navExp, 0.2, {
       width: '0',
     }, {
       width: '100%',

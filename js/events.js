@@ -54,7 +54,7 @@ const navExp = document.querySelector('.nav_expanded');
 const container1 = document.querySelector('.container1');
 /* const logo2 = document.querySelector('.logo2'); */
 /* console.log(logo2); */
-// const logo3 = document.querySelector('.logo3');
+const logo3 = document.querySelector('.logo3');
 const govt = document.querySelector('.govt');
 const suc = document.querySelector(".Suc");
 const eve = document.querySelector(".eve")
@@ -80,7 +80,7 @@ function okay() {
   i++;
   if (i % 2 == 0) {
     // logo3.style.display = 'none';
-    // logo3.style.opacity = "0";
+    logo3.style.opacity = "0";
     about.style.display = 'none';
     feed.style.display = 'none';
     tables.style.display = 'none';
@@ -91,7 +91,7 @@ function okay() {
     suc.style.display = 'none';
     eve.style.display = 'none';
     container1.style.gridTemplateRows = '55px auto';
-    TweenLite.fromTo(navExp, 1, {
+    TweenLite.fromTo(navExp, 0.2, {
       width: '100%',
     }, {
       width: '0',
@@ -126,7 +126,7 @@ function okay() {
     }, {
       opacity: '0',
     });
-  //  logo3. style.display = "none";
+   
     /* logo2.style.opacity = '0';
     logo2.style.display = 'none'; */
   } else {
@@ -172,10 +172,11 @@ function okay() {
       opacity: '1',
       display: 'block',
     });
-    /* logo2.style.display = 'block'; */
+    /*logo2.style.display = 'block'; */
+    logo3. style.display = "none";
     container1.style.gridTemplateRows = '100%';
-    navExp.style.gridTemplateRows = '11% 11% 11% 11% 11% 11% 25% 5%';
-    t1.fromTo(navExp, 1, {
+    navExp.style.gridTemplateRows = '12% 12% 12% 12% 12% 12% 18% 5%';
+    t1.fromTo(navExp, 0.2, {
       width: '0',
     }, {
       width: '100%',

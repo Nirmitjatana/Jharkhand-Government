@@ -198,13 +198,13 @@ th, td {
         grid-template-columns: none;
         grid-template-rows: 55px auto;
         grid-row-gap: 30px;
-        transition: width 2s ease-in-out;
+        transition: width 0.5s ease-in-out;
     }
     .container1{
         grid-template-columns: none;
         grid-template-rows: 55px auto;
         grid-row-gap: 30px;
-        transition: width 2s ease-in-out;
+        transition: width 0.5s ease-in-out;
     }
     .nav_expanded{
         padding-top: 55px;

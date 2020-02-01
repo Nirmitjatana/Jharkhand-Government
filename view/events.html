@@ -1,18 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-<div/div> <meta charset="UTF-8">
+
+<head>
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  
+
   <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="../css/form.css">
-  <title>PMJAY | Achievements</title>
+  <link rel="stylesheet" href="../css/form.css">
 
-  <body>
-    <div class="container1">
-      <div>
+  <title>PMJAY | Achievements</title>
+  <style>
+    @media screen and (max-width: 700px) {
+      .nav_expanded {
+        z-index: 5;
+      }
+
+      .topp1 {
+        z-index: 3;
+      }
+    }
+  </style>
+</head>
+
+
+<body>
+  <div class="container1">
+    <div>
       <div class="nav_expanded">
         <img src="https://0.academia-photos.com/61780733/19658868/19531766/s200_sna.jharkhand.jpg" alt=""
           class="mainLogo">
@@ -44,10 +60,10 @@
         <p class="govt">Govt. of Jharkhand</p>
         <img src="../Assets/img/ham.png" alt="" srcset="" class="ham">
       </div>
-      </div>
-      <div class="topp1" style="margin-bottom: 40px;">
-        <p>Events and Workshops</p>
-        <!-- <div class="w3-row">
+    </div>
+    <div class="topp1" style="margin-bottom: 40px;">
+      <p>Events and Workshops</p>
+      <!-- <div class="w3-row">
           <a href="javascript:void(0)" onclick="openCity(event, 'London');">
             <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding"
               style="color:rgba(255, 62, 62, 0.89);text-align: center;">All</div>
@@ -61,94 +77,59 @@
               style="color:rgba(255, 62, 62, 0.89);text-align: center;">Workshops</div>
           </a>
           </div>-->
-          <div>
-          <button id="all">All events and workshops</button>
-          <button id="events">Events</button>
-          <button id="workshops">Workshops</button>
-          </div>
-          <div class="accordion" id="accordionExample" style="padding-top: 40px;">
-            
-          </div>
-          
-            <script>
-              
-              function gettext(){
-                fetch('http://pmjay.herokuapp.com/all-events-workshops/')
-                .then((res)=>res.json())
-                .then((data)=>{
-                  let output = '';
-                  console.log(data);
-                  data.events.forEach(function(user){
-                    output += `
-                      <div class="card">
-    <div class="card-header" id="heading${user.id}">
-      <h2 class="mb-0" style="color: rgba(255, 62, 62, 0.89);">
-        ${user.event_name}<h5 style="color:rgba(116, 116, 116, 0.89); font-size: small;">Event</h5>
-                    <h3 style="color:rgba(116, 116, 116, 0.89); font-size: medium; padding-top: 10px;">Date:${user.time_of_event}</h3>
-        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse${user.id}" aria-expanded="false" aria-controls="collapse${user.id}" style="float: right;">
-          Details
-        </button>
-      </h2>
-    </div>
-    <div id="collapse${user.id}" class="collapse" aria-labelledby="heading${user.id}" data-parent="#accordionExample">
-      <div class="card-body">
-        ${user.event_description}
+      <div>
+        <button id="all">All events and workshops</button>
+        <button id="events">Events</button>
+        <button id="workshops">Workshops</button>
       </div>
-    </div>
-  </div>
-                    `;
-                  });
-                  data.workshops.forEach(function(user){
-                    output += `
-                      <div class="card">
-    <div class="card-header" id="heading${user.id}">
-      <h2 class="mb-0" style="color: rgba(255, 62, 62, 0.89);">
-        ${user.workshop_name}<h5 style="color:rgba(116, 116, 116, 0.89); font-size: small;">Workshop</h5>
-                    <h3 style="color:rgba(116, 116, 116, 0.89); font-size: medium; padding-top: 10px;">Date:${user.time_of_workshop}</h3>
-        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse${user.id}" aria-expanded="false" aria-controls="collapse${user.id}" style="float: right;">
-          Details
-        </button>
-      </h2>
-    </div>
-    <div id="collapse${user.id}" class="collapse" aria-labelledby="heading${user.id}" data-parent="#accordionExample">
-      <div class="card-body">
-        ${user.workshop_description}
-      </div>
-    </div>
-  </div>
-                    `;
-                  });
-                  document.getElementById('accordionExample').innerHTML = output;
-                  document.getElementById('events').addEventListener('click',function(){
-                let output1 = '';
-                data.events.forEach(function(user){
-                    output1 += `
-                      <div class="card">
-    <div class="card-header" id="heading${user.id}">
-      <h2 class="mb-0" style="color: rgba(255, 62, 62, 0.89);">
-        ${user.event_name}<h5 style="color:rgba(116, 116, 116, 0.89); font-size: small;">Event</h5>
-                    <h3 style="color:rgba(116, 116, 116, 0.89); font-size: medium; padding-top: 10px;">Date:${user.time_of_event}</h3>
-        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse${user.id}" aria-expanded="false" aria-controls="collapse${user.id}" style="float: right;">
-          Details
-        </button>
-      </h2>
-    </div>
-    <div id="collapse${user.id}" class="collapse" aria-labelledby="heading${user.id}" data-parent="#accordionExample">
-      <div class="card-body">
-        ${user.event_description}
-      </div>
-    </div>
-  </div>
-                    `;
-                  });
-                  document.getElementById('accordionExample').innerHTML = output1;
+      <div class="accordion" id="accordionExample" style="padding-top: 40px;">
 
-                });
-                  
-                  document.getElementById('workshops').addEventListener('click', function(){
-                    let output2 = '';
-                  data.workshops.forEach(function(user){
-                    output2 += `
+      </div>
+
+      <script>
+
+        function gettext() {
+          fetch('http://pmjay.herokuapp.com/all-events-workshops/')
+            .then((res) => res.json())
+            .then((data) => {
+              let output = '';
+              console.log(data);
+               
+                 let i;
+                 let k;
+                 let j;
+                 for(j=3;j<data.events.length();j=j+3){
+                  for(i=0;i<j;i++){
+                  data.events.for(function (user) {
+
+                  output += `
+                      <div class="card">
+    <div class="card-header" id="heading${user.id}">
+      <h2 class="mb-0" style="color: rgba(255, 62, 62, 0.89);">
+        ${user.event_name}<h5 style="color:rgba(116, 116, 116, 0.89); font-size: small;">Event</h5>
+                    <h3 style="color:rgba(116, 116, 116, 0.89); font-size: medium; padding-top: 10px;">Date:${user.time_of_event}</h3>
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse${user.id}" aria-expanded="false" aria-controls="collapse${user.id}" style="float: right;">
+          Details
+        </button>
+      </h2>
+    </div>
+    <div id="collapse${user.id}" class="collapse" aria-labelledby="heading${user.id}" data-parent="#accordionExample">
+      <div class="card-body">
+        ${user.event_description}
+      </div>
+    </div>
+  </div>
+                    `;
+}
+
+
+              });}
+
+
+
+            }
+              data.workshops.forEach(function (user) {
+                output += `
                       <div class="card">
     <div class="card-header" id="heading${user.id}">
       <h2 class="mb-0" style="color: rgba(255, 62, 62, 0.89);">
@@ -166,14 +147,65 @@
     </div>
   </div>
                     `;
-                  });
-                  document.getElementById('accordionExample').innerHTML = output2;
-                 });
-              
-                document.getElementById('all').addEventListener('click', function(){
-                  
-                  let output3 = '';
-                  data.events.forEach(function(user){
+              });
+              document.getElementById('accordionExample').innerHTML = output;
+                }
+                
+              document.getElementById('events').addEventListener('click', function () {
+                let output1 = '';
+                data.events.forEach(function (user) {
+                  output1 += `
+                      <div class="card">
+    <div class="card-header" id="heading${user.id}">
+      <h2 class="mb-0" style="color: rgba(255, 62, 62, 0.89);">
+        ${user.event_name}<h5 style="color:rgba(116, 116, 116, 0.89); font-size: small;">Event</h5>
+                    <h3 style="color:rgba(116, 116, 116, 0.89); font-size: medium; padding-top: 10px;">Date:${user.time_of_event}</h3>
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse${user.id}" aria-expanded="false" aria-controls="collapse${user.id}" style="float: right;">
+          Details
+        </button>
+      </h2>
+    </div>
+    <div id="collapse${user.id}" class="collapse" aria-labelledby="heading${user.id}" data-parent="#accordionExample">
+      <div class="card-body">
+        ${user.event_description}
+      </div>
+    </div>
+  </div>
+                    `;
+                });
+                document.getElementById('accordionExample').innerHTML = output1;
+
+              });
+
+              document.getElementById('workshops').addEventListener('click', function () {
+                let output2 = '';
+                data.workshops.forEach(function (user) {
+                  output2 += `
+                      <div class="card">
+    <div class="card-header" id="heading${user.id}">
+      <h2 class="mb-0" style="color: rgba(255, 62, 62, 0.89);">
+        ${user.workshop_name}<h5 style="color:rgba(116, 116, 116, 0.89); font-size: small;">Workshop</h5>
+                    <h3 style="color:rgba(116, 116, 116, 0.89); font-size: medium; padding-top: 10px;">Date:${user.time_of_workshop}</h3>
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse${user.id}" aria-expanded="false" aria-controls="collapse${user.id}" style="float: right;">
+          Details
+        </button>
+      </h2>
+    </div>
+    <div id="collapse${user.id + 1}" class="collapse" aria-labelledby="heading${user.id}" data-parent="#accordionExample">
+      <div class="card-body">
+        ${user.workshop_description}
+      </div>
+    </div>
+  </div>
+                    `;
+                });
+                document.getElementById('accordionExample').innerHTML = output2;
+              });
+
+              document.getElementById('all').addEventListener('click', function () {
+
+                let output3 = '';
+                data.events.forEach(function (user) {
                   output3 += `
                       <div class="card">
     <div class="card-header" id="heading${user.id}">
@@ -192,9 +224,9 @@
     </div>
   </div>
                     `;
-});
-                  data.workshops.forEach(function(user){
-                    output3 += `
+                });
+                data.workshops.forEach(function (user) {
+                  output3 += `
                       <div class="card">
     <div class="card-header" id="heading${user.id}">
       <h2 class="mb-0" style="color: rgba(255, 62, 62, 0.89);">
@@ -212,17 +244,17 @@
     </div>
   </div>
                     `;
-                  });
-                  document.getElementById('accordionExample').innerHTML = output3;
                 });
+                document.getElementById('accordionExample').innerHTML = output3;
               });
-            };
-              gettext();
-              
-              
-            </script>
-        </div> 
-          <!-- <div id="London" class="w3-container city" style="display: none;">
+            });
+        };
+        gettext();
+
+
+      </script>
+    </div>
+    <!-- <div id="London" class="w3-container city" style="display: none;">
             <div class="accordion" id="accordionExample" style="padding-top: 40px;">
                <div class="card">
                 <div class="card-header" id="headingOne">
@@ -246,7 +278,7 @@
               </div>
             </div>
           </div>  -->
-          <!--<div id="Tokyo" class="w3-container city" style="display: none;"> 
+    <!--<div id="Tokyo" class="w3-container city" style="display: none;"> 
             <div class="accordion" id="accordionExample" style="padding-top: 40px;">
               <div class="card">
                 <div class="card-header" id="headingOne">
@@ -294,46 +326,45 @@
               </div>
             </div>
           </div> -->
-          
-          <div class="card">
-            
-            <!--  -->
-          </div>
-        </div>
 
-      <!-- </div> -->
+    <div class="card">
 
+      <!--  -->
+    </div>
+  </div>
 
+  <!-- </div> -->
 
 
 
 
 
-      <div class="header">
-        <img src="../Assets/img/ham.png" alt="" srcset="" class="bam">
-        <img src="https://0.academia-photos.com/61780733/19658868/19531766/s200_sna.jharkhand.jpg" alt=""
-          class="mainLogob">
-      </div>
-
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/plugins/CSSPlugin.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenLite.min.js"></script>
-      <script src="../js/events.js"></script>
-      <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-        crossorigin="anonymous"></script>
-      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-        crossorigin="anonymous"></script>
-      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-        crossorigin="anonymous"></script>
-      <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 
 
+  <div class="header">
+    <img src="../Assets/img/ham.png" alt="" srcset="" class="bam">
+    <img src="https://0.academia-photos.com/61780733/19658868/19531766/s200_sna.jharkhand.jpg" alt="" class="mainLogob">
+  </div>
 
-        <!-- <script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/plugins/CSSPlugin.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenLite.min.js"></script>
+  <script src="../js/events.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+
+
+  <!-- <script>
         function selectAll() {
             // $("#loader").css("display", "block");
             // categoryFlag = 0;
@@ -392,8 +423,8 @@
         }
         selectAll();
         </script> -->
-        
 
-  </body>
+
+</body>
 
 </html>
