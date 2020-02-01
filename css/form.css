@@ -1,3 +1,27 @@
+.newnav > button{
+    border-radius:5px;
+    width:205px;
+    height:50px;
+    margin:25px;
+    color:rgba(255, 62, 62, 0.89);
+    border-color: rgba(255, 62, 62, 0.89);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight:600;
+    background-color: white;
+    position:relative;
+    transition: ease-in 0.2s;
+    
+    
+}
+.newnav > button:hover{
+    background-color: rgba(255, 62, 62, 0.89);
+    color: white;
+    /* width:210px;
+    height:55px; */
+
+
+
+}
 
 
 
