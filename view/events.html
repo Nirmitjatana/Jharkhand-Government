@@ -94,15 +94,9 @@
             .then((data) => {
               let output = '';
               console.log(data);
-               
-                 let i;
-                 let k;
-                 let j;
-                 for(j=3;j<data.events.length();j=j+3){
-                  for(i=0;i<j;i++){
-                  data.events.for(function (user) {
-
-                  output += `
+               data.events.forEach(function (user) {
+                
+                output += `
                       <div class="card">
     <div class="card-header" id="heading${user.id}">
       <h2 class="mb-0" style="color: rgba(255, 62, 62, 0.89);">
@@ -120,14 +114,7 @@
     </div>
   </div>
                     `;
-}
-
-
-              });}
-
-
-
-            }
+              });
               data.workshops.forEach(function (user) {
                 output += `
                       <div class="card">
@@ -149,8 +136,6 @@
                     `;
               });
               document.getElementById('accordionExample').innerHTML = output;
-                }
-                
               document.getElementById('events').addEventListener('click', function () {
                 let output1 = '';
                 data.events.forEach(function (user) {
