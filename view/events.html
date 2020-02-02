@@ -63,20 +63,7 @@
     </div>
     <div class="topp1" style="margin-bottom: 40px;">
       <p>Events and Workshops</p>
-      <!-- <div class="w3-row">
-          <a href="javascript:void(0)" onclick="openCity(event, 'London');">
-            <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding"
-              style="color:rgba(255, 62, 62, 0.89);text-align: center;">All</div>
-          </a>
-          <a href="javascript:void(0)" onclick="openCity(event, 'Paris');" id="defaultOpen">
-            <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding"
-              style="color:rgba(255, 62, 62, 0.89);text-align: center;">Events</div>
-          </a>
-          <a href="javascript:void(0)" onclick="openCity(event, 'Tokyo');">
-            <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding"
-              style="color:rgba(255, 62, 62, 0.89);text-align: center;">Workshops</div>
-          </a>
-          </div>-->
+      
       <div class="newnav">
         <button id="all">All events and workshops</button>
         <button id="events">Events</button>
@@ -118,16 +105,16 @@
               data.workshops.forEach(function (user) {
                 output += `
                       <div class="card">
-    <div class="card-header" id="heading${user.id}">
+    <div class="card-header" id="heading${user.id+1}">
       <h2 class="mb-0" style="color: rgba(255, 62, 62, 0.89);">
         ${user.workshop_name}<h5 style="color:rgba(116, 116, 116, 0.89); font-size: small;">Workshop</h5>
                     <h3 style="color:rgba(116, 116, 116, 0.89); font-size: medium; padding-top: 10px;">Date:${user.time_of_workshop}</h3>
-        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse${user.id}" aria-expanded="false" aria-controls="collapse${user.id}" style="float: right;">
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse${user.id+1}" aria-expanded="false" aria-controls="collapse${user.id+1}" style="float: right;">
           Details
         </button>
       </h2>
     </div>
-    <div id="collapse${user.id}" class="collapse" aria-labelledby="heading${user.id}" data-parent="#accordionExample">
+    <div id="collapse${user.id+1}" class="collapse" aria-labelledby="heading${user.id+1}" data-parent="#accordionExample">
       <div class="card-body">
         ${user.workshop_description}
       </div>
@@ -239,86 +226,15 @@
 
       </script>
     </div>
-    <!-- <div id="London" class="w3-container city" style="display: none;">
-            <div class="accordion" id="accordionExample" style="padding-top: 40px;">
-               <div class="card">
-                <div class="card-header" id="headingOne">
-                  <h2 class="mb-0" style="color: rgba(255, 62, 62, 0.89);">
-                    Event 1<h5 style="color:rgba(116, 116, 116, 0.89); font-size: small;">Event</h5>
-                    <h3 style="color:rgba(116, 116, 116, 0.89); font-size: medium; padding-top: 10px;">Lorem ipsum dolor
-                      sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididu ipsum dolor sit amet
-                      consectetur adipisicing elit.
-                      unknown printer took a</h3>
-                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="float: right;">
-                      See more
-                    </button>
-                  </h2>
-                </div>
-            
-                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-                  <div class="card-body">
-                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>  -->
-    <!--<div id="Tokyo" class="w3-container city" style="display: none;"> 
-            <div class="accordion" id="accordionExample" style="padding-top: 40px;">
-              <div class="card">
-                <div class="card-header" id="headingOne">
-                  <h2 class="mb-0" style="color: rgba(255, 62, 62, 0.89);">
-                    Event 1<h5 style="color:rgba(116, 116, 116, 0.89); font-size: small;">Event</h5>
-                    <h3 style="color:rgba(116, 116, 116, 0.89); font-size: medium; padding-top: 10px;">Lorem ipsum dolor
-                      sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididu ipsum dolor sit amet
-                      consectetur adipisicing elit.
-                      unknown printer took a</h3>
-                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="float: right;">
-                      See more
-                    </button>
-                  </h2>
-                </div>
-            
-                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-                  <div class="card-body">
-                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div id="Paris" class="w3-container city">
-            <div class="accordion" id="accordionExample" style="padding-top: 40px;">
-              <div class="card">
-                <div class="card-header" id="headingOne">
-                  <h2 class="mb-0" style="color: rgba(255, 62, 62, 0.89);">
-                    Event 1<h5 style="color:rgba(116, 116, 116, 0.89); font-size: small;">Event</h5>
-                    <h3 style="color:rgba(116, 116, 116, 0.89); font-size: medium; padding-top: 10px;">Lorem ipsum dolor
-                      sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididu ipsum dolor sit amet
-                      consectetur adipisicing elit.
-                      unknown printer took a</h3>
-                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="float: right;">
-                      See more
-                    </button>
-                  </h2>
-                </div>
-            
-                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-                  <div class="card-body">
-                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div> -->
+    
 
     <div class="card">
 
-      <!--  -->
+      
     </div>
   </div>
 
-  <!-- </div> -->
+  
 
 
 
@@ -349,65 +265,7 @@
 
 
 
-  <!-- <script>
-        function selectAll() {
-            // $("#loader").css("display", "block");
-            // categoryFlag = 0;
-            // limit = limitnum.toString();
-            // console.log(`[LIMIT] ${limit}`)
-            fetch("https://pmjay.herokuapp.com/events/", {
-                    method: "get",
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                })
-                .then((response) => {
-                    
-                    return response.json()
-                    
-                })
-                .then(data => {
-                    let output = '';
-                    // console.log(data.max_limit)
-                    // if(data.data.length==data.max_limit){
-                    //     $("#showMore").css("display", "none");
-                    // }else{
-                    //     $("#showMore").css("display", "inline-block");
-                    // }
-                    data.events.forEach(function (user) {
-                        output += `
-
-              <div class="accordion" id="accordionExample" style="padding-top: 40px;">
-              <div class="card">
-                <div class="card-header" id="heading_${user.id}">
-                  <h2 class="mb-0" style="color: rgba(255, 62, 62, 0.89);">
-                    ${user.event_name}<h5 style="color:rgba(116, 116, 116, 0.89); font-size: small;">Event</h5>
-                    <h3 style="color:rgba(116, 116, 116, 0.89); font-size: medium; padding-top: 10px;">Lorem ipsum dolor
-                      sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididu ipsum dolor sit amet
-                      consectetur adipisicing elit.
-                      unknown printer took a</h3>
-                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse_${user.id}" aria-expanded="true" aria-controls="collapse_${user.id}" style="float: right;">
-                      See more
-                    </button>
-                  </h2>
-                </div>
-            
-                <div id="collapse_${user.id}" class="collapse show" aria-labelledby="heading_${user.id}" data-parent="#accordionExample">
-                  <div class="card-body">
-                    ${user.event_description}
-                  </div>
-                </div>
-              </div>
-              </div>
-          `;
-                    });
-                    $("#loader").css("display", "none");
-                    document.getElementById('accordionExample').innerHTML = output;
-
-                });
-        }
-        selectAll();
-        </script> -->
+  
 
 
 </body>
