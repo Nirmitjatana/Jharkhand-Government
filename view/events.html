@@ -1,31 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="author" content="Prakhar Soni | Nirmit Jatana">
-  <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <link rel="stylesheet" href="../css/form.css">
-
   <title>PMJAY | Achievements</title>
   <style>
     @media screen and (max-width: 700px) {
       .nav_expanded {
         z-index: 5;
       }
-
       .topp1 {
         z-index: 3;
       }
     }
   </style>
 </head>
-
-
 <body>
   <div class="container1">
     <div>
@@ -63,18 +57,27 @@
     </div>
     <div class="topp1" style="margin-bottom: 40px;">
       <p>Events and Workshops</p>
-
+                      <!-- tabs -->
       <div class="newnav" style="margin-left:80px;">
         <button id="all" onfocus="navfocus()">All</button>
         <button id="events">Events</button>
         <button id="workshops">Workshops</button>
       </div>
+                    <!-- tabs end -->
       <div class="accordion" id="accordionExample" style="padding-top: 40px;">
-
+              <!-- here data fetched will be shown -->
       </div>
       <div class="showmore">
         <button id="give">Show more</button>
       </div>
+    </div>
+  </div>
+  <!-- header -->
+  <div class="header">
+    <img src="../Assets/img/ham.png" alt="" srcset="" class="bam">
+    <img src="https://0.academia-photos.com/61780733/19658868/19531766/s200_sna.jharkhand.jpg" alt="" class="mainLogob">
+  </div>
+      <!-- functioning script -->
       <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/plugins/CSSPlugin.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenLite.min.js"></script>
@@ -90,17 +93,7 @@
         crossorigin="anonymous"></script>
       <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-      <!-- <script>
-      function navfocus(){
-        const ele = document.querySelector("#all")
-        ele.style.border-ottom = "none";
-
-      }
-      </script> -->
-
-
-
-
+        <!-- fetch javascript starts here-->
       <script>
         var k = 2;
         var eventflag=0;
@@ -108,7 +101,7 @@
         var allflag=1;
         var yeet = 0;
         var gslen;
-        function gettext(j,o) {
+        function gettext(j,o) {    //function
           fetch('http://pmjay.herokuapp.com/all-events-workshops/')
             .then((res) => res.json())
             .then((data) => {
@@ -125,16 +118,12 @@
                 j=slen;
               }
               gslen=slen;
-              
-              // console.log(elen,wlen);
               let output = '';
               console.log(data);
-  
               function eventshow(){
                 eventflag=1;
                 workshopflag=0;
                 allflag=0;
-                // console.log('clicked')
                 let output1 = '';
                 let i = 0;
                 for(i=0;i<j;i++){
@@ -232,18 +221,14 @@
     </div>
   </div>
   
-  `;
-
-                  
+  `;                  
                 }
                 document.getElementById('accordionExample').innerHTML = output3;
               }
-
               if(yeet == 0){
                 allshow();
                 yeet=1;
               }
-
               document.getElementById('all').addEventListener('click', function () {
                   allshow();
               });
@@ -265,8 +250,6 @@
             });
         };
         gettext(k);
-
-              
               $("#give").click(function () {
                 // if(k+3<=slen){
                 k = k + 3;
@@ -282,43 +265,11 @@
                   gettext(k, 3);
                 }
 
-
-
                 if(k>=gslen){
                 $("#give").css("display", "none");
               }
               });
       </script>
-    </div>
-
-
-
-
-
-
-
-  </div>
-
-
-
-
-
-
-
-
-
-  <div class="header">
-    <img src="../Assets/img/ham.png" alt="" srcset="" class="bam">
-    <img src="https://0.academia-photos.com/61780733/19658868/19531766/s200_sna.jharkhand.jpg" alt="" class="mainLogob">
-  </div>
-
   <script src="../js/events.js"></script>
-
-
-
-
-
-
 </body>
-
 </html>
