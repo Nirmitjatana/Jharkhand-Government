@@ -616,6 +616,9 @@ label:hover{
         display: none;
         
     } */
+    .logo3{
+        display: none;
+    }
     .w3-padding {
         padding: 8px!important;
         margin-left: 30px;
@@ -636,7 +639,10 @@ label:hover{
         grid-template-rows:  220px 220px 220px 220px;
         padding-left:10px;
       }
-      
+      .newnav > button{
+        margin-left:none;
+        position:center;
+      }
       .grid-item > a{
           margin-bottom: 10px;
       }
@@ -696,6 +702,9 @@ input[type=button]{
     top: 0; 
     width: 100vw;
     z-index: 100;
+}
+.showmore > button{
+    margin-left:23vw;
 }
 .mainLogob{
     position: absolute;
