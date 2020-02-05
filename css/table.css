@@ -23,23 +23,38 @@ body{
     height:24px;
 }
 /* Nav: Start */ 
-.nav_expanded{
-    position: relative;
+/* .nav_expanded{
+     position: relative; 
     background-color:#FF5F58;
     display: grid;
     grid-template-rows: 19% 9% 9% 9% 9% 9% 9% 21% ;
     color: white;
     align-items: center;
     font-weight: 300;
-    /* max-height: 900px; */
+     max-height: 760px; 
+    z-index: 1;
+    padding-bottom: 20px;
+    
+} */
+.nav_expanded{
+    position: relative;
+    background-color:#FF5F58;
+    display: grid;
+    grid-template-rows: 19.5% 9% 9% 9% 9% 9% 9% 21%;
+    color: white;
+    align-items: center;
+    font-weight: 300;
     z-index: 1;
     padding-bottom: 20px;
 }
 .logo3{
-    position: relative;
-    width: 39%;
-    left: 50%;
-    transform: translateX(-50%);
+    position: center;
+    width: 116px;
+    height:116px;
+    margin-left:80px;
+    margin-top: 10px;
+    /* left: 116px; */
+    /* transform: translateX(-50%); */
 }
 .logo2{
     position: relative;

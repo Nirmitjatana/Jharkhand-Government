@@ -39,10 +39,10 @@ body{
 }
 .logo3{
     position: relative;
-    /* width: 38%;
-    height: 65%; */
-    left: 28%;
-    /* transform: translateX(-50%); */
+    width: 116px;
+    height: 116px;
+    left: 47%;
+    transform: translateX(-50%);
 }
 .logo2{
     position: relative;
