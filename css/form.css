@@ -192,6 +192,9 @@ body{
     /* padding-left: 3.3vw; */
     text-align: center;
 }
+.eve{
+    border-bottom: solid white 1.1px;
+}
 .ham{
     display: none;
 }
@@ -600,22 +603,6 @@ label:hover{
         position: relative;
         padding-left: 0;
     }
-    /* .logo2{
-        position: relative;
-        left: 50vw;
-        transform: translateX(-50%);
-        /* padding-left: 4vw; 
-        width: 33vw;
-        display: none;
-    } */
-    /* .logo3{
-        position: relative;
-        left: 50vw;
-        height: 32%;
-        width: 20%;
-        display: none;
-        
-    } */
     .logo3{
         display: none;
     }
