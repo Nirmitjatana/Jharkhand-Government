@@ -1,21 +1,4 @@
-// function openCity(evt, cityName) {
-//     var i, x, tablinks;
-//     x = document.getElementsByClassName("city");
-//     for (i = 0; i < x.length; i++) {
-//       x[i].style.display = "none";
-//     }
-//     tablinks = document.getElementsByClassName("tablink");
-//     for (i = 0; i < x.length; i++) {
-//       tablinks[i].className = tablinks[i].className.replace(" w3-border-red", "");
-//     }
-//     document.getElementById(cityName).style.display = "block";
-//     evt.currentTarget.firstElementChild.className += " w3-border-red";
-//   }
-//   document.getElementById("defaultOpen").click();
-//   document.querySelector('a').addEventListener('click', function() {
-//     document.querySelector('.smalldesc').classList.toggle('expand');
-//   });
-  const tables = document.querySelector('.tables');
+const tables = document.querySelector('.tables');
 const tablesImg = document.querySelector('.tablesImg');
 tables.addEventListener('mouseover', () => {
   tablesImg.src = '../Assets/img/tables_pink.png';
@@ -52,8 +35,6 @@ save.addEventListener('mouseout', () => {
 const ham = document.querySelector('.bam');
 const navExp = document.querySelector('.nav_expanded');
 const container1 = document.querySelector('.container1');
-/* const logo2 = document.querySelector('.logo2'); */
-/* console.log(logo2); */
 const logo3 = document.querySelector('.logo3');
 const govt = document.querySelector('.govt');
 const suc = document.querySelector(".Suc");
@@ -79,14 +60,12 @@ const t1 = new TimelineLite();
 function okay() {
   i++;
   if (i % 2 == 0) {
-    // logo3.style.display = 'none';
+    
     logo3.style.opacity = "0";
     about.style.display = 'none';
     feed.style.display = 'none';
     tables.style.display = 'none';
     save.style.display = 'none';
-    /* logo2.style.display = 'none'; */
-    // logo3.style.display = 'none';
     govt.style.display = 'none';
     suc.style.display = 'none';
     eve.style.display = 'none';
@@ -126,9 +105,6 @@ function okay() {
     }, {
       opacity: '0',
     });
-   
-    /* logo2.style.opacity = '0';
-    logo2.style.display = 'none'; */
   } else {
     TweenLite.fromTo(about, 0.1, {
       opacity: '0',
@@ -172,7 +148,7 @@ function okay() {
       opacity: '1',
       display: 'block',
     });
-    /*logo2.style.display = 'block'; */
+   
     logo3. style.display = "none";
     container1.style.gridTemplateRows = '100%';
     navExp.style.gridTemplateRows = '12% 12% 12% 12% 12% 12% 18% 5%';
@@ -181,19 +157,7 @@ function okay() {
     }, {
       width: '100%',
     })
-      /* .fromTo(logo2, 0.1, {
-        opacity: '0',
-      }, {
-        opacity: '1',
-      }) */
-      // .fromTo(logo3, 0.1, {
-      //   opacity: '0',
-      //   display: 'none',
-      // }, {
-      //   opacity: '1',
-      //   display: 'block',
-      //   height: '70px',
-      // })
+      
       .fromTo(govt, 0.1, {
         opacity: '0',
         display: 'none',

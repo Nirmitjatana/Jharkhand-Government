@@ -159,13 +159,6 @@ function okay() {
     }, {
       width: '100%',
     })
-      // .fromTo(logo3, 0.1, {
-      //   opacity: '0',
-      //   display: 'none',
-      // }, {
-      //   opacity: '1',
-      //   display: 'block',
-      // })
       .fromTo(govt, 0.1, {
         opacity: '0',
         display: 'none',

@@ -35,9 +35,6 @@ save.addEventListener('mouseout', () => {
 const ham = document.querySelector('.bam');
 const navExp = document.querySelector('.nav_expanded');
 const container = document.querySelector('.container');
-/* const logo2 = document.querySelector('.logo2'); */
-/* console.log(logo2); */
-// const logo3 = document.querySelector('.logo3');
 const govt = document.querySelector('.govt');
 const suc = document.querySelector(".suc");
 const eve = document.querySelector(".eve");
@@ -66,8 +63,6 @@ function okay() {
     feed.style.display = 'none';
     tables.style.display = 'none';
     save.style.display = 'none';
-    /* logo2.style.display = 'none'; */
-    // logo3.style.display = 'none';
     govt.style.display = 'none';
     suc.style.display = 'none';
     eve.style.display = 'none';
@@ -107,8 +102,6 @@ function okay() {
     }, {
       opacity: '0',
     });
-    /* logo2.style.opacity = '0';
-    logo2.style.display = 'none'; */
   } else {
     TweenLite.fromTo(about, 0.1, {
       opacity: '0',
@@ -152,7 +145,6 @@ function okay() {
       opacity: '1',
       display: 'block',
     });
-    /* logo2.style.display = 'block'; */
     container.style.gridTemplateRows = '100%';
     navExp.style.gridTemplateRows = '12% 12% 12% 12% 12% 12% 18% 5%';
     t1.fromTo(navExp, 0.2, {
@@ -160,18 +152,6 @@ function okay() {
       }, {
       width: '100%',
       })
-      /* .fromTo(logo2, 0.1, {
-        opacity: '0',
-      }, {
-        opacity: '1',
-      }) */
-      // .fromTo(logo3, 0.1, {
-      //   opacity: '0',
-      //   display: 'none',
-      // }, {
-      //   opacity: '1',
-      //   display: 'block',
-      // })
       .fromTo(govt, 0.1, {
         opacity: '0',
         display: 'none',
@@ -181,13 +161,10 @@ function okay() {
       });
   }
 }
-
-
 const selector = document.querySelector('.tableContainer');
 const drop = document.querySelector('#main');
 const change = document.querySelector('.change');
 const change2 = document.querySelector('.changeb');
-
 let z = 0;
 table();
 let k = 0;
@@ -256,10 +233,7 @@ function table() {
     .catch((error) => {
       console.log('Cannot connect to server');
     });
-
-
   // Register User
-
   const file = document.getElementById('main').value;
   const version = document.getElementById('sub').value;
   if (file == '' || version == 'none') {
