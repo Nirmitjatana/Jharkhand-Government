@@ -24,6 +24,11 @@
     /* width:210px;
     height:55px; */
 }
+.newnav > button:focus{
+    background-color: rgba(255, 62, 62, 0.89);
+    color: white;
+    font-size: 1.5em;
+}
 .showmore > button{
     border-radius:5px;
     width:205px;
