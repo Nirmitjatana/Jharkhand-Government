@@ -65,19 +65,11 @@
       </div>
                     <!-- tabs end -->
       <div class="accordion" id="accordionExample" style="padding-top: 40px;">
-              <!-- here data fetched will be shown -->
+            <!-- here data fetched will be shown -->
       </div>
       <div class="showmore">
         <button id="give">Show more</button>
       </div>
-    </div>
-  </div>
-  <!-- header -->
-  <div class="header">
-    <img src="../Assets/img/ham.png" alt="" srcset="" class="bam">
-    <img src="https://0.academia-photos.com/61780733/19658868/19531766/s200_sna.jharkhand.jpg" alt="" class="mainLogob">
-  </div>
-      <!-- functioning script -->
       <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/plugins/CSSPlugin.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenLite.min.js"></script>
@@ -93,7 +85,17 @@
         crossorigin="anonymous"></script>
       <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-        <!-- fetch javascript starts here-->
+      <!-- <script>
+      function navfocus(){
+        const ele = document.querySelector("#all")
+        ele.style.border-ottom = "none";
+
+      }
+      </script> -->
+
+
+
+
       <script>
         var k = 2;
         var eventflag=0;
@@ -101,7 +103,7 @@
         var allflag=1;
         var yeet = 0;
         var gslen;
-        function gettext(j,o) {    //function
+        function gettext(j,o) {
           fetch('http://pmjay.herokuapp.com/all-events-workshops/')
             .then((res) => res.json())
             .then((data) => {
@@ -118,12 +120,16 @@
                 j=slen;
               }
               gslen=slen;
+              
+              // console.log(elen,wlen);
               let output = '';
               console.log(data);
+  
               function eventshow(){
                 eventflag=1;
                 workshopflag=0;
                 allflag=0;
+                // console.log('clicked')
                 let output1 = '';
                 let i = 0;
                 for(i=0;i<j;i++){
@@ -205,30 +211,31 @@
   </div>
                
   <div class="card">
-    <div class="card-header" id="heading${data.workshops[i].id}">
+    <div class="card-header" id="heading${data.workshops[i].id+1}">
       <h2 class="mb-0" style="color: rgba(255, 62, 62, 0.89);">
         ${data.workshops[i].workshop_name}<h5 style="color:rgba(116, 116, 116, 0.89); font-size: small;">Workshop</h5>
                     <h3 style="color:rgba(116, 116, 116, 0.89); font-size: medium; padding-top: 10px;">Date:${data.workshops[i].time_of_workshop}</h3>
-        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse${data.workshops[i].id}" aria-expanded="false" aria-controls="collapse${data.id}" style="float: right;">
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse${data.workshops[i].id+1}" aria-expanded="false" aria-controls="collapse${data.workshops[i].id+1}" style="float: right;">
           Details
         </button>
       </h2>
     </div>
-    <div id="collapse${data.workshops[i].id}" class="collapse" aria-labelledby="heading${data.workshops[i].id}" data-parent="#accordionExample">
+    <div id="collapse${data.workshops[i].id+1}" class="collapse" aria-labelledby="heading${data.workshops[i].id+1}" data-parent="#accordionExample">
       <div class="card-body">
-        ${data.workshop_description}
+        ${data.workshops[i].workshop_description}
       </div>
     </div>
   </div>
-  
-  `;                  
+  `; 
                 }
                 document.getElementById('accordionExample').innerHTML = output3;
               }
+
               if(yeet == 0){
                 allshow();
                 yeet=1;
               }
+
               document.getElementById('all').addEventListener('click', function () {
                   allshow();
               });
@@ -264,12 +271,18 @@
                 }else if(workshopflag == 1){
                   gettext(k, 3);
                 }
-
                 if(k>=gslen){
                 $("#give").css("display", "none");
               }
               });
       </script>
+    </div>
+  </div>
+  <div class="header">
+    <img src="../Assets/img/ham.png" alt="" srcset="" class="bam">
+    <img src="https://0.academia-photos.com/61780733/19658868/19531766/s200_sna.jharkhand.jpg" alt="" class="mainLogob">
+  </div>
+
   <script src="../js/events.js"></script>
 </body>
 </html>
