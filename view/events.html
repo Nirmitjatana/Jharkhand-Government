@@ -211,16 +211,16 @@
   </div>
                
   <div class="card">
-    <div class="card-header" id="heading${data.workshops[i].id+1}">
+    <div class="card-header" id="heading${data.workshops[i].id+100}">
       <h2 class="mb-0" style="color: rgba(255, 62, 62, 0.89);">
         ${data.workshops[i].workshop_name}<h5 style="color:rgba(116, 116, 116, 0.89); font-size: small;">Workshop</h5>
                     <h3 style="color:rgba(116, 116, 116, 0.89); font-size: medium; padding-top: 10px;">Date:${data.workshops[i].time_of_workshop}</h3>
-        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse${data.workshops[i].id+1}" aria-expanded="false" aria-controls="collapse${data.workshops[i].id+1}" style="float: right;">
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse${data.workshops[i].id+100}" aria-expanded="false" aria-controls="collapse${data.workshops[i].id+100}" style="float: right;">
           Details
         </button>
       </h2>
     </div>
-    <div id="collapse${data.workshops[i].id+1}" class="collapse" aria-labelledby="heading${data.workshops[i].id+1}" data-parent="#accordionExample">
+    <div id="collapse${data.workshops[i].id+100}" class="collapse" aria-labelledby="heading${data.workshops[i].id+100}" data-parent="#accordionExample">
       <div class="card-body">
         ${data.workshops[i].workshop_description}
       </div>
